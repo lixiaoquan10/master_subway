@@ -32,7 +32,7 @@ public:
     void manualConnectToBroker(const QString &host, quint16 port);   //连接到服务器
     void manualDisconnectToBroker();                                 //断开连接
 
-    void replyHostControl(QString msgid);   //回复服务器控制指令
+    void replyHostControl(QString msgid, bool isTrue);   //回复服务器控制指令
 
 public slots:
     void publishMessage(const QString &topic, const QByteArray &message);                     //发送数据
