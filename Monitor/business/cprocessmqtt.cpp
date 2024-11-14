@@ -10,8 +10,10 @@ CprocessMqtt::CprocessMqtt(QMqttClient *mqttClient) : m_mqttClient(mqttClient)
     m_msgid = 1;
     m_isPingRespond = true;
     m_productKey = "安科瑞消防疏散";
+    m_reconnectInterval = m_initialReconnectInterval;
     m_deviceSN = CGlobal::instance()->ClientBusiness()->generateUniqueID();
     m_mqttClient->setProtocolVersion(QMqttClient::MQTT_3_1_1);
+    m_mqttClient->setClientId(m_deviceSN);
     //通讯状态变化
     connect(m_mqttClient, &QMqttClient::stateChanged, this, &CprocessMqtt::slot_updateLogStateChange);
     //断开连接
@@ -50,8 +52,17 @@ CprocessMqtt::~CprocessMqtt()
 //断开连接
 void CprocessMqtt::slot_brokerDisconnected()
 {
-    m_reconnectTimer->start(1000);
+    m_reconnectTimer->start(m_reconnectInterval);
     m_pingTimer->stop();
+    // 清理所有定时器
+    for (QTimer *timer : m_resendTimers) {
+        timer->stop();  // 停止定时器
+        delete timer;   // 删除定时器
+    }
+    // 清理定时器列表本身
+    m_resendTimers.clear();
+    // 清理发送的消息列表（此处不需要额外的清理工作，QString 和 QByteArray 会自动销毁）
+    m_sendMessages.clear();
     const QString content = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
             + QLatin1Char('\n')
             + m_mqttClient->hostname()
@@ -60,13 +71,7 @@ void CprocessMqtt::slot_brokerDisconnected()
             + QLatin1Char('\n')
             + QLatin1String("MQTT broker disconnected")
             + QLatin1Char('\n');
-    QFile file("/home/xfss/root/logfile/MQTTData.txt");
-    if (file.open(QIODevice::Append | QIODevice::Text))
-    {
-        QTextStream stream(&file);
-        stream << content << '\n';
-        file.close();
-    }
+    saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
 }
 
 //连接状态发生变化
@@ -79,36 +84,35 @@ void CprocessMqtt::slot_updateLogStateChange()
             + QLatin1String(":")
             + QString::number(m_mqttClient->port())
             + QLatin1Char('\n');
-    if(m_mqttClient->state() == 0)
+    if(m_mqttClient->state() == QMqttClient::Disconnected)
     {
         emit connectStatus(false);
         content = content
                 + QLatin1String("MQTT state changed. Now: disconnected")
                 + QLatin1Char('\n');
-    } else if(m_mqttClient->state() == 1) {
+        saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
+    }
+    else if(m_mqttClient->state() == QMqttClient::Connecting)
+    {
         content = content
                 + QLatin1String("MQTT state changed. Now: connecting")
                 + QLatin1Char('\n');
-    } else if(m_mqttClient->state() == 2) {
+        saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
+    }
+    else if(m_mqttClient->state() == QMqttClient::Connected)
+    {
         content = content
                 + QLatin1String("MQTT state changed. Now: connected")
                 + QLatin1Char('\n');
-    }
-    QFile file("/home/xfss/root/logfile/MQTTData.txt");
-    if (file.open(QIODevice::Append | QIODevice::Text))
-    {
-        QTextStream stream(&file);
-        stream << content << '\n';
-        file.close();
-    }
-    if(m_mqttClient->state() == 2)
-    {
+        saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
         m_isPingRespond = true;
         emit connectStatus(true);
         subscribeComTopic();
         uploadAllDeviceInfo();
         QTimer::singleShot(5000, this, &CprocessMqtt::slot_uploadAllDeviceStatus);
         m_pingTimer->start(2000);
+        // 重置重连间隔
+        m_reconnectInterval = m_initialReconnectInterval;
         m_reconnectTimer->stop();
     }
 }
@@ -130,22 +134,13 @@ void CprocessMqtt::manualConnectToBroker(const QString &host, quint16 port)
             + QString::number(m_port)
             + QLatin1Char('\n');
 
-    QFile file("/home/xfss/root/logfile/MQTTData.txt");
-    if (file.open(QIODevice::Append | QIODevice::Text))
-    {
-        QTextStream stream(&file);
-        stream << content << '\n';
-        file.close();
-    }
+    saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
 }
 
 //手动断开连接
 void CprocessMqtt::manualDisconnectToBroker()
 {
-    if(m_mqttClient->state() == 2)
-    {
-        m_mqttClient->disconnectFromHost();
-    }
+    m_mqttClient->disconnectFromHost();
 }
 
 //重连服务器
@@ -162,14 +157,10 @@ void CprocessMqtt::slot_reconnectToBroker()
             + QLatin1String(":")
             + QString::number(m_port)
             + QLatin1Char('\n');
-
-    QFile file("/home/xfss/root/logfile/MQTTData.txt");
-    if (file.open(QIODevice::Append | QIODevice::Text))
-    {
-        QTextStream stream(&file);
-        stream << content << '\n';
-        file.close();
-    }
+    saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
+    // 增加重连间隔，指数增长但不超过最大值
+    m_reconnectInterval = qMin(m_reconnectInterval * 2, m_maxReconnectInterval);
+    m_reconnectTimer->start(m_reconnectInterval);
 }
 
 //订阅通讯所需主题
@@ -203,25 +194,13 @@ void CprocessMqtt::subscribeToTopic(const QString &topic)
                             + topic
                             + QLatin1Char('\n');
         }
-        QFile file("/home/xfss/root/logfile/MQTTData.txt");
-        if (file.open(QIODevice::Append | QIODevice::Text))
-        {
-            QTextStream stream(&file);
-            stream << data << '\n';
-            file.close();
-        }
+        saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", data);
     } else {
         data = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
                         + QLatin1Char('\n')
                         + QLatin1String("SubscribeToTopic failed. MQTT client is not connected.")
                         + QLatin1Char('\n');
-        QFile file("/home/xfss/root/logfile/MQTTData.txt");
-        if (file.open(QIODevice::Append | QIODevice::Text))
-        {
-            QTextStream stream(&file);
-            stream << data << '\n';
-            file.close();
-        }
+        saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", data);
         manualDisconnectToBroker();
         manualConnectToBroker(m_host, m_port);
     }  
@@ -252,30 +231,17 @@ void CprocessMqtt::publishMessage(const QString &topic, const QByteArray &messag
                 + QLatin1Char('\n')
                 + message
                 + QLatin1Char('\n');
-        QFile file(filePath);
-
-        if (file.open(QIODevice::Append | QIODevice::Text))
-        {
-            QTextStream stream(&file);
-            stream << content << '\n';
-            file.close();
-        }
+        saveDataToFile(filePath, content);
     } else {
         QString data = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
                         + QLatin1Char('\n')
                         + QLatin1String("MQTT client is not connected.")
                         + QLatin1Char('\n');
-        QFile file(filePath);
-        if (file.open(QIODevice::Append | QIODevice::Text))
-        {
-            QTextStream stream(&file);
-            stream << data << '\n';
-            file.close();
-        }
+        saveDataToFile(filePath, data);
         manualDisconnectToBroker();
         manualConnectToBroker(m_host, m_port);
     }
-//    CGlobal::instance()->controlTxtFileSize(filePath, 1024 * 1024);
+    CGlobal::instance()->controlTxtFileSize(filePath, 1024 * 1024);
 }
 
 // 处理消息状态变化的槽函数
@@ -303,14 +269,7 @@ void CprocessMqtt::slot_messageStatusChanged(quint16 packetId, QMqtt::MessageSta
             + QString::number(packetId)
             + str
             + QLatin1Char('\n');
-    QFile file("/home/xfss/root/logfile/MQTTData.txt");
-
-    if (file.open(QIODevice::Append | QIODevice::Text))
-    {
-        QTextStream stream(&file);
-        stream << content << '\n';
-        file.close();
-    }
+    saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
 }
 
 //接收ACK数据超时处理
@@ -334,13 +293,7 @@ void CprocessMqtt::slot_ResendTimerTimeout()
                         + "No Acknowledged! Resend packetId:"
                         + QString::number(packetId)
                         + QLatin1Char('\n');
-                QFile file("/home/xfss/root/logfile/MQTTData.txt");
-                if (file.open(QIODevice::Append | QIODevice::Text))
-                {
-                    QTextStream stream(&file);
-                    stream << content << '\n';
-                    file.close();
-                }
+                saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
             }
 
             // 重发后，重新启动定时器
@@ -363,13 +316,7 @@ void CprocessMqtt::slot_handleMessageReceived(const QByteArray &message, const Q
                 + QLatin1Char('\n')
                 + message
                 + QLatin1Char('\n');
-    QFile file("/home/xfss/root/logfile/MQTTData.txt");
-    if (file.open(QIODevice::Append | QIODevice::Text))
-    {
-        QTextStream stream(&file);
-        stream << content << '\n';
-        file.close();
-    }
+    saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
     if(topic.name() == QString("v1/{%1}/{%2}/sys/service/invoke").arg(m_productKey).arg(m_deviceSN))
     {
         QJsonDocument jsonDoc = QJsonDocument::fromJson(message);
@@ -414,13 +361,7 @@ void CprocessMqtt::slot_requestPing()
                 + QLatin1String("MQTT requestPing.  state: ")
                 + str
                 + QLatin1Char('\n');
-        QFile file("/home/xfss/root/logfile/MQTTData.txt");
-        if (file.open(QIODevice::Append | QIODevice::Text))
-        {
-            QTextStream stream(&file);
-            stream << content << '\n';
-            file.close();
-        }
+        saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
     } else {
         //无回复
         manualDisconnectToBroker();
@@ -436,13 +377,7 @@ void CprocessMqtt::slot_pingResponse()
                 + QLatin1Char('\n')
                 + QLatin1String("MQTT pingResponse.")
                 + QLatin1Char('\n');
-    QFile file("/home/xfss/root/logfile/MQTTData.txt");
-    if (file.open(QIODevice::Append | QIODevice::Text))
-    {
-        QTextStream stream(&file);
-        stream << content << '\n';
-        file.close();
-    }
+    saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
 }
 
 //回复服务器控制指令
@@ -948,5 +883,17 @@ QByteArray CprocessMqtt::creatDeviceStatusJsonData(CDevice* lamp)
     QJsonDocument doc(msgObj);
     QByteArray jsonData = doc.toJson();
     return jsonData;
+}
+
+void CprocessMqtt::saveDataToFile(QString fileName, QString data)
+{
+    QFile file(fileName);
+    if (file.open(QIODevice::Append | QIODevice::Text))
+    {
+        QTextStream stream(&file);
+        stream << data << '\n';
+        file.close();
+    }
+//    CGlobal::instance()->controlTxtFileSize(filePath, 1024 * 1024);
 }
 

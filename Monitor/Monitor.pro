@@ -21,6 +21,7 @@ TRANSLATIONS = Monitor_zh_CN.ts
 SOURCES += main.cpp\
     business/cprocessModbusTcp.cpp \
     business/cprocessmqtt.cpp \
+    business/cprocessntp.cpp \
     dialog/mqttTest.cpp \
     graphics/deviceDefaultControl.cpp \
         widget.cpp \
@@ -129,6 +130,7 @@ HEADERS  += widget.h \
     business/cdataprocessing.h \
     business/cprocessModbusTcp.h \
     business/cprocessmqtt.h \
+    business/cprocessntp.h \
     dialog/mqttTest.h \
     dm/objectstatusenum.h \
     dm/ccontroller.h \

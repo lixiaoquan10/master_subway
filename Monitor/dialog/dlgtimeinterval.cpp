@@ -3,6 +3,7 @@
 #include "cglobal.h"
 #include <QButtonGroup>
 #include "business/cprocessmqtt.h"
+#include "business/cprocessntp.h"
 
 dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
     QDialog(parent),
@@ -112,6 +113,14 @@ dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
             this, SLOT(slot_setComStatus(bool)));
     connect(this, SIGNAL(uploadStatusToMQTT()),
             m_processMqtt, SLOT(slot_uploadAllDeviceStatus()));
+
+    m_ntpClient = new QUdpSocket;
+    m_processNtp = new CprocessNtp("cn.pool.ntp.org", m_ntpClient);
+//    // 创建NTP线程
+//    m_ntpThread = new QThread;
+//    m_processNtp->moveToThread(m_ntpThread);
+//    // 启动MQTT线程
+//    m_ntpThread->start();
 }
 
 
@@ -121,7 +130,12 @@ dlgTimeInterval::~dlgTimeInterval()
     CGlobal::instance()->setTimeInterval(NULL);
     CGlobal::instance()->m_HaveDialog = false;
     delete m_mqttClient;
+    delete m_processMqtt;
     delete m_mqttThread;
+
+    delete m_ntpClient;
+    delete m_processNtp;
+    delete m_ntpThread;
 }
 
 
@@ -526,7 +540,12 @@ void dlgTimeInterval::on_m_ButtonTimeSet_clicked()
     qDebug() << "dlgTimeInterval::on_m_ButtonTimeSet_clicked"
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
     QDateTime combinedDateTime(ui->dateEdit->date(), ui->timeEdit->time());
-    m_dateTimeStr = combinedDateTime.toString("yyyy-MM-dd hh:mm:ss");
+    setSystemTime(combinedDateTime.toString("yyyy-MM-dd hh:mm:ss"));
+}
+
+void dlgTimeInterval::setSystemTime(QString dateTime)
+{
+    m_dateTimeStr = dateTime;
     timeThread *thread = new timeThread(this);
     connect(thread, SIGNAL(timeFinished()), this, SLOT(slot_timeFinished()), Qt::QueuedConnection);
     thread->start();
@@ -1174,6 +1193,7 @@ void dlgTimeInterval::updateSqliteData()
     ui->m_hostAddress->setText(CGlobal::instance()->m_mqttHost);
     ui->m_com->setText(QString::number(CGlobal::instance()->m_mqttCom));
     m_processMqtt->manualConnectToBroker(CGlobal::instance()->m_mqttHost, CGlobal::instance()->m_mqttCom);
+    m_processNtp->startNtpTimer();
 }
 //更新WLAN地址相关信息
 void dlgTimeInterval::updateWLANData()

@@ -34,6 +34,8 @@ public:
 
     void replyHostControl(QString msgid, bool isTrue);   //回复服务器控制指令
 
+    void saveDataToFile(QString fileName, QString data);   //保存到文件
+
 public slots:
     void publishMessage(const QString &topic, const QByteArray &message);                     //发送数据
     void slot_updateLogStateChange();                                                         //连接状态变化
@@ -64,5 +66,9 @@ private:
     QMap<quint16, QPair<QByteArray, QString>> m_sendMessages;  // 维护每个 packetId 对应的消息内容和主题
     const int m_resendTimeout = 3000;       // 3秒超时
     bool m_isPingRespond;                   // 是否有回复
+
+    int m_reconnectInterval;                     // 当前重连时间间隔（毫秒）
+    const int m_initialReconnectInterval = 3000; // 初始重连时间间隔
+    const int m_maxReconnectInterval = 24000;    // 最大重连时间间隔（例如24s）
 };
 #endif // CPROCESSMQTT_H

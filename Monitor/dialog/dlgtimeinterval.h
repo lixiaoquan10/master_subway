@@ -4,6 +4,7 @@
 #include "cglobal.h"
 #include <QPainter>
 #include "business/cprocessmqtt.h"
+#include "business/cprocessntp.h"
 
 namespace Ui {
 class dlgTimeInterval;
@@ -60,6 +61,7 @@ public:
     void updateAdminPuttonGeometry();
     void saveSqliteData(QString ParamName, QString ParamValue);
     void setHostAddressPort(QString ip, QString port);
+    void setSystemTime(QString dateTime);
     void setUseTime(int usetime);
     void setIpAndTimeHide(bool enable);
     bool isWLANChanged();
@@ -171,6 +173,10 @@ private:
     CprocessMqtt *m_processMqtt;
     QMqttClient *m_mqttClient;
     QThread *m_mqttThread;
+
+    CprocessNtp *m_processNtp;
+    QUdpSocket *m_ntpClient;
+    QThread *m_ntpThread;
 
 signals:
     void m_Checked_signal(bool checked);

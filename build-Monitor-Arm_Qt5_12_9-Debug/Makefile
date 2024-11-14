@@ -55,6 +55,7 @@ OBJECTS_DIR   = ./
 SOURCES       = ../Monitor/main.cpp \
 		../Monitor/business/cprocessModbusTcp.cpp \
 		../Monitor/business/cprocessmqtt.cpp \
+		../Monitor/business/cprocessntp.cpp \
 		../Monitor/dialog/mqttTest.cpp \
 		../Monitor/graphics/deviceDefaultControl.cpp \
 		../Monitor/widget.cpp \
@@ -162,6 +163,7 @@ SOURCES       = ../Monitor/main.cpp \
 		moc_cdataprocessing.cpp \
 		moc_cprocessModbusTcp.cpp \
 		moc_cprocessmqtt.cpp \
+		moc_cprocessntp.cpp \
 		moc_mqttTest.cpp \
 		moc_ccontroller.cpp \
 		moc_cobject.cpp \
@@ -263,6 +265,7 @@ SOURCES       = ../Monitor/main.cpp \
 OBJECTS       = main.o \
 		cprocessModbusTcp.o \
 		cprocessmqtt.o \
+		cprocessntp.o \
 		mqttTest.o \
 		deviceDefaultControl.o \
 		widget.o \
@@ -371,6 +374,7 @@ OBJECTS       = main.o \
 		moc_cdataprocessing.o \
 		moc_cprocessModbusTcp.o \
 		moc_cprocessmqtt.o \
+		moc_cprocessntp.o \
 		moc_mqttTest.o \
 		moc_ccontroller.o \
 		moc_cobject.o \
@@ -669,6 +673,7 @@ DIST          = /opt/Qt5.12.9/5.12.9/gcc_64/mkspecs/features/spec_pre.prf \
 		../Monitor/business/cdataprocessing.h \
 		../Monitor/business/cprocessModbusTcp.h \
 		../Monitor/business/cprocessmqtt.h \
+		../Monitor/business/cprocessntp.h \
 		../Monitor/dialog/mqttTest.h \
 		../Monitor/dm/objectstatusenum.h \
 		../Monitor/dm/ccontroller.h \
@@ -775,6 +780,7 @@ DIST          = /opt/Qt5.12.9/5.12.9/gcc_64/mkspecs/features/spec_pre.prf \
 		../Monitor/model/cdeviceforbidfaultlistmodel.h ../Monitor/main.cpp \
 		../Monitor/business/cprocessModbusTcp.cpp \
 		../Monitor/business/cprocessmqtt.cpp \
+		../Monitor/business/cprocessntp.cpp \
 		../Monitor/dialog/mqttTest.cpp \
 		../Monitor/graphics/deviceDefaultControl.cpp \
 		../Monitor/widget.cpp \
@@ -1302,8 +1308,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../Monitor/images.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /opt/Qt5.12.9/5.12.9/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Monitor/widget.h ../Monitor/business/cdataprocessing.h ../Monitor/business/cprocessModbusTcp.h ../Monitor/business/cprocessmqtt.h ../Monitor/dialog/mqttTest.h ../Monitor/dm/objectstatusenum.h ../Monitor/dm/ccontroller.h ../Monitor/dm/cobject.h ../Monitor/dm/cloop.h ../Monitor/dm/clayer.h ../Monitor/dm/cdm.h ../Monitor/dm/cdistribution.h ../Monitor/dm/cdevice.h ../Monitor/dm/cfirepoint.h ../Monitor/dm/cdbsqlite.h ../Monitor/dm/ccanport.h ../Monitor/graphics/cmath.h ../Monitor/graphics/deviceDefaultControl.h ../Monitor/model/ctreeitem.h ../Monitor/model/ctablemodel.h ../Monitor/model/ccontrollertreemodel.h ../Monitor/model/ccontrollermodel.h ../Monitor/model/cmodel.h ../Monitor/model/cloopmodel.h ../Monitor/model/cdistributionmodel.h ../Monitor/model/cdevicesfindtablemodel.h ../Monitor/model/cdevicemodel.h ../Monitor/model/cdesigntreemodel.h ../Monitor/model/ccanportmodel.h ../Monitor/view/ctableview.h ../Monitor/view/ccontrollertreeview.h ../Monitor/cglobal.h ../Monitor/cdevicetype.h ../Monitor/model/cinformationmodel.h ../Monitor/business/cclientbusiness.h ../Monitor/communication/ccommunication.h ../Monitor/widget/ctoptoolbar.h ../Monitor/widget/ccenterframe.h ../Monitor/widget/cbottomtoolbar.h ../Monitor/widget/cprogramview.h ../Monitor/widget/cprogramtreeview.h ../Monitor/widget/cprogramcontrollerview.h ../Monitor/widget/cprogramcandeviceview.h ../Monitor/widget/cprogramdistributionview.h ../Monitor/widget/cprogramdeviceview.h ../Monitor/widget/cprogramcanportview.h ../Monitor/widget/cprogramcontainer.h ../Monitor/widget/cminisplitter.h ../Monitor/widget/cinformationlabel.h ../Monitor/widget/cdesignview.h ../Monitor/widget/cdesigntreeview.h ../Monitor/widget/cdesignsplashview.h ../Monitor/widget/cdesigncontainer.h ../Monitor/dialog/dlgsystemrecordmodel.h ../Monitor/dialog/dlgsystemrecord.h ../Monitor/dialog/dlgadministrator.h ../Monitor/struct/shardEnum.h ../Monitor/struct/cmsgstructbase.h ../Monitor/struct/cmsgrouteconfig.h ../Monitor/struct/cmsgprocesstypename.h ../Monitor/struct/cmsgprintset.h ../Monitor/struct/cmsglog.h ../Monitor/struct/cmsgchecktime.h ../Monitor/struct/cmsgcheckset.h ../Monitor/struct/shardEnum.h ../Monitor/delegate/cpathdelegate.h ../Monitor/delegate/cdevicetypedelegate.h ../Monitor/style/cstylehelper.h ../Monitor/style/cstyledbar.h ../Monitor/style/cstyleanimator.h ../Monitor/style/cmanhattanstyle.h ../Monitor/struct/cmsgpowerinfo.h ../Monitor/struct/cmsgobjectstatusinfo.h ../Monitor/struct/cmsgobjectstatus.h ../Monitor/struct/cmsgnull.h ../Monitor/struct/cmsgfirepoint.h ../Monitor/struct/cmsgevacuationgroup.h ../Monitor/struct/cmsgdirectiontest.h ../Monitor/struct/cmsgdeviceinfo.h ../Monitor/struct/cmsgcontrollerinfo.h ../Monitor/dialog/dlginformationwindow.h ../Monitor/dialog/dlgsearchdevice.h ../Monitor/dialog/dlgchangeadd.h ../Monitor/dialog/dlgchangetype.h ../Monitor/dialog/dlghandfireview.h ../Monitor/groupbox.h ../Monitor/cfilterobject.h ../Monitor/cmyiconstyle.h ../Monitor/dialog/tablewidget.h ../Monitor/dialog/dlglogininformation.h ../Monitor/dialog/dlgtimeinterval.h ../Monitor/struct/cmsglogin.h ../Monitor/struct/cmsgloginfo.h ../Monitor/struct/cmsgledinfo.h ../Monitor/keyboard/ckbcontext.h ../Monitor/keyboard/ckeyboard.h ../Monitor/dialog/dlgdevices.h ../Monitor/widget/cstatustabs.h ../Monitor/model/cdevicelistmodel.h ../Monitor/graphics/configfilemanager.h ../Monitor/dialog/dlgusetime.h ../Monitor/dialog/dlguploadlamp.h ../Monitor/dialog/dlgadminparam.h ../Monitor/dialog/dlgadminParamPage.h ../Monitor/graphics/deviceForbidFault.h ../Monitor/graphics/deviceControl.h ../Monitor/dialog/dlgdeviceForbidFault.h ../Monitor/model/cdeviceforbidfaultlistmodel.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Monitor/main.cpp ../Monitor/business/cprocessModbusTcp.cpp ../Monitor/business/cprocessmqtt.cpp ../Monitor/dialog/mqttTest.cpp ../Monitor/graphics/deviceDefaultControl.cpp ../Monitor/widget.cpp ../Monitor/business/cdataprocessing.cpp ../Monitor/dm/ccontroller.cpp ../Monitor/dm/cobject.cpp ../Monitor/dm/cloop.cpp ../Monitor/dm/clayer.cpp ../Monitor/dm/cdm.cpp ../Monitor/dm/cdistribution.cpp ../Monitor/dm/cdevice.cpp ../Monitor/dm/cfirepoint.cpp ../Monitor/dm/cdbsqlite.cpp ../Monitor/dm/ccanport.cpp ../Monitor/graphics/cmath.cpp ../Monitor/model/ctreeitem.cpp ../Monitor/model/ctablemodel.cpp ../Monitor/model/ccontrollertreemodel.cpp ../Monitor/model/ccontrollermodel.cpp ../Monitor/model/cmodel.cpp ../Monitor/model/cloopmodel.cpp ../Monitor/model/cdistributionmodel.cpp ../Monitor/model/cdevicesfindtablemodel.cpp ../Monitor/model/cdevicemodel.cpp ../Monitor/model/cdesigntreemodel.cpp ../Monitor/model/ccanportmodel.cpp ../Monitor/view/ctableview.cpp ../Monitor/view/ccontrollertreeview.cpp ../Monitor/cglobal.cpp ../Monitor/cdevicetype.cpp ../Monitor/model/cinformationmodel.cpp ../Monitor/business/cclientbusiness.cpp ../Monitor/communication/ccommunication.cpp ../Monitor/widget/ctoptoolbar.cpp ../Monitor/widget/ccenterframe.cpp ../Monitor/widget/cbottomtoolbar.cpp ../Monitor/widget/cprogramview.cpp ../Monitor/widget/cprogramtreeview.cpp ../Monitor/widget/cprogramcontrollerview.cpp ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/widget/cprogramdistributionview.cpp ../Monitor/widget/cprogramdeviceview.cpp ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widget/cprogramcontainer.cpp ../Monitor/widget/cinformationlabel.cpp ../Monitor/widget/cdesignview.cpp ../Monitor/widget/cdesigntreeview.cpp ../Monitor/widget/cdesignsplashview.cpp ../Monitor/widget/cdesigncontainer.cpp ../Monitor/dialog/dlgsystemrecordmodel.cpp ../Monitor/dialog/dlgsystemrecord.cpp ../Monitor/dialog/dlgadministrator.cpp ../Monitor/struct/cmsgstructbase.cpp ../Monitor/struct/cmsgrouteconfig.cpp ../Monitor/struct/cmsgprocesstypename.cpp ../Monitor/struct/cmsgprintset.cpp ../Monitor/struct/cmsglog.cpp ../Monitor/struct/cmsgchecktime.cpp ../Monitor/struct/cmsgcheckset.cpp ../Monitor/delegate/cpathdelegate.cpp ../Monitor/delegate/cdevicetypedelegate.cpp ../Monitor/style/cstylehelper.cpp ../Monitor/style/cstyledbar.cpp ../Monitor/style/cstyleanimator.cpp ../Monitor/style/cmanhattanstyle.cpp ../Monitor/struct/cmsgpowerinfo.cpp ../Monitor/struct/cmsgobjectstatusinfo.cpp ../Monitor/struct/cmsgobjectstatus.cpp ../Monitor/struct/cmsgnull.cpp ../Monitor/struct/cmsgfirepoint.cpp ../Monitor/struct/cmsgevacuationgroup.cpp ../Monitor/struct/cmsgdirectiontest.cpp ../Monitor/struct/cmsgdeviceinfo.cpp ../Monitor/struct/cmsgcontrollerinfo.cpp ../Monitor/dialog/dlginformationwindow.cpp ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgchangeadd.cpp ../Monitor/dialog/dlgchangetype.cpp ../Monitor/dialog/dlghandfireview.cpp ../Monitor/groupbox.cpp ../Monitor/cfilterobject.cpp ../Monitor/cmyiconstyle.cpp ../Monitor/dialog/tablewidget.cpp ../Monitor/dialog/dlglogininformation.cpp ../Monitor/dialog/dlgtimeinterval.cpp ../Monitor/struct/cmsglogin.cpp ../Monitor/struct/cmsgloginfo.cpp ../Monitor/struct/cmsgledinfo.cpp ../Monitor/keyboard/ckbcontext.cpp ../Monitor/keyboard/ckeyboard.cpp ../Monitor/dialog/dlgdevices.cpp ../Monitor/widget/cstatustabs.cpp ../Monitor/model/cdevicelistmodel.cpp ../Monitor/graphics/configfilemanager.cpp ../Monitor/dialog/dlgusetime.cpp ../Monitor/dialog/dlguploadlamp.cpp ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminParamPage.cpp ../Monitor/widget/cminisplitter.cpp ../Monitor/graphics/deviceForbidFault.cpp ../Monitor/graphics/deviceControl.cpp ../Monitor/dialog/dlgdeviceForbidFault.cpp ../Monitor/model/cdeviceforbidfaultlistmodel.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Monitor/widget.h ../Monitor/business/cdataprocessing.h ../Monitor/business/cprocessModbusTcp.h ../Monitor/business/cprocessmqtt.h ../Monitor/business/cprocessntp.h ../Monitor/dialog/mqttTest.h ../Monitor/dm/objectstatusenum.h ../Monitor/dm/ccontroller.h ../Monitor/dm/cobject.h ../Monitor/dm/cloop.h ../Monitor/dm/clayer.h ../Monitor/dm/cdm.h ../Monitor/dm/cdistribution.h ../Monitor/dm/cdevice.h ../Monitor/dm/cfirepoint.h ../Monitor/dm/cdbsqlite.h ../Monitor/dm/ccanport.h ../Monitor/graphics/cmath.h ../Monitor/graphics/deviceDefaultControl.h ../Monitor/model/ctreeitem.h ../Monitor/model/ctablemodel.h ../Monitor/model/ccontrollertreemodel.h ../Monitor/model/ccontrollermodel.h ../Monitor/model/cmodel.h ../Monitor/model/cloopmodel.h ../Monitor/model/cdistributionmodel.h ../Monitor/model/cdevicesfindtablemodel.h ../Monitor/model/cdevicemodel.h ../Monitor/model/cdesigntreemodel.h ../Monitor/model/ccanportmodel.h ../Monitor/view/ctableview.h ../Monitor/view/ccontrollertreeview.h ../Monitor/cglobal.h ../Monitor/cdevicetype.h ../Monitor/model/cinformationmodel.h ../Monitor/business/cclientbusiness.h ../Monitor/communication/ccommunication.h ../Monitor/widget/ctoptoolbar.h ../Monitor/widget/ccenterframe.h ../Monitor/widget/cbottomtoolbar.h ../Monitor/widget/cprogramview.h ../Monitor/widget/cprogramtreeview.h ../Monitor/widget/cprogramcontrollerview.h ../Monitor/widget/cprogramcandeviceview.h ../Monitor/widget/cprogramdistributionview.h ../Monitor/widget/cprogramdeviceview.h ../Monitor/widget/cprogramcanportview.h ../Monitor/widget/cprogramcontainer.h ../Monitor/widget/cminisplitter.h ../Monitor/widget/cinformationlabel.h ../Monitor/widget/cdesignview.h ../Monitor/widget/cdesigntreeview.h ../Monitor/widget/cdesignsplashview.h ../Monitor/widget/cdesigncontainer.h ../Monitor/dialog/dlgsystemrecordmodel.h ../Monitor/dialog/dlgsystemrecord.h ../Monitor/dialog/dlgadministrator.h ../Monitor/struct/shardEnum.h ../Monitor/struct/cmsgstructbase.h ../Monitor/struct/cmsgrouteconfig.h ../Monitor/struct/cmsgprocesstypename.h ../Monitor/struct/cmsgprintset.h ../Monitor/struct/cmsglog.h ../Monitor/struct/cmsgchecktime.h ../Monitor/struct/cmsgcheckset.h ../Monitor/struct/shardEnum.h ../Monitor/delegate/cpathdelegate.h ../Monitor/delegate/cdevicetypedelegate.h ../Monitor/style/cstylehelper.h ../Monitor/style/cstyledbar.h ../Monitor/style/cstyleanimator.h ../Monitor/style/cmanhattanstyle.h ../Monitor/struct/cmsgpowerinfo.h ../Monitor/struct/cmsgobjectstatusinfo.h ../Monitor/struct/cmsgobjectstatus.h ../Monitor/struct/cmsgnull.h ../Monitor/struct/cmsgfirepoint.h ../Monitor/struct/cmsgevacuationgroup.h ../Monitor/struct/cmsgdirectiontest.h ../Monitor/struct/cmsgdeviceinfo.h ../Monitor/struct/cmsgcontrollerinfo.h ../Monitor/dialog/dlginformationwindow.h ../Monitor/dialog/dlgsearchdevice.h ../Monitor/dialog/dlgchangeadd.h ../Monitor/dialog/dlgchangetype.h ../Monitor/dialog/dlghandfireview.h ../Monitor/groupbox.h ../Monitor/cfilterobject.h ../Monitor/cmyiconstyle.h ../Monitor/dialog/tablewidget.h ../Monitor/dialog/dlglogininformation.h ../Monitor/dialog/dlgtimeinterval.h ../Monitor/struct/cmsglogin.h ../Monitor/struct/cmsgloginfo.h ../Monitor/struct/cmsgledinfo.h ../Monitor/keyboard/ckbcontext.h ../Monitor/keyboard/ckeyboard.h ../Monitor/dialog/dlgdevices.h ../Monitor/widget/cstatustabs.h ../Monitor/model/cdevicelistmodel.h ../Monitor/graphics/configfilemanager.h ../Monitor/dialog/dlgusetime.h ../Monitor/dialog/dlguploadlamp.h ../Monitor/dialog/dlgadminparam.h ../Monitor/dialog/dlgadminParamPage.h ../Monitor/graphics/deviceForbidFault.h ../Monitor/graphics/deviceControl.h ../Monitor/dialog/dlgdeviceForbidFault.h ../Monitor/model/cdeviceforbidfaultlistmodel.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Monitor/main.cpp ../Monitor/business/cprocessModbusTcp.cpp ../Monitor/business/cprocessmqtt.cpp ../Monitor/business/cprocessntp.cpp ../Monitor/dialog/mqttTest.cpp ../Monitor/graphics/deviceDefaultControl.cpp ../Monitor/widget.cpp ../Monitor/business/cdataprocessing.cpp ../Monitor/dm/ccontroller.cpp ../Monitor/dm/cobject.cpp ../Monitor/dm/cloop.cpp ../Monitor/dm/clayer.cpp ../Monitor/dm/cdm.cpp ../Monitor/dm/cdistribution.cpp ../Monitor/dm/cdevice.cpp ../Monitor/dm/cfirepoint.cpp ../Monitor/dm/cdbsqlite.cpp ../Monitor/dm/ccanport.cpp ../Monitor/graphics/cmath.cpp ../Monitor/model/ctreeitem.cpp ../Monitor/model/ctablemodel.cpp ../Monitor/model/ccontrollertreemodel.cpp ../Monitor/model/ccontrollermodel.cpp ../Monitor/model/cmodel.cpp ../Monitor/model/cloopmodel.cpp ../Monitor/model/cdistributionmodel.cpp ../Monitor/model/cdevicesfindtablemodel.cpp ../Monitor/model/cdevicemodel.cpp ../Monitor/model/cdesigntreemodel.cpp ../Monitor/model/ccanportmodel.cpp ../Monitor/view/ctableview.cpp ../Monitor/view/ccontrollertreeview.cpp ../Monitor/cglobal.cpp ../Monitor/cdevicetype.cpp ../Monitor/model/cinformationmodel.cpp ../Monitor/business/cclientbusiness.cpp ../Monitor/communication/ccommunication.cpp ../Monitor/widget/ctoptoolbar.cpp ../Monitor/widget/ccenterframe.cpp ../Monitor/widget/cbottomtoolbar.cpp ../Monitor/widget/cprogramview.cpp ../Monitor/widget/cprogramtreeview.cpp ../Monitor/widget/cprogramcontrollerview.cpp ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/widget/cprogramdistributionview.cpp ../Monitor/widget/cprogramdeviceview.cpp ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widget/cprogramcontainer.cpp ../Monitor/widget/cinformationlabel.cpp ../Monitor/widget/cdesignview.cpp ../Monitor/widget/cdesigntreeview.cpp ../Monitor/widget/cdesignsplashview.cpp ../Monitor/widget/cdesigncontainer.cpp ../Monitor/dialog/dlgsystemrecordmodel.cpp ../Monitor/dialog/dlgsystemrecord.cpp ../Monitor/dialog/dlgadministrator.cpp ../Monitor/struct/cmsgstructbase.cpp ../Monitor/struct/cmsgrouteconfig.cpp ../Monitor/struct/cmsgprocesstypename.cpp ../Monitor/struct/cmsgprintset.cpp ../Monitor/struct/cmsglog.cpp ../Monitor/struct/cmsgchecktime.cpp ../Monitor/struct/cmsgcheckset.cpp ../Monitor/delegate/cpathdelegate.cpp ../Monitor/delegate/cdevicetypedelegate.cpp ../Monitor/style/cstylehelper.cpp ../Monitor/style/cstyledbar.cpp ../Monitor/style/cstyleanimator.cpp ../Monitor/style/cmanhattanstyle.cpp ../Monitor/struct/cmsgpowerinfo.cpp ../Monitor/struct/cmsgobjectstatusinfo.cpp ../Monitor/struct/cmsgobjectstatus.cpp ../Monitor/struct/cmsgnull.cpp ../Monitor/struct/cmsgfirepoint.cpp ../Monitor/struct/cmsgevacuationgroup.cpp ../Monitor/struct/cmsgdirectiontest.cpp ../Monitor/struct/cmsgdeviceinfo.cpp ../Monitor/struct/cmsgcontrollerinfo.cpp ../Monitor/dialog/dlginformationwindow.cpp ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgchangeadd.cpp ../Monitor/dialog/dlgchangetype.cpp ../Monitor/dialog/dlghandfireview.cpp ../Monitor/groupbox.cpp ../Monitor/cfilterobject.cpp ../Monitor/cmyiconstyle.cpp ../Monitor/dialog/tablewidget.cpp ../Monitor/dialog/dlglogininformation.cpp ../Monitor/dialog/dlgtimeinterval.cpp ../Monitor/struct/cmsglogin.cpp ../Monitor/struct/cmsgloginfo.cpp ../Monitor/struct/cmsgledinfo.cpp ../Monitor/keyboard/ckbcontext.cpp ../Monitor/keyboard/ckeyboard.cpp ../Monitor/dialog/dlgdevices.cpp ../Monitor/widget/cstatustabs.cpp ../Monitor/model/cdevicelistmodel.cpp ../Monitor/graphics/configfilemanager.cpp ../Monitor/dialog/dlgusetime.cpp ../Monitor/dialog/dlguploadlamp.cpp ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminParamPage.cpp ../Monitor/widget/cminisplitter.cpp ../Monitor/graphics/deviceForbidFault.cpp ../Monitor/graphics/deviceControl.cpp ../Monitor/dialog/dlgdeviceForbidFault.cpp ../Monitor/model/cdeviceforbidfaultlistmodel.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Monitor/dialog/mqttTest.ui ../Monitor/widget/cprogramprojectview.ui ../Monitor/widget/cprogramcandeviceview.ui ../Monitor/widget/cprogramformulaview.ui ../Monitor/widget/cprogramdeviceview.ui ../Monitor/widget/cprogramcanportview.ui ../Monitor/dialog/dlgsystemrecord.ui ../Monitor/dialog/dlgadministrator.ui ../Monitor/dialog/dlgsearchdevice.ui ../Monitor/dialog/dlgtimeinterval.ui ../Monitor/dialog/dlghandfireview.ui ../Monitor/keyboard/ckeyboard.ui ../Monitor/dialog/dlgdevices.ui ../Monitor/dialog/dlgchangetype.ui ../Monitor/dialog/dlgchangeadd.ui ../Monitor/dialog/dlgusetime.ui ../Monitor/dialog/dlgadminparam.ui ../Monitor/dialog/dlgadminParamPage.ui ../Monitor/widget/cprogramdistributionview.ui ../Monitor/dialog/dlguploadlamp.ui ../Monitor/dialog/dlgdeviceForbidFault.ui $(DISTDIR)/
 	$(COPY_FILE) --parents Monitor_zh_CN.ts $(DISTDIR)/
 
@@ -1392,10 +1398,10 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /opt/Qt5.12.9/5.12.9/gcc_64/mkspecs/features/data/dummy.cpp
 	g++ -pipe -g -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h /opt/Qt5.12.9/5.12.9/gcc_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_widget.cpp moc_cdataprocessing.cpp moc_cprocessModbusTcp.cpp moc_cprocessmqtt.cpp moc_mqttTest.cpp moc_ccontroller.cpp moc_cobject.cpp moc_cloop.cpp moc_clayer.cpp moc_cdm.cpp moc_cdistribution.cpp moc_cdevice.cpp moc_cfirepoint.cpp moc_cdbsqlite.cpp moc_ccanport.cpp moc_deviceDefaultControl.cpp moc_ctablemodel.cpp moc_ccontrollertreemodel.cpp moc_ccontrollermodel.cpp moc_cmodel.cpp moc_cloopmodel.cpp moc_cdistributionmodel.cpp moc_cdevicesfindtablemodel.cpp moc_cdevicemodel.cpp moc_cdesigntreemodel.cpp moc_ccanportmodel.cpp moc_ctableview.cpp moc_ccontrollertreeview.cpp moc_cglobal.cpp moc_cdevicetype.cpp moc_cinformationmodel.cpp moc_cclientbusiness.cpp moc_ccommunication.cpp moc_ctoptoolbar.cpp moc_ccenterframe.cpp moc_cbottomtoolbar.cpp moc_cprogramview.cpp moc_cprogramtreeview.cpp moc_cprogramcontrollerview.cpp moc_cprogramcandeviceview.cpp moc_cprogramdistributionview.cpp moc_cprogramdeviceview.cpp moc_cprogramcanportview.cpp moc_cprogramcontainer.cpp moc_cminisplitter.cpp moc_cinformationlabel.cpp moc_cdesignview.cpp moc_cdesigntreeview.cpp moc_cdesignsplashview.cpp moc_cdesigncontainer.cpp moc_dlgsystemrecordmodel.cpp moc_dlgsystemrecord.cpp moc_dlgadministrator.cpp moc_cmsgstructbase.cpp moc_cmsgrouteconfig.cpp moc_cmsgprocesstypename.cpp moc_cmsgprintset.cpp moc_cmsglog.cpp moc_cmsgchecktime.cpp moc_cmsgcheckset.cpp moc_cpathdelegate.cpp moc_cdevicetypedelegate.cpp moc_cstyledbar.cpp moc_cstyleanimator.cpp moc_cmanhattanstyle.cpp moc_cmsgpowerinfo.cpp moc_cmsgobjectstatusinfo.cpp moc_cmsgobjectstatus.cpp moc_cmsgnull.cpp moc_cmsgfirepoint.cpp moc_cmsgevacuationgroup.cpp moc_cmsgdirectiontest.cpp moc_cmsgdeviceinfo.cpp moc_cmsgcontrollerinfo.cpp moc_dlginformationwindow.cpp moc_dlgsearchdevice.cpp moc_dlgchangeadd.cpp moc_dlgchangetype.cpp moc_dlghandfireview.cpp moc_groupbox.cpp moc_cfilterobject.cpp moc_cmyiconstyle.cpp moc_tablewidget.cpp moc_dlglogininformation.cpp moc_dlgtimeinterval.cpp moc_cmsglogin.cpp moc_cmsgloginfo.cpp moc_cmsgledinfo.cpp moc_ckbcontext.cpp moc_ckeyboard.cpp moc_dlgdevices.cpp moc_cstatustabs.cpp moc_cdevicelistmodel.cpp moc_configfilemanager.cpp moc_dlgusetime.cpp moc_dlguploadlamp.cpp moc_dlgadminparam.cpp moc_dlgadminParamPage.cpp moc_deviceForbidFault.cpp moc_deviceControl.cpp moc_dlgdeviceForbidFault.cpp moc_cdeviceforbidfaultlistmodel.cpp
+compiler_moc_header_make_all: moc_widget.cpp moc_cdataprocessing.cpp moc_cprocessModbusTcp.cpp moc_cprocessmqtt.cpp moc_cprocessntp.cpp moc_mqttTest.cpp moc_ccontroller.cpp moc_cobject.cpp moc_cloop.cpp moc_clayer.cpp moc_cdm.cpp moc_cdistribution.cpp moc_cdevice.cpp moc_cfirepoint.cpp moc_cdbsqlite.cpp moc_ccanport.cpp moc_deviceDefaultControl.cpp moc_ctablemodel.cpp moc_ccontrollertreemodel.cpp moc_ccontrollermodel.cpp moc_cmodel.cpp moc_cloopmodel.cpp moc_cdistributionmodel.cpp moc_cdevicesfindtablemodel.cpp moc_cdevicemodel.cpp moc_cdesigntreemodel.cpp moc_ccanportmodel.cpp moc_ctableview.cpp moc_ccontrollertreeview.cpp moc_cglobal.cpp moc_cdevicetype.cpp moc_cinformationmodel.cpp moc_cclientbusiness.cpp moc_ccommunication.cpp moc_ctoptoolbar.cpp moc_ccenterframe.cpp moc_cbottomtoolbar.cpp moc_cprogramview.cpp moc_cprogramtreeview.cpp moc_cprogramcontrollerview.cpp moc_cprogramcandeviceview.cpp moc_cprogramdistributionview.cpp moc_cprogramdeviceview.cpp moc_cprogramcanportview.cpp moc_cprogramcontainer.cpp moc_cminisplitter.cpp moc_cinformationlabel.cpp moc_cdesignview.cpp moc_cdesigntreeview.cpp moc_cdesignsplashview.cpp moc_cdesigncontainer.cpp moc_dlgsystemrecordmodel.cpp moc_dlgsystemrecord.cpp moc_dlgadministrator.cpp moc_cmsgstructbase.cpp moc_cmsgrouteconfig.cpp moc_cmsgprocesstypename.cpp moc_cmsgprintset.cpp moc_cmsglog.cpp moc_cmsgchecktime.cpp moc_cmsgcheckset.cpp moc_cpathdelegate.cpp moc_cdevicetypedelegate.cpp moc_cstyledbar.cpp moc_cstyleanimator.cpp moc_cmanhattanstyle.cpp moc_cmsgpowerinfo.cpp moc_cmsgobjectstatusinfo.cpp moc_cmsgobjectstatus.cpp moc_cmsgnull.cpp moc_cmsgfirepoint.cpp moc_cmsgevacuationgroup.cpp moc_cmsgdirectiontest.cpp moc_cmsgdeviceinfo.cpp moc_cmsgcontrollerinfo.cpp moc_dlginformationwindow.cpp moc_dlgsearchdevice.cpp moc_dlgchangeadd.cpp moc_dlgchangetype.cpp moc_dlghandfireview.cpp moc_groupbox.cpp moc_cfilterobject.cpp moc_cmyiconstyle.cpp moc_tablewidget.cpp moc_dlglogininformation.cpp moc_dlgtimeinterval.cpp moc_cmsglogin.cpp moc_cmsgloginfo.cpp moc_cmsgledinfo.cpp moc_ckbcontext.cpp moc_ckeyboard.cpp moc_dlgdevices.cpp moc_cstatustabs.cpp moc_cdevicelistmodel.cpp moc_configfilemanager.cpp moc_dlgusetime.cpp moc_dlguploadlamp.cpp moc_dlgadminparam.cpp moc_dlgadminParamPage.cpp moc_deviceForbidFault.cpp moc_deviceControl.cpp moc_dlgdeviceForbidFault.cpp moc_cdeviceforbidfaultlistmodel.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_widget.cpp moc_cdataprocessing.cpp moc_cprocessModbusTcp.cpp moc_cprocessmqtt.cpp moc_mqttTest.cpp moc_ccontroller.cpp moc_cobject.cpp moc_cloop.cpp moc_clayer.cpp moc_cdm.cpp moc_cdistribution.cpp moc_cdevice.cpp moc_cfirepoint.cpp moc_cdbsqlite.cpp moc_ccanport.cpp moc_deviceDefaultControl.cpp moc_ctablemodel.cpp moc_ccontrollertreemodel.cpp moc_ccontrollermodel.cpp moc_cmodel.cpp moc_cloopmodel.cpp moc_cdistributionmodel.cpp moc_cdevicesfindtablemodel.cpp moc_cdevicemodel.cpp moc_cdesigntreemodel.cpp moc_ccanportmodel.cpp moc_ctableview.cpp moc_ccontrollertreeview.cpp moc_cglobal.cpp moc_cdevicetype.cpp moc_cinformationmodel.cpp moc_cclientbusiness.cpp moc_ccommunication.cpp moc_ctoptoolbar.cpp moc_ccenterframe.cpp moc_cbottomtoolbar.cpp moc_cprogramview.cpp moc_cprogramtreeview.cpp moc_cprogramcontrollerview.cpp moc_cprogramcandeviceview.cpp moc_cprogramdistributionview.cpp moc_cprogramdeviceview.cpp moc_cprogramcanportview.cpp moc_cprogramcontainer.cpp moc_cminisplitter.cpp moc_cinformationlabel.cpp moc_cdesignview.cpp moc_cdesigntreeview.cpp moc_cdesignsplashview.cpp moc_cdesigncontainer.cpp moc_dlgsystemrecordmodel.cpp moc_dlgsystemrecord.cpp moc_dlgadministrator.cpp moc_cmsgstructbase.cpp moc_cmsgrouteconfig.cpp moc_cmsgprocesstypename.cpp moc_cmsgprintset.cpp moc_cmsglog.cpp moc_cmsgchecktime.cpp moc_cmsgcheckset.cpp moc_cpathdelegate.cpp moc_cdevicetypedelegate.cpp moc_cstyledbar.cpp moc_cstyleanimator.cpp moc_cmanhattanstyle.cpp moc_cmsgpowerinfo.cpp moc_cmsgobjectstatusinfo.cpp moc_cmsgobjectstatus.cpp moc_cmsgnull.cpp moc_cmsgfirepoint.cpp moc_cmsgevacuationgroup.cpp moc_cmsgdirectiontest.cpp moc_cmsgdeviceinfo.cpp moc_cmsgcontrollerinfo.cpp moc_dlginformationwindow.cpp moc_dlgsearchdevice.cpp moc_dlgchangeadd.cpp moc_dlgchangetype.cpp moc_dlghandfireview.cpp moc_groupbox.cpp moc_cfilterobject.cpp moc_cmyiconstyle.cpp moc_tablewidget.cpp moc_dlglogininformation.cpp moc_dlgtimeinterval.cpp moc_cmsglogin.cpp moc_cmsgloginfo.cpp moc_cmsgledinfo.cpp moc_ckbcontext.cpp moc_ckeyboard.cpp
-	-$(DEL_FILE) moc_dlgdevices.cpp moc_cstatustabs.cpp moc_cdevicelistmodel.cpp moc_configfilemanager.cpp moc_dlgusetime.cpp moc_dlguploadlamp.cpp moc_dlgadminparam.cpp moc_dlgadminParamPage.cpp moc_deviceForbidFault.cpp moc_deviceControl.cpp moc_dlgdeviceForbidFault.cpp moc_cdeviceforbidfaultlistmodel.cpp
+	-$(DEL_FILE) moc_widget.cpp moc_cdataprocessing.cpp moc_cprocessModbusTcp.cpp moc_cprocessmqtt.cpp moc_cprocessntp.cpp moc_mqttTest.cpp moc_ccontroller.cpp moc_cobject.cpp moc_cloop.cpp moc_clayer.cpp moc_cdm.cpp moc_cdistribution.cpp moc_cdevice.cpp moc_cfirepoint.cpp moc_cdbsqlite.cpp moc_ccanport.cpp moc_deviceDefaultControl.cpp moc_ctablemodel.cpp moc_ccontrollertreemodel.cpp moc_ccontrollermodel.cpp moc_cmodel.cpp moc_cloopmodel.cpp moc_cdistributionmodel.cpp moc_cdevicesfindtablemodel.cpp moc_cdevicemodel.cpp moc_cdesigntreemodel.cpp moc_ccanportmodel.cpp moc_ctableview.cpp moc_ccontrollertreeview.cpp moc_cglobal.cpp moc_cdevicetype.cpp moc_cinformationmodel.cpp moc_cclientbusiness.cpp moc_ccommunication.cpp moc_ctoptoolbar.cpp moc_ccenterframe.cpp moc_cbottomtoolbar.cpp moc_cprogramview.cpp moc_cprogramtreeview.cpp moc_cprogramcontrollerview.cpp moc_cprogramcandeviceview.cpp moc_cprogramdistributionview.cpp moc_cprogramdeviceview.cpp moc_cprogramcanportview.cpp moc_cprogramcontainer.cpp moc_cminisplitter.cpp moc_cinformationlabel.cpp moc_cdesignview.cpp moc_cdesigntreeview.cpp moc_cdesignsplashview.cpp moc_cdesigncontainer.cpp moc_dlgsystemrecordmodel.cpp moc_dlgsystemrecord.cpp moc_dlgadministrator.cpp moc_cmsgstructbase.cpp moc_cmsgrouteconfig.cpp moc_cmsgprocesstypename.cpp moc_cmsgprintset.cpp moc_cmsglog.cpp moc_cmsgchecktime.cpp moc_cmsgcheckset.cpp moc_cpathdelegate.cpp moc_cdevicetypedelegate.cpp moc_cstyledbar.cpp moc_cstyleanimator.cpp moc_cmanhattanstyle.cpp moc_cmsgpowerinfo.cpp moc_cmsgobjectstatusinfo.cpp moc_cmsgobjectstatus.cpp moc_cmsgnull.cpp moc_cmsgfirepoint.cpp moc_cmsgevacuationgroup.cpp moc_cmsgdirectiontest.cpp moc_cmsgdeviceinfo.cpp moc_cmsgcontrollerinfo.cpp moc_dlginformationwindow.cpp moc_dlgsearchdevice.cpp moc_dlgchangeadd.cpp moc_dlgchangetype.cpp moc_dlghandfireview.cpp moc_groupbox.cpp moc_cfilterobject.cpp moc_cmyiconstyle.cpp moc_tablewidget.cpp moc_dlglogininformation.cpp moc_dlgtimeinterval.cpp moc_cmsglogin.cpp moc_cmsgloginfo.cpp moc_cmsgledinfo.cpp
+	-$(DEL_FILE) moc_ckbcontext.cpp moc_ckeyboard.cpp moc_dlgdevices.cpp moc_cstatustabs.cpp moc_cdevicelistmodel.cpp moc_configfilemanager.cpp moc_dlgusetime.cpp moc_dlguploadlamp.cpp moc_dlgadminparam.cpp moc_dlgadminParamPage.cpp moc_deviceForbidFault.cpp moc_deviceControl.cpp moc_dlgdeviceForbidFault.cpp moc_cdeviceforbidfaultlistmodel.cpp
 moc_widget.cpp: ../Monitor/widget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
@@ -1839,6 +1845,89 @@ moc_cprocessmqtt.cpp: ../Monitor/business/cprocessmqtt.h \
 		moc_predefs.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/bin/moc
 	/opt/Qt5.12.9/5.12.9/gcc_64/bin/moc $(DEFINES) --include /home/ubuntu64/work/master-subway/build-Monitor-Arm_Qt5_12_9-Debug/moc_predefs.h -I/opt/Qt5.12.9/5.12.9/gcc_64/mkspecs/linux-g++ -I/home/ubuntu64/work/master-subway/Monitor -I/opt/Qt5.12.9/5.12.9/gcc_64/include -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtXml -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Monitor/business/cprocessmqtt.h -o moc_cprocessmqtt.cpp
+
+moc_cprocessntp.cpp: ../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtcore-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsystemdetection.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocessordetection.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcompilerdetection.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtypeinfo.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTimer \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasictimer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qabstractsocket.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostaddress.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDateTime \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
+		moc_predefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/bin/moc
+	/opt/Qt5.12.9/5.12.9/gcc_64/bin/moc $(DEFINES) --include /home/ubuntu64/work/master-subway/build-Monitor-Arm_Qt5_12_9-Debug/moc_predefs.h -I/opt/Qt5.12.9/5.12.9/gcc_64/mkspecs/linux-g++ -I/home/ubuntu64/work/master-subway/Monitor -I/opt/Qt5.12.9/5.12.9/gcc_64/include -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtXml -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Monitor/business/cprocessntp.h -o moc_cprocessntp.cpp
 
 moc_mqttTest.cpp: ../Monitor/dialog/mqttTest.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
@@ -2895,6 +2984,9 @@ moc_cdevice.cpp: ../Monitor/dm/cdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -4998,6 +5090,9 @@ moc_cglobal.cpp: ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		moc_predefs.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/bin/moc
 	/opt/Qt5.12.9/5.12.9/gcc_64/bin/moc $(DEFINES) --include /home/ubuntu64/work/master-subway/build-Monitor-Arm_Qt5_12_9-Debug/moc_predefs.h -I/opt/Qt5.12.9/5.12.9/gcc_64/mkspecs/linux-g++ -I/home/ubuntu64/work/master-subway/Monitor -I/opt/Qt5.12.9/5.12.9/gcc_64/include -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtXml -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork -I/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Monitor/cglobal.h -o moc_cglobal.cpp
@@ -9967,6 +10062,9 @@ moc_dlghandfireview.cpp: ../Monitor/dialog/dlghandfireview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -10877,6 +10975,9 @@ moc_dlgtimeinterval.cpp: ../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -12789,6 +12890,9 @@ moc_dlgdeviceForbidFault.cpp: ../Monitor/dialog/dlgdeviceForbidFault.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -14572,6 +14676,9 @@ cprocessModbusTcp.o: ../Monitor/business/cprocessModbusTcp.cpp ../Monitor/busine
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -14994,6 +15101,9 @@ cprocessmqtt.o: ../Monitor/business/cprocessmqtt.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -15077,6 +15187,431 @@ cprocessmqtt.o: ../Monitor/business/cprocessmqtt.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qjsondocument.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QJsonObject
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cprocessmqtt.o ../Monitor/business/cprocessmqtt.cpp
+
+cprocessntp.o: ../Monitor/business/cprocessntp.cpp ../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtcore-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsystemdetection.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocessordetection.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcompilerdetection.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtypeinfo.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmargins.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpaintdevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrect.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpalette.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcolor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfiledevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcryptographichash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDateTime \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDesktopWidget \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDir \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdir.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfileinfo.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QDrag \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qdrag.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QDragEnterEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QDragMoveEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QDropEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFile \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QMenu \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qmenu.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QMessageBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qmessagebox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QModelIndex \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QMouseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QMimeData \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmimedata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QNetworkInterface \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qnetworkinterface.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostaddress.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qabstractsocket.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QObject \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPixmap \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPoint \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSet \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSettings \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsettings.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSizePolicy \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QShortcut \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qshortcut.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql/QSqlError \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql/qsqlerror.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql/qtsqlglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql/qtsql-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql/QSqlQuery \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql/qsqlquery.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql/qsqldatabase.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql/QSqlRecord \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql/qsqlrecord.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSortFilterProxyModel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractproxymodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QState \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstate.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractstate.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetaobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QStackedLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstackedlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QStackedWidget \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstackedwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg/QSvgRenderer \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg/qsvgrenderer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qxmlstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg/qtsvgglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTabWidget \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTemporaryFile \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtemporaryfile.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QThread \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qthread.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTimer \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasictimer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QToolButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
+		../Monitor/widget.h \
+		../Monitor/cdevicetype.h \
+		../Monitor/cmyiconstyle.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCommonStyle \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcommonstyle.h \
+		../Monitor/groupbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		../Monitor/cfilterobject.h \
+		../Monitor/business/cclientbusiness.h \
+		../Monitor/struct/shardEnum.h \
+		../Monitor/struct/cmsglog.h \
+		../Monitor/struct/cmsgstructbase.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDataStream \
+		../Monitor/struct/cmsgloginfo.h \
+		../Monitor/struct/cmsgrouteconfig.h \
+		../Monitor/struct/cmsgprocesstypename.h \
+		../Monitor/struct/cmsgobjectstatus.h \
+		../Monitor/struct/cmsgnull.h \
+		../Monitor/struct/cmsglogin.h \
+		../Monitor/struct/cmsgfirepoint.h \
+		../Monitor/struct/cmsgprintset.h \
+		../Monitor/struct/cmsgcheckset.h \
+		../Monitor/struct/cmsgchecktime.h \
+		../Monitor/struct/cmsgdirectiontest.h \
+		../Monitor/struct/cmsgobjectstatusinfo.h \
+		../Monitor/struct/cmsgcontrollerinfo.h \
+		../Monitor/struct/cmsgdeviceinfo.h \
+		../Monitor/struct/cmsgpowerinfo.h \
+		../Monitor/struct/cmsgevacuationgroup.h \
+		../Monitor/struct/cmsgledinfo.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtXml/QDomDocument \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtXml/qdom.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtXml/qtxmlglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtXml/qtxml-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtXml/QDomElement \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtXml/QDomText \
+		../Monitor/business/cdataprocessing.h \
+		../Monitor/business/cprocessModbusTcp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QAbstractSocket \
+		../Monitor/communication/ccommunication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLibrary \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlibrary.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QStringList \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariantList \
+		../Monitor/dialog/dlgadministrator.h \
+		../Monitor/dialog/dlgchangeadd.h \
+		../Monitor/dialog/dlgchangetype.h \
+		../Monitor/dialog/dlgdevices.h \
+		../Monitor/dialog/dlginformationwindow.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QMovie \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmovie.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimagereader.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimageiohandler.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qplugin.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qjsonobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qjsonvalue.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfactoryinterface.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QProgressBar \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qprogressbar.h \
+		../Monitor/dialog/dlglogininformation.h \
+		../Monitor/dialog/dlgsystemrecord.h \
+		../Monitor/dialog/dlgsystemrecordmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QAbstractTableModel \
+		../Monitor/dialog/dlgtimeinterval.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		../Monitor/business/cprocessmqtt.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttauthenticationproperties.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqtttype.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPair \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedDataPointer \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QString \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttconnectionproperties.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttpublishproperties.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttsubscription.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttmessage.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqtttopicname.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QExplicitlySharedDataPointer \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QMetaType \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqtttopicfilter.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttsubscriptionproperties.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QIODevice \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
+		../Monitor/dialog/dlguploadlamp.h \
+		../Monitor/dialog/dlgusetime.h \
+		../Monitor/dialog/tablewidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableWidget \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtablewidget.h \
+		../Monitor/dialog/dlgsearchdevice.h \
+		../Monitor/dialog/dlghandfireview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeWidgetItem \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtreewidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtreeview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtreewidgetitemiterator.h \
+		../Monitor/dm/ccontroller.h \
+		../Monitor/dm/cobject.h \
+		../Monitor/dm/objectstatusenum.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSql/QSqlDatabase \
+		../Monitor/dialog/dlgdeviceForbidFault.h \
+		../Monitor/dialog/dlgadminparam.h \
+		../Monitor/dialog/dlgadminParamPage.h \
+		../Monitor/dm/cdbsqlite.h \
+		../Monitor/dm/clayer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QUndoStack \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qundostack.h \
+		../Monitor/dm/ccanport.h \
+		../Monitor/dm/cdistribution.h \
+		../Monitor/dm/cloop.h \
+		../Monitor/dm/cdevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
+		../Monitor/dm/cfirepoint.h \
+		../Monitor/dm/cdm.h \
+		../Monitor/graphics/cmath.h \
+		../Monitor/graphics/configfilemanager.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QMap \
+		../Monitor/graphics/deviceControl.h \
+		../Monitor/graphics/deviceForbidFault.h \
+		../Monitor/model/ccanportmodel.h \
+		../Monitor/model/cmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QAbstractItemModel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointer \
+		../Monitor/model/ccontrollermodel.h \
+		../Monitor/model/ccontrollertreemodel.h \
+		../Monitor/model/cdesigntreemodel.h \
+		../Monitor/model/cdevicelistmodel.h \
+		../Monitor/model/cdevicemodel.h \
+		../Monitor/model/cdevicesfindtablemodel.h \
+		../Monitor/model/ctablemodel.h \
+		../Monitor/model/cdistributionmodel.h \
+		../Monitor/model/cinformationmodel.h \
+		../Monitor/model/cloopmodel.h \
+		../Monitor/model/ctreeitem.h \
+		../Monitor/widget/cbottomtoolbar.h \
+		../Monitor/widget/ccenterframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSplitter \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsplitter.h \
+		../Monitor/widget/cdesigncontainer.h \
+		../Monitor/widget/cdesignsplashview.h \
+		../Monitor/widget/cdesigntreeview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QItemSelection \
+		../Monitor/widget/cdesignview.h \
+		../Monitor/widget/cinformationlabel.h \
+		../Monitor/widget/cminisplitter.h \
+		../Monitor/widget/cprogramcanportview.h \
+		../Monitor/widget/cprogramcontainer.h \
+		../Monitor/widget/cprogramcontrollerview.h \
+		../Monitor/widget/cprogramdeviceview.h \
+		../Monitor/widget/cprogramdistributionview.h \
+		../Monitor/widget/cprogramcandeviceview.h \
+		../Monitor/widget/cprogramtreeview.h \
+		../Monitor/widget/cprogramview.h \
+		../Monitor/widget/cstatustabs.h \
+		../Monitor/widget/ctoptoolbar.h \
+		../Monitor/style/cstyledbar.h \
+		../Monitor/style/cstylehelper.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QStyle \
+		../Monitor/delegate/cdevicetypedelegate.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QStyledItemDelegate \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
+		../Monitor/view/ctableview.h \
+		../Monitor/view/ccontrollertreeview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTimeZone \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtimezone.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cprocessntp.o ../Monitor/business/cprocessntp.cpp
 
 mqttTest.o: ../Monitor/dialog/mqttTest.cpp ../Monitor/dialog/mqttTest.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
@@ -15417,6 +15952,9 @@ mqttTest.o: ../Monitor/dialog/mqttTest.cpp ../Monitor/dialog/mqttTest.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
 		../Monitor/business/cprocessmqtt.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -15838,6 +16376,9 @@ deviceDefaultControl.o: ../Monitor/graphics/deviceDefaultControl.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -16257,6 +16798,9 @@ widget.o: ../Monitor/widget.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -16675,6 +17219,9 @@ cdataprocessing.o: ../Monitor/business/cdataprocessing.cpp ../Monitor/cglobal.h 
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -17093,6 +17640,9 @@ ccontroller.o: ../Monitor/dm/ccontroller.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -17511,6 +18061,9 @@ cobject.o: ../Monitor/dm/cobject.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -17929,6 +18482,9 @@ cloop.o: ../Monitor/dm/cloop.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -18347,6 +18903,9 @@ clayer.o: ../Monitor/dm/clayer.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -18765,6 +19324,9 @@ cdm.o: ../Monitor/dm/cdm.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -19183,6 +19745,9 @@ cdistribution.o: ../Monitor/dm/cdistribution.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -19601,6 +20166,9 @@ cdevice.o: ../Monitor/dm/cdevice.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -20019,6 +20587,9 @@ cfirepoint.o: ../Monitor/dm/cfirepoint.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -20437,6 +21008,9 @@ cdbsqlite.o: ../Monitor/dm/cdbsqlite.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -20855,6 +21429,9 @@ ccanport.o: ../Monitor/dm/ccanport.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -21273,6 +21850,9 @@ cmath.o: ../Monitor/graphics/cmath.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -21877,6 +22457,9 @@ ccontrollertreemodel.o: ../Monitor/model/ccontrollertreemodel.cpp ../Monitor/cgl
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -22295,6 +22878,9 @@ ccontrollermodel.o: ../Monitor/model/ccontrollermodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -22713,6 +23299,9 @@ cmodel.o: ../Monitor/model/cmodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -23131,6 +23720,9 @@ cloopmodel.o: ../Monitor/model/cloopmodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -23549,6 +24141,9 @@ cdistributionmodel.o: ../Monitor/model/cdistributionmodel.cpp ../Monitor/cglobal
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -23967,6 +24562,9 @@ cdevicesfindtablemodel.o: ../Monitor/model/cdevicesfindtablemodel.cpp ../Monitor
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -24385,6 +24983,9 @@ cdevicemodel.o: ../Monitor/model/cdevicemodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -24803,6 +25404,9 @@ cdesigntreemodel.o: ../Monitor/model/cdesigntreemodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -25221,6 +25825,9 @@ ccanportmodel.o: ../Monitor/model/ccanportmodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -25898,6 +26505,9 @@ cglobal.o: ../Monitor/cglobal.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -26337,6 +26947,9 @@ cdevicetype.o: ../Monitor/cdevicetype.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -26755,6 +27368,9 @@ cinformationmodel.o: ../Monitor/model/cinformationmodel.cpp ../Monitor/cglobal.h
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -27187,6 +27803,9 @@ cclientbusiness.o: ../Monitor/business/cclientbusiness.cpp ../Monitor/business/c
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -27592,6 +28211,9 @@ ccommunication.o: ../Monitor/communication/ccommunication.cpp ../Monitor/cglobal
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -28010,6 +28632,9 @@ ctoptoolbar.o: ../Monitor/widget/ctoptoolbar.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -28428,6 +29053,9 @@ ccenterframe.o: ../Monitor/widget/ccenterframe.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -28846,6 +29474,9 @@ cbottomtoolbar.o: ../Monitor/widget/cbottomtoolbar.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -29264,6 +29895,9 @@ cprogramview.o: ../Monitor/widget/cprogramview.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -29691,6 +30325,9 @@ cprogramtreeview.o: ../Monitor/widget/cprogramtreeview.cpp ../Monitor/widget/cpr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -30101,6 +30738,9 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -30521,6 +31161,9 @@ cprogramcandeviceview.o: ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -30940,6 +31583,9 @@ cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -31358,6 +32004,9 @@ cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdevice
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -31778,6 +32427,9 @@ cprogramcanportview.o: ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widg
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -32195,6 +32847,9 @@ cprogramcontainer.o: ../Monitor/widget/cprogramcontainer.cpp ../Monitor/cglobal.
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -32730,6 +33385,9 @@ cdesignview.o: ../Monitor/widget/cdesignview.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -33148,6 +33806,9 @@ cdesigntreeview.o: ../Monitor/widget/cdesigntreeview.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -33573,6 +34234,9 @@ cdesignsplashview.o: ../Monitor/widget/cdesignsplashview.cpp ../Monitor/widget/c
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -34076,6 +34740,9 @@ cdesigncontainer.o: ../Monitor/widget/cdesigncontainer.cpp ../Monitor/cglobal.h 
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -34494,6 +35161,9 @@ dlgsystemrecordmodel.o: ../Monitor/dialog/dlgsystemrecordmodel.cpp ../Monitor/di
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -34913,6 +35583,9 @@ dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -35332,6 +36005,9 @@ dlgadministrator.o: ../Monitor/dialog/dlgadministrator.cpp ui_dlgadministrator.h
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -36307,6 +36983,9 @@ cdevicetypedelegate.o: ../Monitor/delegate/cdevicetypedelegate.cpp ../Monitor/de
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -37835,6 +38514,9 @@ dlginformationwindow.o: ../Monitor/dialog/dlginformationwindow.cpp ../Monitor/cg
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -38255,6 +38937,9 @@ dlgsearchdevice.o: ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgse
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -38674,6 +39359,9 @@ dlgchangeadd.o: ../Monitor/dialog/dlgchangeadd.cpp ui_dlgchangeadd.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -39093,6 +39781,9 @@ dlgchangetype.o: ../Monitor/dialog/dlgchangetype.cpp ui_dlgchangetype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -39516,6 +40207,9 @@ dlghandfireview.o: ../Monitor/dialog/dlghandfireview.cpp ../Monitor/dialog/dlgha
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -40325,6 +41019,9 @@ dlglogininformation.o: ../Monitor/dialog/dlglogininformation.cpp ../Monitor/cglo
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -40823,6 +41520,9 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QButtonGroup \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qbuttongroup.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgtimeinterval.o ../Monitor/dialog/dlgtimeinterval.cpp
@@ -41485,6 +42185,9 @@ ckeyboard.o: ../Monitor/keyboard/ckeyboard.cpp ../Monitor/keyboard/ckeyboard.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -41904,6 +42607,9 @@ dlgdevices.o: ../Monitor/dialog/dlgdevices.cpp ui_dlgdevices.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -42322,6 +43028,9 @@ cstatustabs.o: ../Monitor/widget/cstatustabs.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -42740,6 +43449,9 @@ cdevicelistmodel.o: ../Monitor/model/cdevicelistmodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -43158,6 +43870,9 @@ configfilemanager.o: ../Monitor/graphics/configfilemanager.cpp ../Monitor/cgloba
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -43655,7 +44370,10 @@ dlgusetime.o: ../Monitor/dialog/dlgusetime.cpp ../Monitor/dialog/dlgusetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgusetime.o ../Monitor/dialog/dlgusetime.cpp
 
 dlguploadlamp.o: ../Monitor/dialog/dlguploadlamp.cpp ui_dlguploadlamp.h \
@@ -43997,6 +44715,9 @@ dlguploadlamp.o: ../Monitor/dialog/dlguploadlamp.cpp ui_dlguploadlamp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableWidget \
@@ -44416,6 +45137,9 @@ dlgadminparam.o: ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -44842,6 +45566,9 @@ dlgadminParamPage.o: ../Monitor/dialog/dlgadminParamPage.cpp ../Monitor/dialog/d
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -45380,6 +46107,9 @@ deviceForbidFault.o: ../Monitor/graphics/deviceForbidFault.cpp ../Monitor/cgloba
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -45798,6 +46528,9 @@ deviceControl.o: ../Monitor/graphics/deviceControl.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -46221,6 +46954,9 @@ dlgdeviceForbidFault.o: ../Monitor/dialog/dlgdeviceForbidFault.cpp ../Monitor/di
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -46636,6 +47372,9 @@ cdeviceforbidfaultlistmodel.o: ../Monitor/model/cdeviceforbidfaultlistmodel.cpp 
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSharedPointer \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qtcpsocket.h \
+		../Monitor/business/cprocessntp.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		../Monitor/dialog/dlguploadlamp.h \
 		../Monitor/dialog/dlgusetime.h \
 		../Monitor/dialog/tablewidget.h \
@@ -46732,6 +47471,9 @@ moc_cprocessModbusTcp.o: moc_cprocessModbusTcp.cpp
 
 moc_cprocessmqtt.o: moc_cprocessmqtt.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_cprocessmqtt.o moc_cprocessmqtt.cpp
+
+moc_cprocessntp.o: moc_cprocessntp.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_cprocessntp.o moc_cprocessntp.cpp
 
 moc_mqttTest.o: moc_mqttTest.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mqttTest.o moc_mqttTest.cpp
