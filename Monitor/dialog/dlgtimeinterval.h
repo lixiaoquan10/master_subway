@@ -60,12 +60,13 @@ public:
     void updateWLANData();
     void updateAdminPuttonGeometry();
     void saveSqliteData(QString ParamName, QString ParamValue);
-    void setHostAddressPort(QString ip, QString port);
+    void setHost1AddressPort(QString ip, QString port);
     void setSystemTime(QString dateTime);
     void setUseTime(int usetime);
     void setIpAndTimeHide(bool enable);
     bool isWLANChanged();
-    bool isHostAddressChanged();
+    bool isHost1AddressChanged();
+    bool isHost2AddressChanged();
     QString getGateway(const QString &interfaceName);
     void setWLANData();
 
@@ -100,7 +101,9 @@ private slots:
 
     void on_EnergyCheckBox_clicked();
 
-    void on_pushButton_saveHostAddress_clicked();
+    void on_pushButton_saveHost1Address_clicked();
+
+    void on_pushButton_saveHost2Address_clicked();
 
     void on_pushButton_can1can2_clicked();
 
@@ -162,7 +165,8 @@ private slots:
 
     void on_pushButton_ModbusTCP_clicked();
 
-    void slot_setComStatus(bool enable);
+    void slot_setCom1Status(bool enable);
+    void slot_setCom2Status(bool enable);
     void slot_setHostControlMsg(int type);
 
 private:
@@ -170,9 +174,13 @@ private:
     bool isThreadRunning;
     TriangleButton *m_triangleButton;
 
-    CprocessMqtt *m_processMqtt;
-    QMqttClient *m_mqttClient;
-    QThread *m_mqttThread;
+    CprocessMqtt *m_processMqtt1;
+    QMqttClient *m_mqttClient1;
+    QThread *m_mqttThread1;
+
+    CprocessMqtt *m_processMqtt2;
+    QMqttClient *m_mqttClient2;
+    QThread *m_mqttThread2;
 
     CprocessNtp *m_processNtp;
     QUdpSocket *m_ntpClient;

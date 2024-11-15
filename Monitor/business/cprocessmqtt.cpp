@@ -9,7 +9,7 @@ CprocessMqtt::CprocessMqtt(QMqttClient *mqttClient) : m_mqttClient(mqttClient)
 {
     m_msgid = 1;
     m_isPingRespond = true;
-    m_productKey = "安科瑞消防疏散";
+    m_productKey = "安科瑞应急照明与疏散指示系统";
     m_reconnectInterval = m_initialReconnectInterval;
     m_deviceSN = CGlobal::instance()->ClientBusiness()->generateUniqueID();
     m_mqttClient->setProtocolVersion(QMqttClient::MQTT_3_1_1);
@@ -179,27 +179,39 @@ void CprocessMqtt::subscribeToTopic(const QString &topic)
         if (subscription)
         {
             data = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
-                            + QLatin1Char('\n')
-                            + QLatin1String("Subscribe to topic:  ")
-                            + topic
-                            + QLatin1Char('\n');
+                    + QLatin1Char('\n')
+                    + m_host
+                    + QLatin1String(":")
+                    + QString::number(m_port)
+                    + QLatin1Char('\n')
+                    + QLatin1String("Subscribe to topic:  ")
+                    + topic
+                    + QLatin1Char('\n');
             connect(subscription, SIGNAL(messageReceived(QByteArray, QMqttTopicName)),
                                 this, SLOT(slot_handleMessageReceived(QByteArray, QMqttTopicName)));
         }
         else
         {
             data = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
-                            + QLatin1Char('\n')
-                            + QLatin1String("Failed to subscribe to topic:  ")
-                            + topic
-                            + QLatin1Char('\n');
+                    + QLatin1Char('\n')
+                    + m_host
+                    + QLatin1String(":")
+                    + QString::number(m_port)
+                    + QLatin1Char('\n')
+                    + QLatin1String("Failed to subscribe to topic:  ")
+                    + topic
+                    + QLatin1Char('\n');
         }
         saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", data);
     } else {
         data = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
-                        + QLatin1Char('\n')
-                        + QLatin1String("SubscribeToTopic failed. MQTT client is not connected.")
-                        + QLatin1Char('\n');
+                + QLatin1Char('\n')
+                + m_host
+                + QLatin1String(":")
+                + QString::number(m_port)
+                + QLatin1Char('\n')
+                + QLatin1String("SubscribeToTopic failed. MQTT client is not connected.")
+                + QLatin1Char('\n');
         saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", data);
         manualDisconnectToBroker();
         manualConnectToBroker(m_host, m_port);
@@ -223,6 +235,10 @@ void CprocessMqtt::publishMessage(const QString &topic, const QByteArray &messag
         }
         QString content = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
                 + QLatin1Char('\n')
+                + m_host
+                + QLatin1String(":")
+                + QString::number(m_port)
+                + QLatin1Char('\n')
                 + QLatin1String("Send Topic: ")
                 + topic
                 + QLatin1Char('\n')
@@ -234,9 +250,13 @@ void CprocessMqtt::publishMessage(const QString &topic, const QByteArray &messag
         saveDataToFile(filePath, content);
     } else {
         QString data = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
-                        + QLatin1Char('\n')
-                        + QLatin1String("MQTT client is not connected.")
-                        + QLatin1Char('\n');
+                + QLatin1Char('\n')
+                + m_host
+                + QLatin1String(":")
+                + QString::number(m_port)
+                + QLatin1Char('\n')
+                + QLatin1String("MQTT client is not connected.")
+                + QLatin1Char('\n');
         saveDataToFile(filePath, data);
         manualDisconnectToBroker();
         manualConnectToBroker(m_host, m_port);
@@ -265,6 +285,10 @@ void CprocessMqtt::slot_messageStatusChanged(quint16 packetId, QMqtt::MessageSta
     }
     QString content = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
             + QLatin1Char('\n')
+            + m_host
+            + QLatin1String(":")
+            + QString::number(m_port)
+            + QLatin1Char('\n')
             + "packetId:"
             + QString::number(packetId)
             + str
@@ -290,6 +314,10 @@ void CprocessMqtt::slot_ResendTimerTimeout()
                 m_sendMessages.remove(packetId);
                 QString content = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
                         + QLatin1Char('\n')
+                        + m_host
+                        + QLatin1String(":")
+                        + QString::number(m_port)
+                        + QLatin1Char('\n')
                         + "No Acknowledged! Resend packetId:"
                         + QString::number(packetId)
                         + QLatin1Char('\n');
@@ -310,12 +338,16 @@ void CprocessMqtt::slot_ResendTimerTimeout()
 void CprocessMqtt::slot_handleMessageReceived(const QByteArray &message, const QMqttTopicName &topic)
 {
     const QString content = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
-                + QLatin1Char('\n')
-                + QLatin1String(" Received Topic: ")
-                + topic.name()
-                + QLatin1Char('\n')
-                + message
-                + QLatin1Char('\n');
+            + QLatin1Char('\n')
+            + m_host
+            + QLatin1String(":")
+            + QString::number(m_port)
+            + QLatin1Char('\n')
+            + QLatin1String(" Received Topic: ")
+            + topic.name()
+            + QLatin1Char('\n')
+            + message
+            + QLatin1Char('\n');
     saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
     if(topic.name() == QString("v1/{%1}/{%2}/sys/service/invoke").arg(m_productKey).arg(m_deviceSN))
     {
@@ -358,6 +390,10 @@ void CprocessMqtt::slot_requestPing()
         QString str = QString::number(m_mqttClient->state());
         const QString content = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
                 + QLatin1Char('\n')
+                + m_host
+                + QLatin1String(":")
+                + QString::number(m_port)
+                + QLatin1Char('\n')
                 + QLatin1String("MQTT requestPing.  state: ")
                 + str
                 + QLatin1Char('\n');
@@ -374,9 +410,13 @@ void CprocessMqtt::slot_pingResponse()
 {
     m_isPingRespond = true;
     const QString content = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz")
-                + QLatin1Char('\n')
-                + QLatin1String("MQTT pingResponse.")
-                + QLatin1Char('\n');
+            + QLatin1Char('\n')
+            + m_host
+            + QLatin1String(":")
+            + QString::number(m_port)
+            + QLatin1Char('\n')
+            + QLatin1String("MQTT pingResponse.")
+            + QLatin1Char('\n');
     saveDataToFile("/home/xfss/root/logfile/MQTTData.txt", content);
 }
 
@@ -569,7 +609,7 @@ QByteArray CprocessMqtt::creatControllerJsonData(CController* controller)
     Q_UNUSED(controller);
     // 创建上行报文
     QJsonObject controllerType;
-    controllerType["value"] = "应急疏散监控主机";
+    controllerType["value"] = "应急照明控制器";
     controllerType["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject controllerID;
@@ -603,8 +643,12 @@ QByteArray CprocessMqtt::creatDistributionJsonData(CDistribution* distribution)
     distributionAddress["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject distributionType;
-    distributionType["value"] = distribution->distributionValue(DISTRIBUTION_VALUE_NAME).toString();
+    distributionType["value"] = "集中电源";
     distributionType["ts"] = QDateTime::currentMSecsSinceEpoch();
+
+    QJsonObject distributionName;
+    distributionName["value"] = distribution->distributionValue(DISTRIBUTION_VALUE_NAME).toString();
+    distributionName["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject distributionArea;
     distributionArea["value"] = distribution->distributionValue(DISTRIBUTION_VALUE_AREA).toString();
@@ -617,6 +661,7 @@ QByteArray CprocessMqtt::creatDistributionJsonData(CDistribution* distribution)
     QJsonObject paramsObj;
     paramsObj["CanDeviceID"] = distributionID;
     paramsObj["Type"] = distributionType;
+    paramsObj["Name"] = distributionName;
     paramsObj["CanDeviceAddress"] = distributionAddress;
     paramsObj["Area"] = distributionArea;
     paramsObj["Location"] = distributionLocation;
@@ -642,6 +687,11 @@ QByteArray CprocessMqtt::creatLoopJsonData(CLoop* loop)
     loopType["value"] = "回路";
     loopType["ts"] = QDateTime::currentMSecsSinceEpoch();
 
+    QJsonObject loopName;
+    QString name = "回路" + QString::number(loop->loopAdd());
+    loopName["value"] = name;
+    loopName["ts"] = QDateTime::currentMSecsSinceEpoch();
+
     QJsonObject loopAddress;
     loopAddress["value"] = QString::number(loop->canportAdd()-2) + "-" +
             QString::number(loop->distributionAdd()) + "-" +
@@ -651,6 +701,7 @@ QByteArray CprocessMqtt::creatLoopJsonData(CLoop* loop)
     QJsonObject paramsObj;
     paramsObj["LoopID"] = loopID;
     paramsObj["Type"] = loopType;
+    paramsObj["Name"] = loopName;
     paramsObj["LoopAddress"] = loopAddress;
 
     QJsonObject msgObj;
@@ -671,8 +722,12 @@ QByteArray CprocessMqtt::creatDeviceJsonData(CDevice* lamp)
     lampID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject lampType;
-    lampType["value"] = lamp->deviceValue(DEVICE_VALUE_TYPE).toString();
+    lampType["value"] = "灯具";
     lampType["ts"] = QDateTime::currentMSecsSinceEpoch();
+
+    QJsonObject lampName;
+    lampName["value"] = lamp->deviceValue(DEVICE_VALUE_TYPE).toString();
+    lampName["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject lampAddress;
     lampAddress["value"] = QString::number(lamp->canportAdd()-2) + "-" +
@@ -693,6 +748,7 @@ QByteArray CprocessMqtt::creatDeviceJsonData(CDevice* lamp)
     QJsonObject paramsObj;
     paramsObj["LampID"] = lampID;
     paramsObj["Type"] = lampType;
+    paramsObj["Name"] = lampName;
     paramsObj["LampAddress"] = lampAddress;
     paramsObj["LampArea"] = lampArea;
     paramsObj["LampLocation"] = lampLocation;
@@ -712,7 +768,7 @@ QByteArray CprocessMqtt::creatControllerStatusJsonData(CController* controller)
 {
     // 创建上行报文
     QJsonObject controllerType;
-    controllerType["value"] = "应急疏散监控主机";
+    controllerType["value"] = "应急照明控制器";
     controllerType["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject controllerID;
@@ -763,8 +819,13 @@ QByteArray CprocessMqtt::creatDistributionStatusJsonData(CDistribution* distribu
     distributionAddress["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject distributionType;
-    distributionType["value"] = distribution->distributionValue(DISTRIBUTION_VALUE_NAME).toString();
+    distributionType["value"] = "集中电源";
     distributionType["ts"] = QDateTime::currentMSecsSinceEpoch();
+
+    QJsonObject distributionName;
+    distributionName["value"] = distribution->distributionValue(DISTRIBUTION_VALUE_NAME).toString();
+    distributionName["ts"] = QDateTime::currentMSecsSinceEpoch();
+
 
     QJsonObject distributionCommunicationFault;
     distributionCommunicationFault["value"] = distribution->getStatus(OBJS_DistributionCommunicationFault)? "True" : "False";
@@ -785,6 +846,7 @@ QByteArray CprocessMqtt::creatDistributionStatusJsonData(CDistribution* distribu
 
     paramsObj["CanDeviceID"] = distributionID;
     paramsObj["Type"] = distributionType;
+    paramsObj["Name"] = distributionName;
     paramsObj["CanDeviceAddress"] = distributionAddress;
     paramsObj["CommunicationFault"] = distributionCommunicationFault;
     paramsObj["MainPowerFault"] = distributionMainPowerFault;
@@ -812,6 +874,11 @@ QByteArray CprocessMqtt::creatLoopStatusJsonData(CLoop* loop)
     loopType["value"] = "回路";
     loopType["ts"] = QDateTime::currentMSecsSinceEpoch();
 
+    QJsonObject loopName;
+    QString name = "回路" + QString::number(loop->loopAdd());
+    loopName["value"] = name;
+    loopName["ts"] = QDateTime::currentMSecsSinceEpoch();
+
     QJsonObject loopAddress;
     loopAddress["value"] = QString::number(loop->canportAdd()-2) + "-" +
             QString::number(loop->distributionAdd()) + "-" +
@@ -825,6 +892,7 @@ QByteArray CprocessMqtt::creatLoopStatusJsonData(CLoop* loop)
     QJsonObject paramsObj;
     paramsObj["LoopID"] = loopID;
     paramsObj["Type"] = loopType;
+    paramsObj["Name"] = loopName;
     paramsObj["LoopAddress"] = loopAddress;
     paramsObj["CommunicationFault"] = loopCommunicationFault;
 
@@ -846,8 +914,12 @@ QByteArray CprocessMqtt::creatDeviceStatusJsonData(CDevice* lamp)
     lampID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject lampType;
-    lampType["value"] = lamp->deviceValue(DEVICE_VALUE_TYPE).toString();
+    lampType["value"] = "灯具";
     lampType["ts"] = QDateTime::currentMSecsSinceEpoch();
+
+    QJsonObject lampName;
+    lampName["value"] = lamp->deviceValue(DEVICE_VALUE_TYPE).toString();
+    lampName["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject lampAddress;
     lampAddress["value"] = QString::number(lamp->canportAdd()-2) + "-" +
@@ -871,6 +943,7 @@ QByteArray CprocessMqtt::creatDeviceStatusJsonData(CDevice* lamp)
     QJsonObject paramsObj;
     paramsObj["LampID"] = lampID;
     paramsObj["Type"] = lampType;
+    paramsObj["Name"] = lampName;
     paramsObj["LampAddress"] = lampAddress;
     paramsObj["CommunicationFault"] = lampCommunicationFault;
     paramsObj["LightFault"] = lampLightFault;

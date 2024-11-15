@@ -552,8 +552,11 @@ public:
     QString m_addressDetail;
     QString m_ControllerID;
 
-    QString m_mqttHost;
-    qint16 m_mqttCom;
+    QString m_mqttHost1;
+    qint16 m_mqttCom1;
+
+    QString m_mqttHost2;
+    qint16 m_mqttCom2;
 
     int m_ARTUType;
 

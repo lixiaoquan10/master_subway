@@ -100,18 +100,18 @@ public:
     QLabel *label_8;
     QLineEdit *m_pingResult;
     QSpacerItem *horizontalSpacer_4;
-    QGroupBox *hostAddressSetBox;
+    QGroupBox *host1AddressSetBox;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout_17;
-    QLabel *label_HostAddress;
-    QLineEdit *m_hostAddress;
+    QLabel *label_Host1Address;
+    QLineEdit *m_host1Address;
     QHBoxLayout *horizontalLayout_5;
-    QLabel *label_com;
-    QLineEdit *m_com;
-    QPushButton *pushButton_saveHostAddress;
+    QLabel *label_com1;
+    QLineEdit *m_com1;
+    QPushButton *pushButton_saveHost1Address;
     QHBoxLayout *horizontalLayout_25;
-    QLabel *label_comStatus;
-    QLineEdit *m_comStatus;
+    QLabel *label_com1Status;
+    QLineEdit *m_com1Status;
     QGroupBox *StartRuleBox;
     QVBoxLayout *verticalLayout_15;
     QCheckBox *allStartCheckBox;
@@ -165,6 +165,18 @@ public:
     QCheckBox *ARTU426CheckBox;
     QGroupBox *groupBox_ModbusTCP;
     QPushButton *pushButton_ModbusTCP;
+    QGroupBox *host2AddressSetBox;
+    QVBoxLayout *verticalLayout_9;
+    QHBoxLayout *horizontalLayout_18;
+    QLabel *label_Host2Address;
+    QLineEdit *m_host2Address;
+    QHBoxLayout *horizontalLayout_6;
+    QLabel *label_com2;
+    QLineEdit *m_com2;
+    QPushButton *pushButton_saveHost2Address;
+    QHBoxLayout *horizontalLayout_29;
+    QLabel *label_com2Status;
+    QLineEdit *m_com2Status;
 
     void setupUi(QDialog *dlgTimeInterval)
     {
@@ -511,7 +523,7 @@ public:
 
         UseTimeBox = new QGroupBox(dlgTimeInterval);
         UseTimeBox->setObjectName(QString::fromUtf8("UseTimeBox"));
-        UseTimeBox->setGeometry(QRect(340, 400, 210, 70));
+        UseTimeBox->setGeometry(QRect(340, 390, 210, 70));
         UseTimeBox->setFont(font1);
         UseTimeBox->setCheckable(false);
         UseTimeBox->setChecked(false);
@@ -543,7 +555,7 @@ public:
 
         timeBox = new QGroupBox(dlgTimeInterval);
         timeBox->setObjectName(QString::fromUtf8("timeBox"));
-        timeBox->setGeometry(QRect(580, 140, 190, 140));
+        timeBox->setGeometry(QRect(830, 140, 190, 140));
         timeBox->setFont(font1);
         verticalLayout_4 = new QVBoxLayout(timeBox);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
@@ -676,91 +688,91 @@ public:
 
         verticalLayout_10->addLayout(horizontalLayout_11);
 
-        hostAddressSetBox = new QGroupBox(dlgTimeInterval);
-        hostAddressSetBox->setObjectName(QString::fromUtf8("hostAddressSetBox"));
-        hostAddressSetBox->setGeometry(QRect(330, 140, 220, 140));
-        hostAddressSetBox->setFont(font1);
-        verticalLayout_5 = new QVBoxLayout(hostAddressSetBox);
+        host1AddressSetBox = new QGroupBox(dlgTimeInterval);
+        host1AddressSetBox->setObjectName(QString::fromUtf8("host1AddressSetBox"));
+        host1AddressSetBox->setGeometry(QRect(330, 140, 220, 140));
+        host1AddressSetBox->setFont(font1);
+        verticalLayout_5 = new QVBoxLayout(host1AddressSetBox);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         horizontalLayout_17 = new QHBoxLayout();
         horizontalLayout_17->setObjectName(QString::fromUtf8("horizontalLayout_17"));
-        label_HostAddress = new QLabel(hostAddressSetBox);
-        label_HostAddress->setObjectName(QString::fromUtf8("label_HostAddress"));
-        label_HostAddress->setMinimumSize(QSize(50, 28));
-        label_HostAddress->setMaximumSize(QSize(50, 28));
-        label_HostAddress->setFont(font1);
+        label_Host1Address = new QLabel(host1AddressSetBox);
+        label_Host1Address->setObjectName(QString::fromUtf8("label_Host1Address"));
+        label_Host1Address->setMinimumSize(QSize(50, 28));
+        label_Host1Address->setMaximumSize(QSize(50, 28));
+        label_Host1Address->setFont(font1);
 
-        horizontalLayout_17->addWidget(label_HostAddress);
+        horizontalLayout_17->addWidget(label_Host1Address);
 
-        m_hostAddress = new QLineEdit(hostAddressSetBox);
-        m_hostAddress->setObjectName(QString::fromUtf8("m_hostAddress"));
-        sizePolicy2.setHeightForWidth(m_hostAddress->sizePolicy().hasHeightForWidth());
-        m_hostAddress->setSizePolicy(sizePolicy2);
-        m_hostAddress->setMinimumSize(QSize(140, 28));
-        m_hostAddress->setMaximumSize(QSize(140, 28));
-        m_hostAddress->setFont(font1);
-        m_hostAddress->setEchoMode(QLineEdit::Normal);
+        m_host1Address = new QLineEdit(host1AddressSetBox);
+        m_host1Address->setObjectName(QString::fromUtf8("m_host1Address"));
+        sizePolicy2.setHeightForWidth(m_host1Address->sizePolicy().hasHeightForWidth());
+        m_host1Address->setSizePolicy(sizePolicy2);
+        m_host1Address->setMinimumSize(QSize(140, 28));
+        m_host1Address->setMaximumSize(QSize(140, 28));
+        m_host1Address->setFont(font1);
+        m_host1Address->setEchoMode(QLineEdit::Normal);
 
-        horizontalLayout_17->addWidget(m_hostAddress);
+        horizontalLayout_17->addWidget(m_host1Address);
 
 
         verticalLayout_5->addLayout(horizontalLayout_17);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        label_com = new QLabel(hostAddressSetBox);
-        label_com->setObjectName(QString::fromUtf8("label_com"));
-        label_com->setMinimumSize(QSize(50, 28));
-        label_com->setMaximumSize(QSize(50, 28));
-        label_com->setFont(font1);
+        label_com1 = new QLabel(host1AddressSetBox);
+        label_com1->setObjectName(QString::fromUtf8("label_com1"));
+        label_com1->setMinimumSize(QSize(50, 28));
+        label_com1->setMaximumSize(QSize(50, 28));
+        label_com1->setFont(font1);
 
-        horizontalLayout_5->addWidget(label_com);
+        horizontalLayout_5->addWidget(label_com1);
 
-        m_com = new QLineEdit(hostAddressSetBox);
-        m_com->setObjectName(QString::fromUtf8("m_com"));
-        sizePolicy2.setHeightForWidth(m_com->sizePolicy().hasHeightForWidth());
-        m_com->setSizePolicy(sizePolicy2);
-        m_com->setMinimumSize(QSize(60, 28));
-        m_com->setMaximumSize(QSize(60, 28));
-        m_com->setFont(font1);
-        m_com->setEchoMode(QLineEdit::Normal);
+        m_com1 = new QLineEdit(host1AddressSetBox);
+        m_com1->setObjectName(QString::fromUtf8("m_com1"));
+        sizePolicy2.setHeightForWidth(m_com1->sizePolicy().hasHeightForWidth());
+        m_com1->setSizePolicy(sizePolicy2);
+        m_com1->setMinimumSize(QSize(60, 28));
+        m_com1->setMaximumSize(QSize(60, 28));
+        m_com1->setFont(font1);
+        m_com1->setEchoMode(QLineEdit::Normal);
 
-        horizontalLayout_5->addWidget(m_com);
+        horizontalLayout_5->addWidget(m_com1);
 
-        pushButton_saveHostAddress = new QPushButton(hostAddressSetBox);
-        pushButton_saveHostAddress->setObjectName(QString::fromUtf8("pushButton_saveHostAddress"));
-        sizePolicy2.setHeightForWidth(pushButton_saveHostAddress->sizePolicy().hasHeightForWidth());
-        pushButton_saveHostAddress->setSizePolicy(sizePolicy2);
-        pushButton_saveHostAddress->setMinimumSize(QSize(0, 28));
-        pushButton_saveHostAddress->setMaximumSize(QSize(80, 28));
-        pushButton_saveHostAddress->setFont(font1);
+        pushButton_saveHost1Address = new QPushButton(host1AddressSetBox);
+        pushButton_saveHost1Address->setObjectName(QString::fromUtf8("pushButton_saveHost1Address"));
+        sizePolicy2.setHeightForWidth(pushButton_saveHost1Address->sizePolicy().hasHeightForWidth());
+        pushButton_saveHost1Address->setSizePolicy(sizePolicy2);
+        pushButton_saveHost1Address->setMinimumSize(QSize(0, 28));
+        pushButton_saveHost1Address->setMaximumSize(QSize(80, 28));
+        pushButton_saveHost1Address->setFont(font1);
 
-        horizontalLayout_5->addWidget(pushButton_saveHostAddress);
+        horizontalLayout_5->addWidget(pushButton_saveHost1Address);
 
 
         verticalLayout_5->addLayout(horizontalLayout_5);
 
         horizontalLayout_25 = new QHBoxLayout();
         horizontalLayout_25->setObjectName(QString::fromUtf8("horizontalLayout_25"));
-        label_comStatus = new QLabel(hostAddressSetBox);
-        label_comStatus->setObjectName(QString::fromUtf8("label_comStatus"));
-        label_comStatus->setMinimumSize(QSize(0, 28));
-        label_comStatus->setMaximumSize(QSize(16777215, 28));
-        label_comStatus->setFont(font1);
+        label_com1Status = new QLabel(host1AddressSetBox);
+        label_com1Status->setObjectName(QString::fromUtf8("label_com1Status"));
+        label_com1Status->setMinimumSize(QSize(0, 28));
+        label_com1Status->setMaximumSize(QSize(16777215, 28));
+        label_com1Status->setFont(font1);
 
-        horizontalLayout_25->addWidget(label_comStatus);
+        horizontalLayout_25->addWidget(label_com1Status);
 
-        m_comStatus = new QLineEdit(hostAddressSetBox);
-        m_comStatus->setObjectName(QString::fromUtf8("m_comStatus"));
-        sizePolicy2.setHeightForWidth(m_comStatus->sizePolicy().hasHeightForWidth());
-        m_comStatus->setSizePolicy(sizePolicy2);
-        m_comStatus->setMinimumSize(QSize(0, 28));
-        m_comStatus->setMaximumSize(QSize(150, 28));
-        m_comStatus->setFont(font1);
-        m_comStatus->setEchoMode(QLineEdit::Normal);
-        m_comStatus->setReadOnly(true);
+        m_com1Status = new QLineEdit(host1AddressSetBox);
+        m_com1Status->setObjectName(QString::fromUtf8("m_com1Status"));
+        sizePolicy2.setHeightForWidth(m_com1Status->sizePolicy().hasHeightForWidth());
+        m_com1Status->setSizePolicy(sizePolicy2);
+        m_com1Status->setMinimumSize(QSize(0, 28));
+        m_com1Status->setMaximumSize(QSize(150, 28));
+        m_com1Status->setFont(font1);
+        m_com1Status->setEchoMode(QLineEdit::Normal);
+        m_com1Status->setReadOnly(true);
 
-        horizontalLayout_25->addWidget(m_comStatus);
+        horizontalLayout_25->addWidget(m_com1Status);
 
 
         verticalLayout_5->addLayout(horizontalLayout_25);
@@ -847,7 +859,7 @@ public:
 
         testLinkageComBox = new QGroupBox(dlgTimeInterval);
         testLinkageComBox->setObjectName(QString::fromUtf8("testLinkageComBox"));
-        testLinkageComBox->setGeometry(QRect(800, 140, 220, 140));
+        testLinkageComBox->setGeometry(QRect(580, 300, 220, 140));
         testLinkageComBox->setFont(font1);
         verticalLayout_2 = new QVBoxLayout(testLinkageComBox);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
@@ -950,7 +962,7 @@ public:
 
         groupBox_phoneNumber = new QGroupBox(dlgTimeInterval);
         groupBox_phoneNumber->setObjectName(QString::fromUtf8("groupBox_phoneNumber"));
-        groupBox_phoneNumber->setGeometry(QRect(340, 310, 210, 70));
+        groupBox_phoneNumber->setGeometry(QRect(340, 300, 210, 70));
         groupBox_phoneNumber->setFont(font1);
         horizontalLayout_26 = new QHBoxLayout(groupBox_phoneNumber);
         horizontalLayout_26->setObjectName(QString::fromUtf8("horizontalLayout_26"));
@@ -972,7 +984,7 @@ public:
 
         groupBox_firepointNumber = new QGroupBox(dlgTimeInterval);
         groupBox_firepointNumber->setObjectName(QString::fromUtf8("groupBox_firepointNumber"));
-        groupBox_firepointNumber->setGeometry(QRect(780, 310, 170, 70));
+        groupBox_firepointNumber->setGeometry(QRect(1030, 370, 170, 70));
         groupBox_firepointNumber->setFont(font1);
         horizontalLayout_27 = new QHBoxLayout(groupBox_firepointNumber);
         horizontalLayout_27->setObjectName(QString::fromUtf8("horizontalLayout_27"));
@@ -1030,7 +1042,7 @@ public:
         pushButton_lamptwinkleconfig->setFont(font1);
         ARTUBox = new QGroupBox(dlgTimeInterval);
         ARTUBox->setObjectName(QString::fromUtf8("ARTUBox"));
-        ARTUBox->setGeometry(QRect(580, 310, 170, 135));
+        ARTUBox->setGeometry(QRect(830, 300, 170, 135));
         ARTUBox->setFont(font1);
         ARTUBox->setCheckable(false);
         ARTUBox->setChecked(false);
@@ -1062,13 +1074,102 @@ public:
 
         groupBox_ModbusTCP = new QGroupBox(dlgTimeInterval);
         groupBox_ModbusTCP->setObjectName(QString::fromUtf8("groupBox_ModbusTCP"));
-        groupBox_ModbusTCP->setGeometry(QRect(780, 400, 170, 80));
+        groupBox_ModbusTCP->setGeometry(QRect(1030, 460, 170, 80));
         groupBox_ModbusTCP->setFont(font1);
         pushButton_ModbusTCP = new QPushButton(groupBox_ModbusTCP);
         pushButton_ModbusTCP->setObjectName(QString::fromUtf8("pushButton_ModbusTCP"));
         pushButton_ModbusTCP->setGeometry(QRect(20, 40, 130, 28));
         pushButton_ModbusTCP->setMinimumSize(QSize(130, 28));
         pushButton_ModbusTCP->setFont(font1);
+        host2AddressSetBox = new QGroupBox(dlgTimeInterval);
+        host2AddressSetBox->setObjectName(QString::fromUtf8("host2AddressSetBox"));
+        host2AddressSetBox->setGeometry(QRect(580, 140, 220, 140));
+        host2AddressSetBox->setFont(font1);
+        verticalLayout_9 = new QVBoxLayout(host2AddressSetBox);
+        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
+        horizontalLayout_18 = new QHBoxLayout();
+        horizontalLayout_18->setObjectName(QString::fromUtf8("horizontalLayout_18"));
+        label_Host2Address = new QLabel(host2AddressSetBox);
+        label_Host2Address->setObjectName(QString::fromUtf8("label_Host2Address"));
+        label_Host2Address->setMinimumSize(QSize(50, 28));
+        label_Host2Address->setMaximumSize(QSize(50, 28));
+        label_Host2Address->setFont(font1);
+
+        horizontalLayout_18->addWidget(label_Host2Address);
+
+        m_host2Address = new QLineEdit(host2AddressSetBox);
+        m_host2Address->setObjectName(QString::fromUtf8("m_host2Address"));
+        sizePolicy2.setHeightForWidth(m_host2Address->sizePolicy().hasHeightForWidth());
+        m_host2Address->setSizePolicy(sizePolicy2);
+        m_host2Address->setMinimumSize(QSize(140, 28));
+        m_host2Address->setMaximumSize(QSize(140, 28));
+        m_host2Address->setFont(font1);
+        m_host2Address->setEchoMode(QLineEdit::Normal);
+
+        horizontalLayout_18->addWidget(m_host2Address);
+
+
+        verticalLayout_9->addLayout(horizontalLayout_18);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        label_com2 = new QLabel(host2AddressSetBox);
+        label_com2->setObjectName(QString::fromUtf8("label_com2"));
+        label_com2->setMinimumSize(QSize(50, 28));
+        label_com2->setMaximumSize(QSize(50, 28));
+        label_com2->setFont(font1);
+
+        horizontalLayout_6->addWidget(label_com2);
+
+        m_com2 = new QLineEdit(host2AddressSetBox);
+        m_com2->setObjectName(QString::fromUtf8("m_com2"));
+        sizePolicy2.setHeightForWidth(m_com2->sizePolicy().hasHeightForWidth());
+        m_com2->setSizePolicy(sizePolicy2);
+        m_com2->setMinimumSize(QSize(60, 28));
+        m_com2->setMaximumSize(QSize(60, 28));
+        m_com2->setFont(font1);
+        m_com2->setEchoMode(QLineEdit::Normal);
+
+        horizontalLayout_6->addWidget(m_com2);
+
+        pushButton_saveHost2Address = new QPushButton(host2AddressSetBox);
+        pushButton_saveHost2Address->setObjectName(QString::fromUtf8("pushButton_saveHost2Address"));
+        sizePolicy2.setHeightForWidth(pushButton_saveHost2Address->sizePolicy().hasHeightForWidth());
+        pushButton_saveHost2Address->setSizePolicy(sizePolicy2);
+        pushButton_saveHost2Address->setMinimumSize(QSize(0, 28));
+        pushButton_saveHost2Address->setMaximumSize(QSize(80, 28));
+        pushButton_saveHost2Address->setFont(font1);
+
+        horizontalLayout_6->addWidget(pushButton_saveHost2Address);
+
+
+        verticalLayout_9->addLayout(horizontalLayout_6);
+
+        horizontalLayout_29 = new QHBoxLayout();
+        horizontalLayout_29->setObjectName(QString::fromUtf8("horizontalLayout_29"));
+        label_com2Status = new QLabel(host2AddressSetBox);
+        label_com2Status->setObjectName(QString::fromUtf8("label_com2Status"));
+        label_com2Status->setMinimumSize(QSize(0, 28));
+        label_com2Status->setMaximumSize(QSize(16777215, 28));
+        label_com2Status->setFont(font1);
+
+        horizontalLayout_29->addWidget(label_com2Status);
+
+        m_com2Status = new QLineEdit(host2AddressSetBox);
+        m_com2Status->setObjectName(QString::fromUtf8("m_com2Status"));
+        sizePolicy2.setHeightForWidth(m_com2Status->sizePolicy().hasHeightForWidth());
+        m_com2Status->setSizePolicy(sizePolicy2);
+        m_com2Status->setMinimumSize(QSize(0, 28));
+        m_com2Status->setMaximumSize(QSize(150, 28));
+        m_com2Status->setFont(font1);
+        m_com2Status->setEchoMode(QLineEdit::Normal);
+        m_com2Status->setReadOnly(true);
+
+        horizontalLayout_29->addWidget(m_com2Status);
+
+
+        verticalLayout_9->addLayout(horizontalLayout_29);
+
 
         retranslateUi(dlgTimeInterval);
 
@@ -1112,11 +1213,11 @@ public:
         label_6->setText(QApplication::translate("dlgTimeInterval", "IP\345\234\260\345\235\200:", nullptr));
         pingButton->setText(QApplication::translate("dlgTimeInterval", "ping", nullptr));
         label_8->setText(QApplication::translate("dlgTimeInterval", "\346\265\213\350\257\225\346\210\220\345\212\237\347\216\207:", nullptr));
-        hostAddressSetBox->setTitle(QApplication::translate("dlgTimeInterval", "\351\200\232\350\256\257\345\234\260\345\235\200", nullptr));
-        label_HostAddress->setText(QApplication::translate("dlgTimeInterval", "\345\234\260\345\235\200:", nullptr));
-        label_com->setText(QApplication::translate("dlgTimeInterval", "\347\253\257\345\217\243:", nullptr));
-        pushButton_saveHostAddress->setText(QApplication::translate("dlgTimeInterval", "\344\277\235\345\255\230\350\256\276\347\275\256", nullptr));
-        label_comStatus->setText(QApplication::translate("dlgTimeInterval", "\351\200\232\350\256\257\347\212\266\346\200\201:", nullptr));
+        host1AddressSetBox->setTitle(QApplication::translate("dlgTimeInterval", "MQTT1\351\200\232\350\256\257\345\234\260\345\235\200", nullptr));
+        label_Host1Address->setText(QApplication::translate("dlgTimeInterval", "\345\234\260\345\235\200:", nullptr));
+        label_com1->setText(QApplication::translate("dlgTimeInterval", "\347\253\257\345\217\243:", nullptr));
+        pushButton_saveHost1Address->setText(QApplication::translate("dlgTimeInterval", "\344\277\235\345\255\230\350\256\276\347\275\256", nullptr));
+        label_com1Status->setText(QApplication::translate("dlgTimeInterval", "\351\200\232\350\256\257\347\212\266\346\200\201:", nullptr));
         StartRuleBox->setTitle(QApplication::translate("dlgTimeInterval", "\345\220\257\345\212\250\350\247\204\345\210\231", nullptr));
         allStartCheckBox->setText(QApplication::translate("dlgTimeInterval", "\345\205\250\351\203\250\345\220\257\345\212\250", nullptr));
         onlyStartGroupCheckBox->setText(QApplication::translate("dlgTimeInterval", "\345\210\206\347\273\204\345\220\257\345\212\250", nullptr));
@@ -1159,6 +1260,11 @@ public:
         ARTU426CheckBox->setText(QApplication::translate("dlgTimeInterval", "\345\220\257\347\224\250ARTU-426", nullptr));
         groupBox_ModbusTCP->setTitle(QApplication::translate("dlgTimeInterval", "ModbusTCP\346\234\215\345\212\241", nullptr));
         pushButton_ModbusTCP->setText(QApplication::translate("dlgTimeInterval", "\345\257\274\345\207\272\345\257\204\345\255\230\345\231\250\347\202\271\350\241\250", nullptr));
+        host2AddressSetBox->setTitle(QApplication::translate("dlgTimeInterval", "MQTT2\351\200\232\350\256\257\345\234\260\345\235\200", nullptr));
+        label_Host2Address->setText(QApplication::translate("dlgTimeInterval", "\345\234\260\345\235\200:", nullptr));
+        label_com2->setText(QApplication::translate("dlgTimeInterval", "\347\253\257\345\217\243:", nullptr));
+        pushButton_saveHost2Address->setText(QApplication::translate("dlgTimeInterval", "\344\277\235\345\255\230\350\256\276\347\275\256", nullptr));
+        label_com2Status->setText(QApplication::translate("dlgTimeInterval", "\351\200\232\350\256\257\347\212\266\346\200\201:", nullptr));
     } // retranslateUi
 
 };

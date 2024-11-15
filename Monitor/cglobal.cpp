@@ -146,8 +146,11 @@ CGlobal::CGlobal(QObject *parent) : QObject(parent)
     m_baudRate = "19200";
     m_startFirepointNumber = 2;
 
-    m_mqttHost = "";
-    m_mqttCom = 0;
+    m_mqttHost1 = "";
+    m_mqttCom1 = 0;
+
+    m_mqttHost2 = "";
+    m_mqttCom2 = 0;
 
     m_ARTUType = 0;
 

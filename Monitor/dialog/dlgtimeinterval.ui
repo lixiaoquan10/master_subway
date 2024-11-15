@@ -864,7 +864,7 @@
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>400</y>
+     <y>390</y>
      <width>210</width>
      <height>70</height>
     </rect>
@@ -952,7 +952,7 @@
   <widget class="QGroupBox" name="timeBox">
    <property name="geometry">
     <rect>
-     <x>580</x>
+     <x>830</x>
      <y>140</y>
      <width>190</width>
      <height>140</height>
@@ -1295,7 +1295,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QGroupBox" name="hostAddressSetBox">
+  <widget class="QGroupBox" name="host1AddressSetBox">
    <property name="geometry">
     <rect>
      <x>330</x>
@@ -1310,13 +1310,13 @@
     </font>
    </property>
    <property name="title">
-    <string>通讯地址</string>
+    <string>MQTT1通讯地址</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_5">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_17">
       <item>
-       <widget class="QLabel" name="label_HostAddress">
+       <widget class="QLabel" name="label_Host1Address">
         <property name="minimumSize">
          <size>
           <width>50</width>
@@ -1340,7 +1340,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="m_hostAddress">
+       <widget class="QLineEdit" name="m_host1Address">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -1374,7 +1374,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_5">
       <item>
-       <widget class="QLabel" name="label_com">
+       <widget class="QLabel" name="label_com1">
         <property name="minimumSize">
          <size>
           <width>50</width>
@@ -1398,7 +1398,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="m_com">
+       <widget class="QLineEdit" name="m_com1">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -1428,7 +1428,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_saveHostAddress">
+       <widget class="QPushButton" name="pushButton_saveHost1Address">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -1462,7 +1462,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_25">
       <item>
-       <widget class="QLabel" name="label_comStatus">
+       <widget class="QLabel" name="label_com1Status">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -1486,7 +1486,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="m_comStatus">
+       <widget class="QLineEdit" name="m_com1Status">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -1725,8 +1725,8 @@
   <widget class="QGroupBox" name="testLinkageComBox">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>140</y>
+     <x>580</x>
+     <y>300</y>
      <width>220</width>
      <height>140</height>
     </rect>
@@ -2008,7 +2008,7 @@
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>310</y>
+     <y>300</y>
      <width>210</width>
      <height>70</height>
     </rect>
@@ -2072,8 +2072,8 @@
   <widget class="QGroupBox" name="groupBox_firepointNumber">
    <property name="geometry">
     <rect>
-     <x>780</x>
-     <y>310</y>
+     <x>1030</x>
+     <y>370</y>
      <width>170</width>
      <height>70</height>
     </rect>
@@ -2253,8 +2253,8 @@
   <widget class="QGroupBox" name="ARTUBox">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>310</y>
+     <x>830</x>
+     <y>300</y>
      <width>170</width>
      <height>135</height>
     </rect>
@@ -2327,8 +2327,8 @@
   <widget class="QGroupBox" name="groupBox_ModbusTCP">
    <property name="geometry">
     <rect>
-     <x>780</x>
-     <y>400</y>
+     <x>1030</x>
+     <y>460</y>
      <width>170</width>
      <height>80</height>
     </rect>
@@ -2365,6 +2365,233 @@
      <string>导出寄存器点表</string>
     </property>
    </widget>
+  </widget>
+  <widget class="QGroupBox" name="host2AddressSetBox">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>140</y>
+     <width>220</width>
+     <height>140</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="title">
+    <string>MQTT2通讯地址</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_9">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_18">
+      <item>
+       <widget class="QLabel" name="label_Host2Address">
+        <property name="minimumSize">
+         <size>
+          <width>50</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>地址:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="m_host2Address">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>140</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>140</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_com2">
+        <property name="minimumSize">
+         <size>
+          <width>50</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>端口:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="m_com2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_saveHost2Address">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>80</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>保存设置</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_29">
+      <item>
+       <widget class="QLabel" name="label_com2Status">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>通讯状态:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="m_com2Status">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

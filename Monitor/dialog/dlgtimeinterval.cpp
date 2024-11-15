@@ -97,22 +97,39 @@ dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
     m_triangleButton->setGeometry(1320,610,32,32);
     connect(m_triangleButton, SIGNAL(clicked()), this, SLOT(on_triangleButton_clicked()));
 
-    ui->m_comStatus->setText("未连接");
-    m_mqttClient = new QMqttClient;
-    m_processMqtt = new CprocessMqtt(m_mqttClient);
+    ui->m_com1Status->setText("未连接");
+    ui->m_com2Status->setText("未连接");
+    m_mqttClient1 = new QMqttClient;
+    m_processMqtt1 = new CprocessMqtt(m_mqttClient1);
     // 创建MQTT线程
-    m_mqttThread = new QThread;
-    m_mqttClient->moveToThread(m_mqttThread);
+    m_mqttThread1 = new QThread;
+    m_mqttClient1->moveToThread(m_mqttThread1);
     // 启动MQTT线程
-    m_mqttThread->start();
+    m_mqttThread1->start();
     connect(CGlobal::instance()->ClientBusiness(), SIGNAL(statusSendToMQTT(CObject*, bool)),
-            m_processMqtt, SLOT(slot_sendDeviceStatusMsg(CObject*, bool)));
-    connect(m_processMqtt, SIGNAL(hostControlMsg(int)),
+            m_processMqtt1, SLOT(slot_sendDeviceStatusMsg(CObject*, bool)));
+    connect(m_processMqtt1, SIGNAL(hostControlMsg(int)),
             this, SLOT(slot_setHostControlMsg(int)));
-    connect(m_processMqtt, SIGNAL(connectStatus(bool)),
-            this, SLOT(slot_setComStatus(bool)));
+    connect(m_processMqtt1, SIGNAL(connectStatus(bool)),
+            this, SLOT(slot_setCom1Status(bool)));
     connect(this, SIGNAL(uploadStatusToMQTT()),
-            m_processMqtt, SLOT(slot_uploadAllDeviceStatus()));
+            m_processMqtt1, SLOT(slot_uploadAllDeviceStatus()));
+
+    m_mqttClient2 = new QMqttClient;
+    m_processMqtt2 = new CprocessMqtt(m_mqttClient2);
+    // 创建MQTT线程
+    m_mqttThread2 = new QThread;
+    m_mqttClient2->moveToThread(m_mqttThread2);
+    // 启动MQTT线程
+    m_mqttThread2->start();
+    connect(CGlobal::instance()->ClientBusiness(), SIGNAL(statusSendToMQTT(CObject*, bool)),
+            m_processMqtt2, SLOT(slot_sendDeviceStatusMsg(CObject*, bool)));
+    connect(m_processMqtt2, SIGNAL(hostControlMsg(int)),
+            this, SLOT(slot_setHostControlMsg(int)));
+    connect(m_processMqtt2, SIGNAL(connectStatus(bool)),
+            this, SLOT(slot_setCom2Status(bool)));
+    connect(this, SIGNAL(uploadStatusToMQTT()),
+            m_processMqtt2, SLOT(slot_uploadAllDeviceStatus()));
 
     m_ntpClient = new QUdpSocket;
     m_processNtp = new CprocessNtp("cn.pool.ntp.org", m_ntpClient);
@@ -129,9 +146,13 @@ dlgTimeInterval::~dlgTimeInterval()
     delete ui;
     CGlobal::instance()->setTimeInterval(NULL);
     CGlobal::instance()->m_HaveDialog = false;
-    delete m_mqttClient;
-    delete m_processMqtt;
-    delete m_mqttThread;
+    delete m_mqttClient1;
+    delete m_processMqtt1;
+    delete m_mqttThread1;
+
+    delete m_mqttClient2;
+    delete m_processMqtt2;
+    delete m_mqttThread2;
 
     delete m_ntpClient;
     delete m_processNtp;
@@ -785,30 +806,56 @@ void dlgTimeInterval::on_pushButton_saveWlan_clicked()
 }
 
 
-void dlgTimeInterval::on_pushButton_saveHostAddress_clicked()
+void dlgTimeInterval::on_pushButton_saveHost1Address_clicked()
 {
-    qDebug() << "dlgTimeInterval::on_pushButton_saveHostAddress_clicked"
+    qDebug() << "dlgTimeInterval::on_pushButton_saveHost1Address_clicked"
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
 
-    if(!isHostAddressChanged())
+    if(!isHost1AddressChanged())
         return;
-    saveSqliteData("MQTTHost", ui->m_hostAddress->text());
-    saveSqliteData("MQTTCom", ui->m_com->text());
-    CGlobal::instance()->m_mqttHost = ui->m_hostAddress->text();
-    CGlobal::instance()->m_mqttCom = ui->m_com->text().toInt();
-    m_processMqtt->manualDisconnectToBroker();
-    m_processMqtt->manualConnectToBroker(CGlobal::instance()->m_mqttHost,CGlobal::instance()->m_mqttCom);
+    saveSqliteData("MQTT1Host", ui->m_host1Address->text());
+    saveSqliteData("MQTT1Com", ui->m_com1->text());
+    CGlobal::instance()->m_mqttHost1 = ui->m_host1Address->text();
+    CGlobal::instance()->m_mqttCom1 = ui->m_com1->text().toInt();
+    m_processMqtt1->manualDisconnectToBroker();
+    m_processMqtt1->manualConnectToBroker(CGlobal::instance()->m_mqttHost1,CGlobal::instance()->m_mqttCom1);
     QFile file("home/xfss/root/logfile/IPChangeRecord.txt");
     // 以追加写入模式打开文件，如果文件不存在则新建
     if (file.open(QIODevice::Append | QIODevice::Text))
     {
         QTextStream out(&file);
         QString str = "////" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss:zzz") + "\n" +
-                "MQTT地址:" + ui->m_hostAddress->text() + "\n" +
-                "MQTT端口号:" + ui->m_com->text() + "\n" + "\n";
+                "MQTT1地址:" + ui->m_host1Address->text() + "\n" +
+                "MQTT1端口号:" + ui->m_com1->text() + "\n" + "\n";
         out << str;  // 写入数据
         file.close();
     }  
+}
+
+void dlgTimeInterval::on_pushButton_saveHost2Address_clicked()
+{
+    qDebug() << "dlgTimeInterval::on_pushButton_saveHost2Address_clicked"
+             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
+
+    if(!isHost2AddressChanged())
+        return;
+    saveSqliteData("MQTTHost2", ui->m_host2Address->text());
+    saveSqliteData("MQTTCom2", ui->m_com2->text());
+    CGlobal::instance()->m_mqttHost2 = ui->m_host2Address->text();
+    CGlobal::instance()->m_mqttCom2 = ui->m_com2->text().toInt();
+    m_processMqtt2->manualDisconnectToBroker();
+    m_processMqtt2->manualConnectToBroker(CGlobal::instance()->m_mqttHost2,CGlobal::instance()->m_mqttCom2);
+    QFile file("home/xfss/root/logfile/IPChangeRecord.txt");
+    // 以追加写入模式打开文件，如果文件不存在则新建
+    if (file.open(QIODevice::Append | QIODevice::Text))
+    {
+        QTextStream out(&file);
+        QString str = "////" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss:zzz") + "\n" +
+                "MQTT1地址:" + ui->m_host2Address->text() + "\n" +
+                "MQTT1端口号:" + ui->m_com2->text() + "\n" + "\n";
+        out << str;  // 写入数据
+        file.close();
+    }
 }
 
 void dlgTimeInterval::on_pushButton_lampForbidList_clicked()
@@ -937,12 +984,12 @@ void dlgTimeInterval::systemChanged()
 }
 
 //设置显示通讯地址端口号
-void dlgTimeInterval::setHostAddressPort(QString ip, QString port)
+void dlgTimeInterval::setHost1AddressPort(QString ip, QString port)
 {
-    qDebug() << "dlgTimeInterval::setHostIpPort"
+    qDebug() << "dlgTimeInterval::setHost1IpPort"
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
-    ui->m_hostAddress->setText(ip);
-    ui->m_com->setText(port);
+    ui->m_host1Address->setText(ip);
+    ui->m_com1->setText(port);
 }
 
 
@@ -1034,14 +1081,24 @@ void dlgTimeInterval::on_pushButton_ModbusTCP_clicked()
 }
 
 //设置显示连接设备通讯状态
-void dlgTimeInterval::slot_setComStatus(bool enable)
+void dlgTimeInterval::slot_setCom1Status(bool enable)
 {
     qDebug() << "dlgTimeInterval::setComStatus"
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
     if(enable)
-        ui->m_comStatus->setText("已连接");
+        ui->m_com1Status->setText("已连接");
     else
-        ui->m_comStatus->setText("未连接");
+        ui->m_com1Status->setText("未连接");
+}
+
+void dlgTimeInterval::slot_setCom2Status(bool enable)
+{
+    qDebug() << "dlgTimeInterval::setComStatus"
+             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
+    if(enable)
+        ui->m_com2Status->setText("已连接");
+    else
+        ui->m_com2Status->setText("未连接");
 }
 
 //设置MQTT服务器控制指令
@@ -1084,13 +1141,24 @@ bool dlgTimeInterval::isWLANChanged()
 }
 
 
-bool dlgTimeInterval::isHostAddressChanged()
+bool dlgTimeInterval::isHost1AddressChanged()
 {
-    qDebug() << "dlgTimeInterval::isHostAddressChanged"
+    qDebug() << "dlgTimeInterval::isHost1AddressChanged"
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
-    if(ui->m_hostAddress->text() != CGlobal::instance()->m_mqttHost)
+    if(ui->m_host1Address->text() != CGlobal::instance()->m_mqttHost1)
         return true;
-    if(ui->m_com->text() != QString::number(CGlobal::instance()->m_mqttCom))
+    if(ui->m_com1->text() != QString::number(CGlobal::instance()->m_mqttCom1))
+        return true;
+    return false;
+}
+
+bool dlgTimeInterval::isHost2AddressChanged()
+{
+    qDebug() << "dlgTimeInterval::isHost2AddressChanged"
+             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
+    if(ui->m_host2Address->text() != CGlobal::instance()->m_mqttHost2)
+        return true;
+    if(ui->m_com2->text() != QString::number(CGlobal::instance()->m_mqttCom2))
         return true;
     return false;
 }
@@ -1146,6 +1214,8 @@ void dlgTimeInterval::updateSqliteData()
         ui->version_can7can8->hide();
         ui->pushButton_can7can8->hide();
         ui->VersionBox->setFixedHeight(140);
+        ui->groupBox_firepointNumber->move(1030, 300);
+        ui->groupBox_ModbusTCP->move(1030, 390);
     }
     else if(CGlobal::instance()->m_nCanNumber == 8)
     {
@@ -1190,9 +1260,14 @@ void dlgTimeInterval::updateSqliteData()
     ui->timeEdit->setCalendarPopup(true);
     ui->timeEdit->setDateTime(QDateTime::currentDateTime());
 
-    ui->m_hostAddress->setText(CGlobal::instance()->m_mqttHost);
-    ui->m_com->setText(QString::number(CGlobal::instance()->m_mqttCom));
-    m_processMqtt->manualConnectToBroker(CGlobal::instance()->m_mqttHost, CGlobal::instance()->m_mqttCom);
+    ui->m_host1Address->setText(CGlobal::instance()->m_mqttHost1);
+    ui->m_com1->setText(QString::number(CGlobal::instance()->m_mqttCom1));
+    m_processMqtt1->manualConnectToBroker(CGlobal::instance()->m_mqttHost1, CGlobal::instance()->m_mqttCom1);
+
+    ui->m_host2Address->setText(CGlobal::instance()->m_mqttHost2);
+    ui->m_com2->setText(QString::number(CGlobal::instance()->m_mqttCom2));
+    m_processMqtt2->manualConnectToBroker(CGlobal::instance()->m_mqttHost2, CGlobal::instance()->m_mqttCom2);
+
     m_processNtp->startNtpTimer();
 }
 //更新WLAN地址相关信息
@@ -1352,14 +1427,16 @@ void dlgTimeInterval::setIpAndTimeHide(bool enable)
     if(enable)
     {
         ui->wlanBox->hide();
-        ui->hostAddressSetBox->hide();
+        ui->host1AddressSetBox->hide();
+        ui->host2AddressSetBox->hide();
         ui->timeBox->hide();
         ui->pingBox->hide();
     }
     else
     {
         ui->wlanBox->show();
-        ui->hostAddressSetBox->show();
+        ui->host1AddressSetBox->show();
+        ui->host2AddressSetBox->hide();
         ui->timeBox->show();
         ui->pingBox->show();
     }

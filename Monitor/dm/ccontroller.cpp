@@ -218,13 +218,21 @@ void CController::paramInit(QSqlDatabase db)
             CGlobal::instance()->m_baudRate = query.value(fieldParamValue).toString();
             QTimer::singleShot(6000,this,SLOT(slot_updateLinkageBaudrate()));
         }
-        else if(query.value(fieldParamName).toString() == "MQTTHost")
+        else if(query.value(fieldParamName).toString() == "MQTTHost1")
         {
-            CGlobal::instance()->m_mqttHost = query.value(fieldParamValue).toString();
+            CGlobal::instance()->m_mqttHost1 = query.value(fieldParamValue).toString();
         }
-        else if(query.value(fieldParamName).toString() == "MQTTCom")
+        else if(query.value(fieldParamName).toString() == "MQTTCom1")
         {
-            CGlobal::instance()->m_mqttCom = query.value(fieldParamValue).toInt();
+            CGlobal::instance()->m_mqttCom1 = query.value(fieldParamValue).toInt();
+        }
+        else if(query.value(fieldParamName).toString() == "MQTTHost2")
+        {
+            CGlobal::instance()->m_mqttHost2 = query.value(fieldParamValue).toString();
+        }
+        else if(query.value(fieldParamName).toString() == "MQTTCom2")
+        {
+            CGlobal::instance()->m_mqttCom2 = query.value(fieldParamValue).toInt();
         }
         else if(query.value(fieldParamName).toString() == "ARTUType")
         {
