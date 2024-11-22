@@ -35,6 +35,11 @@ CprocessNtp::~CprocessNtp()
 
 void CprocessNtp::startNtpTimer()
 {
+//    if(ntpAddress != "")
+//    {
+//        QHostInfo hostInfo = QHostInfo::fromName(ntpAddress);
+//        m_hostAddress = hostInfo.addresses().first();
+//    }
     m_ntpTimer->start(600000);
 }
 
@@ -91,7 +96,7 @@ void CprocessNtp::onResponseReceived()
                     + ntpDateTime.toString("yyyy-MM-dd HH:mm:ss")
                     + QLatin1Char('\n')
                     + QLatin1String("current time:")
-                    + QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss")
+                    + currentDateTime.toString("yyyy-MM-dd HH:mm:ss")
                     + QLatin1Char('\n');
             QFile file("/home/xfss/root/logfile/NTPData.txt");
             if (file.open(QIODevice::Append | QIODevice::Text))

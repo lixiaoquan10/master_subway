@@ -109,7 +109,7 @@ static const uint qt_meta_data_CprocessMqtt[] = {
     QMetaType::Void, QMetaType::Int,    5,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::QByteArray,    7,    8,
+    QMetaType::Bool, QMetaType::QString, QMetaType::QByteArray,    7,    8,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QByteArray, 0x80000000 | 12,    8,    7,
@@ -133,7 +133,8 @@ void CprocessMqtt::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         switch (_id) {
         case 0: _t->connectStatus((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 1: _t->hostControlMsg((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: _t->publishMessage((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QByteArray(*)>(_a[2]))); break;
+        case 2: { bool _r = _t->publishMessage((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QByteArray(*)>(_a[2])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         case 3: _t->slot_updateLogStateChange(); break;
         case 4: _t->slot_brokerDisconnected(); break;
         case 5: _t->slot_handleMessageReceived((*reinterpret_cast< const QByteArray(*)>(_a[1])),(*reinterpret_cast< const QMqttTopicName(*)>(_a[2]))); break;

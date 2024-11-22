@@ -36,8 +36,10 @@ public:
 
     void saveDataToFile(QString fileName, QString data);   //保存到文件
 
+    void clearSendData();        // 清理发送相关数据
+
 public slots:
-    void publishMessage(const QString &topic, const QByteArray &message);                     //发送数据
+    bool publishMessage(const QString &topic, const QByteArray &message);                     //发送数据
     void slot_updateLogStateChange();                                                         //连接状态变化
     void slot_brokerDisconnected();                                                           //服务器断开连接
     void slot_handleMessageReceived(const QByteArray &message, const QMqttTopicName &topic);  //数据接收
@@ -66,6 +68,7 @@ private:
     QMap<quint16, QPair<QByteArray, QString>> m_sendMessages;  // 维护每个 packetId 对应的消息内容和主题
     const int m_resendTimeout = 3000;       // 3秒超时
     bool m_isPingRespond;                   // 是否有回复
+    int m_pingNoRespondCount;               // 未回复次数
 
     int m_reconnectInterval;                     // 当前重连时间间隔（毫秒）
     const int m_initialReconnectInterval = 3000; // 初始重连时间间隔

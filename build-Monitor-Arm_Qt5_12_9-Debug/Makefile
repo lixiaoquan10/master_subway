@@ -41524,7 +41524,9 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QButtonGroup \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qbuttongroup.h
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgtimeinterval.o ../Monitor/dialog/dlgtimeinterval.cpp
 
 cmsglogin.o: ../Monitor/struct/cmsglogin.cpp ../Monitor/struct/cmsglogin.h \

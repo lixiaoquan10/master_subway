@@ -73,13 +73,16 @@ public:
     void setTestLinkageComResult(QString str);
     void setLinkageComStatus(QString str);
     void uploadStatusToMqtt();
+    //配置MQTT通讯网络
+    void configureRoute(QString wlanName, QString wlanIP,
+                        QString wlanGateway, QString mqttIP);
 
     QString m_getTmpip1;
-    QString m_getTmpgateway1;
+//    QString m_getTmpgateway1;
     QString m_getTmpmask1;
 
     QString m_getTmpip2;
-    QString m_getTmpgateway2;
+//    QString m_getTmpgateway2;
     QString m_getTmpmask2;
 
     QString m_dateTimeStr;
@@ -169,15 +172,20 @@ private slots:
     void slot_setCom2Status(bool enable);
     void slot_setHostControlMsg(int type);
 
+    void onMqttSocketConnected1();
+    void onMqttSocketConnected2();
+
 private:
     Ui::dlgTimeInterval *ui;
     bool isThreadRunning;
     TriangleButton *m_triangleButton;
 
+    QTcpSocket *m_tcpSocket1;
     CprocessMqtt *m_processMqtt1;
     QMqttClient *m_mqttClient1;
     QThread *m_mqttThread1;
 
+    QTcpSocket *m_tcpSocket2;
     CprocessMqtt *m_processMqtt2;
     QMqttClient *m_mqttClient2;
     QThread *m_mqttThread2;

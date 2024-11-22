@@ -218,6 +218,14 @@ void CController::paramInit(QSqlDatabase db)
             CGlobal::instance()->m_baudRate = query.value(fieldParamValue).toString();
             QTimer::singleShot(6000,this,SLOT(slot_updateLinkageBaudrate()));
         }
+        else if(query.value(fieldParamName).toString() == "Wlan1Gateway")
+        {
+            CGlobal::instance()->m_wlan1Gateway = query.value(fieldParamValue).toString();
+        }
+        else if(query.value(fieldParamName).toString() == "Wlan2Gateway")
+        {
+            CGlobal::instance()->m_wlan2Gateway = query.value(fieldParamValue).toString();
+        }
         else if(query.value(fieldParamName).toString() == "MQTTHost1")
         {
             CGlobal::instance()->m_mqttHost1 = query.value(fieldParamValue).toString();
@@ -234,11 +242,16 @@ void CController::paramInit(QSqlDatabase db)
         {
             CGlobal::instance()->m_mqttCom2 = query.value(fieldParamValue).toInt();
         }
+        else if(query.value(fieldParamName).toString() == "NTPAddress")
+        {
+            CGlobal::instance()->m_ntpAddress = query.value(fieldParamValue).toString();
+        }
         else if(query.value(fieldParamName).toString() == "ARTUType")
         {
             CGlobal::instance()->m_ARTUType = query.value(fieldParamValue).toInt();
         }
     }
+    CGlobal::instance()->TimeInterval()->updateWLANData();
     CGlobal::instance()->TimeInterval()->updateSqliteData();
     CGlobal::instance()->AdminParamPage()->updateSqliteData();
     CMsgObjectStatus msgObjectStatus;

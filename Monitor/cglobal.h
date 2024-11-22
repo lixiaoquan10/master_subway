@@ -552,11 +552,16 @@ public:
     QString m_addressDetail;
     QString m_ControllerID;
 
+    QString m_wlan1Gateway;
+    QString m_wlan2Gateway;
+
     QString m_mqttHost1;
     qint16 m_mqttCom1;
 
     QString m_mqttHost2;
     qint16 m_mqttCom2;
+
+    QString m_ntpAddress;
 
     int m_ARTUType;
 
@@ -591,12 +596,12 @@ public:
     QWidget* m_lineEditwidget;
     bool m_isdialogMousePress;
 
-    int m_nCanportAddress;         //?????CAN??   CAN1-CAN4(3-6)
-    int m_nDistriAddress;          //???????????
-    int m_nLoopAddress;            //?????????
-    bool m_isSelectDistribution;   //??????????
-    bool m_isSelectLoop;           //????????
-    bool m_isDelUnregLampFlag;     //?????????????
+    int m_nCanportAddress;         //CAN1-CAN4(3-6)
+    int m_nDistriAddress;
+    int m_nLoopAddress;
+    bool m_isSelectDistribution;
+    bool m_isSelectLoop;
+    bool m_isDelUnregLampFlag;
     int m_FireEmergencyTime;
     int m_noFireEmergencyTime;
     int m_OpenA;

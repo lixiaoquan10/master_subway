@@ -146,11 +146,16 @@ CGlobal::CGlobal(QObject *parent) : QObject(parent)
     m_baudRate = "19200";
     m_startFirepointNumber = 2;
 
+    m_wlan1Gateway = "";
+    m_wlan2Gateway = "";
+
     m_mqttHost1 = "";
     m_mqttCom1 = 0;
 
     m_mqttHost2 = "";
     m_mqttCom2 = 0;
+
+    m_ntpAddress = "";
 
     m_ARTUType = 0;
 

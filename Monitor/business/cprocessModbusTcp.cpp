@@ -291,6 +291,8 @@ void CprocessModbusTcp::processReceiveData(QByteArray array)
             replySendData(data);
         }
     }
+    else
+        m_receiveBuff.clear();
 }
 
 void CprocessModbusTcp::replySendData(QByteArray data)
