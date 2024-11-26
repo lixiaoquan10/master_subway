@@ -10,6 +10,8 @@ dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::dlgTimeInterval)
 {
+    qDebug() << "dlgTimeInterval::dlgTimeInterval"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     ui->setupUi(this);
     this->setWindowTitle("系统设置");
     setWindowFlags(Qt::FramelessWindowHint);
@@ -98,7 +100,6 @@ dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
 
     ui->m_com1Status->setText("未连接");
     ui->m_com2Status->setText("未连接");
-//    m_tcpSocket1 = new QTcpSocket;
     m_mqttClient1 = new QMqttClient;
     m_mqttClient1->setUsername("SEMODEL");
     m_mqttClient1->setPassword("se_model");
@@ -117,14 +118,13 @@ dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
     connect(this, SIGNAL(uploadStatusToMQTT()),
             m_processMqtt1, SLOT(slot_uploadAllDeviceStatus()));
 
-    m_tcpSocket2 = new QTcpSocket;
     m_mqttClient2 = new QMqttClient;
     m_processMqtt2 = new CprocessMqtt(m_mqttClient2);
     // 创建MQTT线程
-//    m_mqttThread2 = new QThread;
-//    m_mqttClient2->moveToThread(m_mqttThread2);
-//    // 启动MQTT线程
-//    m_mqttThread2->start();
+    m_mqttThread2 = new QThread;
+    m_mqttClient2->moveToThread(m_mqttThread2);
+    // 启动MQTT线程
+    m_mqttThread2->start();
     connect(CGlobal::instance()->ClientBusiness(), SIGNAL(statusSendToMQTT(CObject*, bool)),
             m_processMqtt2, SLOT(slot_sendDeviceStatusMsg(CObject*, bool)));
     connect(m_processMqtt2, SIGNAL(hostControlMsg(int)),
@@ -135,12 +135,12 @@ dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
             m_processMqtt2, SLOT(slot_uploadAllDeviceStatus()));
 
     m_ntpClient = new QUdpSocket;
-    m_processNtp = new CprocessNtp("cn.pool.ntp.org", m_ntpClient);
-//    // 创建NTP线程
+//    // 创建ntp线程
 //    m_ntpThread = new QThread;
-//    m_processNtp->moveToThread(m_ntpThread);
-//    // 启动MQTT线程
+//    m_ntpClient->moveToThread(m_ntpThread);
+//    // 启动ntp线程
 //    m_ntpThread->start();
+//    m_processNtp = new CprocessNtp("cn.pool.ntp.org", m_ntpClient);
 }
 
 
@@ -169,7 +169,9 @@ void dlgTimeInterval::saveSqliteData(QString ParamName, QString ParamValue)
 {
     qDebug() << "dlgTimeInterval::saveSqliteData"
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
-    QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLite101.db";
+    if(ParamValue.isEmpty())
+        return;
+    QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLiteCE100.db";
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");;
     db.setDatabaseName(fileName);
     if(!db.open())
@@ -253,15 +255,6 @@ void dlgTimeInterval::on_Can4CheckBox_clicked()
 {
     qDebug() << "dlgTimeInterval::on_Can4CheckBox_clicked"
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
-//    QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLite101.db";
-//    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");;
-//    db.setDatabaseName(fileName);
-//    if(!db.open())
-//        return;
-//    QSqlQuery query(db);
-//    query.exec(QString("INSERT OR REPLACE INTO ParamInfo (ParamName, ParamValue) VALUES ('CanNumber', '%1');").arg(4));
-//    db.commit();
-//    db.close();
     saveSqliteData("CanNumber", QString::number(4));
 }
 
@@ -287,7 +280,7 @@ void dlgTimeInterval::on_Can8CheckBox_clicked()
     messageBox.setText(log);
     messageBox.exec();
     CGlobal::instance()->m_HaveDialog = false;
-//    QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLite101.db";
+//    QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLiteCE100.db.db";
 //    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");;
 //    db.setDatabaseName(fileName);
 //    if(!db.open())
@@ -304,7 +297,7 @@ void dlgTimeInterval::on_singleWLAN_clicked()
     qDebug() << "dlgTimeInterval::on_singleWLAN_clicked"
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
     CGlobal::instance()->m_isDoubleWLAN = false;
-//    QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLite101.db";
+//    QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLiteCE100.db.db";
 //    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");;
 //    db.setDatabaseName(fileName);
 //    if(!db.open())
@@ -339,7 +332,7 @@ void dlgTimeInterval::on_doubleWLAN_clicked()
     messageBox.exec();
     CGlobal::instance()->m_HaveDialog = false;
     CGlobal::instance()->m_isDoubleWLAN = true;
-//    QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLite101.db";
+//    QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLiteCE100.db.db";
 //    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");;
 //    db.setDatabaseName(fileName);
 //    if(!db.open())
@@ -508,7 +501,7 @@ void dlgTimeInterval::on_pushButton_testLinkageCom_clicked()
     if(ret == QMessageBox::Yes)
     {
         CGlobal::instance()->m_baudRate = ui->comboBox_testLinkageCom->currentText();
-//        QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLite101.db";
+//        QString fileName = CGlobal::instance()->workspaces() + "/" + "ESSQLiteCE100.db.db";
 //        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");;
 //        db.setDatabaseName(fileName);
 //        if(!db.open())
@@ -688,13 +681,6 @@ void dlgTimeInterval::slot_ipsetFinished()
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
     // 进入 dlgTimeInterval 界面的逻辑
     CGlobal::instance()->TimeInterval()->exec();
-    configureRoute("enp1s0", m_getTmpip1, CGlobal::instance()->m_wlan1Gateway,
-                   CGlobal::instance()->m_mqttHost1);
-    if(CGlobal::instance()->m_isDoubleWLAN)
-    {
-        configureRoute(CGlobal::instance()->m_wlanName, m_getTmpip2,
-                       CGlobal::instance()->m_wlan2Gateway, CGlobal::instance()->m_mqttHost2);
-    }
     QThread *finishedThread = qobject_cast<QThread*>(sender());
     if (finishedThread) {
         // 等待线程结束，确保线程执行已完成
@@ -776,6 +762,7 @@ void ipsetThread::run()
     }
 
 }
+
 
 
 void dlgTimeInterval::on_pushButton_saveWlan_clicked()
@@ -1278,34 +1265,8 @@ void dlgTimeInterval::updateSqliteData()
     ui->m_host1Address->setText(CGlobal::instance()->m_mqttHost1);
     ui->m_com1->setText(QString::number(CGlobal::instance()->m_mqttCom1));
 
-//    QHostAddress hostAddress1(m_getTmpip1);
-////    m_tcpSocket1->bind(hostAddress1, 1884);
-//    if (!m_tcpSocket1->bind(hostAddress1, 0)) {
-//        qDebug() << "Failed to bind TCP socket to address" << m_getTmpip1 << "on port 1883";
-//    } else {
-//        qDebug() << "Binding succeeded for socket 2";
-//    }
-//    m_tcpSocket1->connectToHost(CGlobal::instance()->m_mqttHost1, CGlobal::instance()->m_mqttCom1);
-//    // 连接成功时触发
-//    connect(m_tcpSocket1, &QTcpSocket::connected, this, &dlgTimeInterval::onMqttSocketConnected1);
-    m_processMqtt1->manualConnectToBroker(CGlobal::instance()->m_mqttHost1, CGlobal::instance()->m_mqttCom1);
-
     ui->m_host2Address->setText(CGlobal::instance()->m_mqttHost2);
     ui->m_com2->setText(QString::number(CGlobal::instance()->m_mqttCom2));
-
-//    QHostAddress hostAddress2(m_getTmpip2);
-//    if (!m_tcpSocket2->bind(hostAddress2, 1883)) {
-//        qDebug() << "Failed to bind TCP socket to address" << m_getTmpip2 << "on port 1883";
-//    } else {
-//        qDebug() << "Binding succeeded for socket 2";
-//    }
-//    m_tcpSocket2->connectToHost(CGlobal::instance()->m_mqttHost2, CGlobal::instance()->m_mqttCom2);
-//    // 连接成功时触发
-//    connect(m_tcpSocket2, &QTcpSocket::connected, this, &dlgTimeInterval::onMqttSocketConnected2);
-//    m_mqttClient2->setTransport(m_tcpSocket2, QMqttClient::TransportType::IODevice);
-    m_processMqtt2->manualConnectToBroker(CGlobal::instance()->m_mqttHost2, CGlobal::instance()->m_mqttCom2);
-
-    m_processNtp->startNtpTimer();
 }
 // 连接成功的槽函数
 void dlgTimeInterval::onMqttSocketConnected1()
@@ -1322,6 +1283,64 @@ void dlgTimeInterval::updateWLANData()
 {
     qDebug() << "dlgTimeInterval::updateWLANData"
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
+    wlanThread *wlan = new wlanThread(this);
+    connect(wlan, SIGNAL(wlanFinished(QString,QString,QString,QString,QString)),
+            this, SLOT(slot_wlanFinished(QString,QString,QString,QString,QString)), Qt::QueuedConnection);
+    wlan->start();
+}
+
+void dlgTimeInterval::slot_wlanFinished(QString wlanIP1, QString wlanGateway1, QString wlanName2, QString wlanIP2, QString wlanGateway2)
+{
+    qDebug() << "dlgTimeInterval::slot_wlanFinished"
+             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
+    QThread *finishedThread = qobject_cast<QThread*>(sender());
+    if (finishedThread) {
+        // 等待线程结束，确保线程执行已完成
+        finishedThread->wait();
+        // 删除线程对象
+        finishedThread->deleteLater(); // 推荐使用 deleteLater()，安全删除线程对象
+    }
+    // 进入 dlgTimeInterval 界面的逻辑
+//    CGlobal::instance()->TimeInterval()->exec();
+    m_getTmpip1 = wlanIP1;
+    ui->m_myip1->setText(m_getTmpip1);
+    m_getTmpip2 = wlanIP2;
+    ui->m_myip2->setText(m_getTmpip2);
+    CGlobal::instance()->m_wlanName = wlanName2;
+    CGlobal::instance()->m_wlan1Gateway = wlanGateway1;
+    ui->m_gateway1->setText(CGlobal::instance()->m_wlan1Gateway);
+    if(CGlobal::instance()->m_isDoubleWLAN)
+    {
+        CGlobal::instance()->m_wlan2Gateway = wlanGateway2;
+        ui->m_gateway2->setText(CGlobal::instance()->m_wlan2Gateway);
+        ui->wlanBox->setFixedHeight(210);
+        ui->pingBox->move(40, 370);
+    }
+    else
+    {
+        ui->m_myip2->hide();
+        ui->label_myip2->hide();
+        ui->m_gateway2->hide();
+        ui->label_gateway2->hide();
+        ui->wlanBox->setFixedHeight(150);
+        ui->pingBox->move(40, 310);
+    }
+    m_processMqtt1->manualConnectToBroker(CGlobal::instance()->m_mqttHost1, CGlobal::instance()->m_mqttCom1);
+    m_processMqtt2->manualConnectToBroker(CGlobal::instance()->m_mqttHost2, CGlobal::instance()->m_mqttCom2);
+    if(!m_processNtp)
+    {
+        m_processNtp = new CprocessNtp("cn.pool.ntp.org", m_ntpClient);
+        m_processNtp->startNtpTimer();
+    }
+}
+
+void wlanThread::run()
+{
+    QString wlanName;
+    QString getTmpip1;
+    QString getTmpip2;
+    QString wlan1Gateway;
+    QString wlan2Gateway;
     if(CGlobal::instance()->m_isDoubleWLAN)
     {
         // 创建一个QProcess对象
@@ -1357,13 +1376,11 @@ void dlgTimeInterval::updateWLANData()
                 int space_pos = input.indexOf(' ');
 
                 // Remove everything from the first space onwards
-                QString str;
                 if (space_pos != -1) {
-                   str = input.left(space_pos);
+                   wlanName = input.left(space_pos);
                 } else {
-                   str = input; // If no space found, keep the original string
+                   wlanName = input; // If no space found, keep the original string
                 }
-                CGlobal::instance()->m_wlanName = str;
             }
         }
     }
@@ -1376,76 +1393,33 @@ void dlgTimeInterval::updateWLANData()
             foreach (QNetworkAddressEntry entry, entries) {
                 if (entry.ip().protocol() == QAbstractSocket::IPv4Protocol)
                 {
-                    qDebug() << "IPv4 Address:" << entry.ip().toString();
                     if(interfaceName == "enp1s0")
                     {
-                        m_getTmpip1 = entry.ip().toString();
-                        ui->m_myip1->setText(m_getTmpip1);
+                        getTmpip1 = entry.ip().toString();
                     }
-                    else if(interfaceName == CGlobal::instance()->m_wlanName)
+                    else if(interfaceName == wlanName)
                     {
-                        m_getTmpip2 = entry.ip().toString();
-                        ui->m_myip2->setText(m_getTmpip2);
+                        getTmpip2 = entry.ip().toString();
                     }
                 }
             }
         }
     }
     // 获取 enp1s0 接口的网关
-    CGlobal::instance()->m_wlan1Gateway = getGateway("enp1s0");
-    ui->m_gateway1->setText(CGlobal::instance()->m_wlan1Gateway);
-    configureRoute("enp1s0", m_getTmpip1, CGlobal::instance()->m_wlan1Gateway,
+    wlan1Gateway = getGateway("enp1s0");
+    configureRoute("enp1s0", getTmpip1, wlan1Gateway,
                    CGlobal::instance()->m_mqttHost1);
     if(CGlobal::instance()->m_isDoubleWLAN)
     {
         // 获取 enp*s0 接口的网关
-        QString wlan2Gateway = getGateway(CGlobal::instance()->m_wlanName);
-        if(wlan2Gateway != "")
+        wlan2Gateway = getGateway(wlanName);
+        if(wlan2Gateway.isEmpty())
         {
-            ui->m_gateway2->setText(wlan2Gateway);
-            CGlobal::instance()->m_wlan2Gateway = wlan2Gateway;
+            wlan2Gateway = CGlobal::instance()->m_wlan2Gateway;
         }
-        else
-            ui->m_gateway2->setText(CGlobal::instance()->m_wlan2Gateway);
-        configureRoute(CGlobal::instance()->m_wlanName, m_getTmpip2,
-                       CGlobal::instance()->m_wlan2Gateway, CGlobal::instance()->m_mqttHost2);
-        ui->wlanBox->setFixedHeight(210);
-        ui->pingBox->move(40, 370);
+        configureRoute(wlanName, getTmpip2, wlan2Gateway, CGlobal::instance()->m_mqttHost2);
     }
-    else
-    {
-        ui->m_myip2->hide();
-        ui->label_myip2->hide();
-        ui->m_gateway2->hide();
-        ui->label_gateway2->hide();
-        ui->wlanBox->setFixedHeight(150);
-        ui->pingBox->move(40, 310);
-    }
-}
-//获取主机网关
-QString dlgTimeInterval::getGateway(const QString &interfaceName)
-{
-    qDebug() << "dlgTimeInterval::getGateway"
-             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
-    QString gateway;
-
-    QProcess process;
-    // 构建命令，只获取特定接口的网关信息
-    QString command = "ip route show dev " + interfaceName + " default";
-    process.start(command);
-    process.waitForFinished();
-
-    QString result = process.readAllStandardOutput();
-    QStringList lines = result.split("\n");
-
-    foreach (QString line, lines) {
-        if (line.contains("default via")) {
-            QStringList parts = line.split(" ");
-            gateway = parts.at(2);
-            break;
-        }
-    }
-    return gateway;
+    emit wlanFinished(getTmpip1, wlan1Gateway, wlanName, getTmpip2, wlan2Gateway);
 }
 
 void dlgTimeInterval::configureRoute(QString wlanName, QString wlanIP, QString wlanGateway, QString mqttIP)

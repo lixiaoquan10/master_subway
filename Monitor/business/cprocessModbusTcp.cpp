@@ -19,6 +19,8 @@
 
 CprocessModbusTcp::CprocessModbusTcp()
 {
+    qDebug() << "CprocessModbusTcp::CprocessModbusTcp"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     m_modbustcpServer = new QTcpServer(this);
     m_timer = new QTimer();
     m_disconnectTimer = new QTimer();

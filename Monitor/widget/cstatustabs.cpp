@@ -5,6 +5,7 @@
 
 CStatusTabs::CStatusTabs(QWidget *parent) : QWidget(parent)
 {
+    qDebug() << "CStatusTabs::CStatusTabs" << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     m_tabWidget = new QTabWidget(this);
     createTab("启动");
     createTab("故障");

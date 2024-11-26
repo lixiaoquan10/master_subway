@@ -4,6 +4,8 @@
 dlgInformationWindow::dlgInformationWindow(QWidget *parent) :
     QDialog(parent)
 {
+    qDebug() << "dlgInformationWindow::dlgInformationWindow"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowOpacity(0.8);
     this->setFixedSize(400, 200);

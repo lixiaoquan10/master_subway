@@ -11,6 +11,8 @@
 CProgramCanDeviceView::CProgramCanDeviceView(QWidget *parent) :
     QWidget(parent), ui(new Ui::CProgramCanDeviceView)
 {
+    qDebug() << "CProgramCanDeviceView::CProgramCanDeviceView"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     ui->setupUi(this);
     CGlobal::instance()->setProgramCanDeviceView(this);
     m_canAddress = 0;

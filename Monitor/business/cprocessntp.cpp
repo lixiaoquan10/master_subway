@@ -17,9 +17,9 @@ CprocessNtp::CprocessNtp(const QString& ntpServer, QUdpSocket* udpSocket)
     {
 
     }
-    // 解析域名为 IP 地址
-    QHostInfo hostInfo = QHostInfo::fromName(m_serverAddress);
-    m_hostAddress = hostInfo.addresses().first();
+//    // 解析域名为 IP 地址
+//    QHostInfo hostInfo = QHostInfo::fromName(m_serverAddress);
+//    m_hostAddress = hostInfo.addresses().first();
     // 设置 readyRead 信号槽
     connect(m_udpSocket, &QUdpSocket::readyRead, this, &CprocessNtp::onResponseReceived);
     //定时对时
@@ -45,10 +45,17 @@ void CprocessNtp::startNtpTimer()
 
 void CprocessNtp::slot_requestTime()
 {
+    // 如果没有网络连接，可以直接返回
+    if (m_udpSocket->state() != QAbstractSocket::BoundState) {
+        return;
+    }
     // 创建 NTP 请求包
     QByteArray requestPacket(48, 0);
     requestPacket[0] = 0x1B; // 28秒的偏移，表示 NTP 客户端请求，版本号 3，模式 3（客户端请求）
 
+    // 解析域名为 IP 地址
+    QHostInfo hostInfo = QHostInfo::fromName(m_serverAddress);
+    m_hostAddress = hostInfo.addresses().first();
     // 发送数据包
     qint64 bytesWritten = m_udpSocket->writeDatagram(requestPacket, m_hostAddress, 123);
     if (bytesWritten == -1) {

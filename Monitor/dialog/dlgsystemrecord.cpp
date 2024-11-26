@@ -6,6 +6,8 @@ dlgSystemRecord::dlgSystemRecord(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::dlgSystemRecord)
 {
+    qDebug() << "dlgSystemRecord::dlgSystemRecord"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     ui->setupUi(this);
     CGlobal::instance()->setSystemRecord(this);
     this->setWindowTitle("事件记录");

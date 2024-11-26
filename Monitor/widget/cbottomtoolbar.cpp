@@ -3,6 +3,8 @@
 CBottomToolBar::CBottomToolBar(QWidget *parent) :
     QWidget(parent)
 {
+    qDebug() << "CBottomToolBar::CBottomToolBar"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     createToolBar();
     setUser();
     setAuto();

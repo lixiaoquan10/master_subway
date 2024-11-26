@@ -7,6 +7,8 @@
 dlgdeviceForbidFault::dlgdeviceForbidFault(QWidget *parent) :
     QDialog(parent), ui(new Ui::dlgdeviceForbidFault)
 {
+    qDebug() << "dlgdeviceForbidFault::dlgdeviceForbidFault"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     ui->setupUi(this);
     CGlobal::instance()->setDeviceForbidFault(this);
     m_model = new CDeviceForbidFaultlistmodel();

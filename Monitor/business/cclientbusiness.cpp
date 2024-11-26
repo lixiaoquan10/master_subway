@@ -47,6 +47,7 @@ CClientBusiness::CClientBusiness(QObject *parent) :
     m_currentStatusId(0), m_currentRecvStatusId(0), m_currentRecvStatusNumber(0),
     m_advPassword("6006")
 {
+    qDebug() << "CClientBusiness::CClientBusiness" << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     m_projectPath = QCoreApplication::applicationDirPath(); /*应用程序目录 /opt*/
 //    m_communication = new CCommunication(m_projectPath + "/BService.dll");
     m_communication = new CCommunication(m_projectPath + "/libBService.so.1.0.0");
@@ -461,8 +462,8 @@ void CClientBusiness::DeviceBatteryStatus(CDevice* device, int status, int power
 //生成设备唯一码
 QString CClientBusiness::generateUniqueID()
 {
-    qDebug() << "CClientBusiness::generateUniqueID"
-             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
+//    qDebug() << "CClientBusiness::generateUniqueID"
+//             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     bool isUniqueID = true;
     QString filePath = "/home/xfss/root/logfile/uniquecode.txt"; // 将文件路径替换为实际的文件路径
     QFile file(filePath);
@@ -496,13 +497,13 @@ QString CClientBusiness::generateUniqueID()
             QTextStream out(&file);
             out << uniqueCode;
             file.close();
-            qDebug() << "Data saved to file: " << filePath;
+//            qDebug() << "Data saved to file: " << filePath;
             isUniqueID = true;
             return uniqueCode;
         }
         else
         {
-            qDebug() << "Failed to open file for writing: " << filePath;
+//            qDebug() << "Failed to open file for writing: " << filePath;
         }
     }
     return NULL;

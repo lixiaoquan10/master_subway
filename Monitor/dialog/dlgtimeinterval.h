@@ -3,6 +3,7 @@
 
 #include "cglobal.h"
 #include <QPainter>
+#include <QHostInfo>
 #include "business/cprocessmqtt.h"
 #include "business/cprocessntp.h"
 
@@ -97,6 +98,9 @@ private slots:
     void slot_timeFinished();
 
     void slot_pingFinished(double successRate);
+
+    void slot_wlanFinished(QString wlanIP1, QString wlanGateway1,
+                           QString wlanName2, QString wlanIP2, QString wlanGateway2);
 
     void slot_ipsetFinished();
 
@@ -242,6 +246,78 @@ protected:
     void run();
 private:
     QString m_pingIP;
+};
+
+class wlanThread : public QThread
+{
+    Q_OBJECT
+public:
+    explicit wlanThread(QObject *parent = NULL)
+        : QThread(parent)
+    {
+    }
+    QString getGateway(const QString &interfaceName)
+    {
+        QString gateway;
+
+        QProcess process;
+        // 构建命令，只获取特定接口的网关信息
+        QString command = "ip route show dev " + interfaceName + " default";
+        process.start(command);
+        process.waitForFinished();
+
+        QString result = process.readAllStandardOutput();
+        QStringList lines = result.split("\n");
+
+        foreach (QString line, lines) {
+            if (line.contains("default via")) {
+                QStringList parts = line.split(" ");
+                gateway = parts.at(2);
+                break;
+            }
+        }
+        return gateway;
+    }
+    void configureRoute(QString wlanName, QString wlanIP, QString wlanGateway, QString mqttIP)
+    {
+        QProcess process;
+        // 获取网关
+        if(wlanGateway == "")
+        {
+            QStringList ipParts = wlanIP.split('.');
+            if (ipParts.size() == 4) {
+                ipParts[3] = "1";  // 设置网关的最后一部分为 '1'
+                wlanGateway = ipParts.join('.');
+            }
+        }
+        QHostAddress address(mqttIP);
+        if(address.protocol() == QAbstractSocket::IPv4Protocol
+                || address.protocol() == QAbstractSocket::IPv6Protocol)
+        {
+            // 如果是 IP 地址
+            QString args = "ip route add " + mqttIP + " via " + wlanGateway + " dev " + wlanName;
+            process.start(args);
+        }
+        else
+        {
+            // 这里假设 mqttHost 是域名并且可以通过 DNS 解析
+            QHostInfo hostInfo = QHostInfo::fromName(mqttIP);
+            if (!hostInfo.addresses().isEmpty()) {
+                QString resolvedIP = hostInfo.addresses().first().toString();
+                QString args = "ip route add " + resolvedIP + " via " + wlanGateway + " dev " + wlanName;
+                process.start(args);
+            }
+        }
+
+        // 等待进程完成
+        process.waitForFinished();
+    }
+signals:
+    void wlanFinished(QString wlanIP1, QString wlanGateway1, QString wlanName2, QString wlanIP2, QString wlanGateway2);
+protected:
+    void run();
+private:
+
 };
 
 #endif // DLGTIMEINTERVAL_H

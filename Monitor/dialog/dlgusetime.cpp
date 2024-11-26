@@ -11,6 +11,8 @@ dlgUseTime::dlgUseTime(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::dlgUseTime)
 {
+    qDebug() << "dlgUseTime::dlgUseTime"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     ui->setupUi(this);
     ui->label_message->setWordWrap(true);
     m_useDay = 0;

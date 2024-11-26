@@ -26,7 +26,7 @@ CCommunication::CCommunication(const QString &fileName, QObject *parent) :
 
 int CCommunication::CommunicationType(QString strProjectPath)
 {
-    qDebug() << "CCommunication::CommunicationType"
+    qDebug() << "CCommunication::CommunicationType" << strProjectPath
              << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
     Type type = (Type)resolve("TXType");
     qDebug()<< this->errorString();

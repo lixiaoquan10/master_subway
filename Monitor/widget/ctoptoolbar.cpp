@@ -6,6 +6,8 @@
 CTopToolBar::CTopToolBar(QWidget *parent) :
     QWidget(parent)
 {
+    qDebug() << "CTopToolBar::CTopToolBar"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     initMember();
     createToolBar();
     updateMenu();
@@ -1108,7 +1110,7 @@ void CTopToolBar::slotAuto()
 void CTopToolBar::slotSystemSetup()
 {
     qDebug() << "CTopToolBar::slotSystemSetup" << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
-    CGlobal::instance()->TimeInterval()->updateWLANData();
+//    CGlobal::instance()->TimeInterval()->updateWLANData();
     CGlobal::instance()->TimeInterval()->updateSqliteData();
     // 替换界面
     changeCenterFrameWidget(CGlobal::instance()->TimeInterval());

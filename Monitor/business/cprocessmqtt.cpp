@@ -134,6 +134,8 @@ void CprocessMqtt::slot_updateLogStateChange()
 //手动连接服务器
 void CprocessMqtt::manualConnectToBroker(const QString &host, quint16 port)
 {
+    qDebug() << "CprocessMqtt::manualConnectToBroker"
+             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
     if(m_mqttClient->state() == QMqttClient::Connected)
         return;
     m_host = host;
@@ -392,18 +394,25 @@ void CprocessMqtt::slot_handleMessageReceived(const QByteArray &message, const Q
                 return;
             }
             // 提取各个字段
-            QString reset = params.value("Reset").toObject().value("value").toString();
-            QString start = params.value("Start").toObject().value("value").toString();
-            if((reset == "") || (start == "") ||
-                    ((reset != "True") && (reset != "False")) ||
-                    ((start != "True") && (start != "False")))
-            {
+            bool reset;
+            bool start;
+            // 判断 "Reset" 是否存在
+            if (params.contains("Reset")) {
+                reset = params.value("Reset").toObject().value("value").toBool();
+            } else {
                 replyHostControl(msgid, false);
                 return;
             }
-            if(reset == "True")
+            // 判断 "Start" 是否存在
+            if (params.contains("Start")) {
+                start = params.value("Start").toObject().value("value").toBool();
+            } else {
+                replyHostControl(msgid, false);
+                return;
+            }
+            if(reset)
                 emit hostControlMsg(0x01);
-            if(start == "True")
+            if(start)
                 emit hostControlMsg(0x02);
             replyHostControl(msgid, true);
         }
@@ -716,7 +725,7 @@ QByteArray CprocessMqtt::creatControllerJsonData(CController* controller)
     controllerType["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject controllerID;
-    controllerID["value"] = "1";
+    controllerID["value"] = 1;
     controllerID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject paramsObj;
@@ -737,7 +746,7 @@ QByteArray CprocessMqtt::creatDistributionJsonData(CDistribution* distribution)
 {
     // 创建上行报文
     QJsonObject distributionID;
-    distributionID["value"] = QString::number(distribution->keyId());
+    distributionID["value"] = distribution->keyId();
     distributionID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject distributionAddress;
@@ -783,7 +792,7 @@ QByteArray CprocessMqtt::creatLoopJsonData(CLoop* loop)
 {
     // 创建上行报文
     QJsonObject loopID;
-    loopID["value"] = QString::number(loop->keyId());
+    loopID["value"] = loop->keyId();
     loopID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject loopType;
@@ -821,7 +830,7 @@ QByteArray CprocessMqtt::creatDeviceJsonData(CDevice* lamp)
 {
     // 创建上行报文
     QJsonObject lampID;
-    lampID["value"] = QString::number(lamp->keyId());
+    lampID["value"] = lamp->keyId();
     lampID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject lampType;
@@ -875,21 +884,21 @@ QByteArray CprocessMqtt::creatControllerStatusJsonData(CController* controller)
     controllerType["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject controllerID;
-    controllerID["value"] = "1";
+    controllerID["value"] = 1;
     controllerID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject controllerMainPowerFault;
-    controllerMainPowerFault["value"] = CGlobal::instance()->m_isShieldMainPowerFaultEmergency? "True" : "False";
+    controllerMainPowerFault["value"] = CGlobal::instance()->m_isShieldMainPowerFaultEmergency ? true : false;
     controllerMainPowerFault["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject controllerBatteryPowerFault;
     controllerBatteryPowerFault["value"] =  (controller->getStatus(OBJS_StandbyPowerOff) ||
                                              controller->getStatus(OBJS_StandbyPowerShort) ||
-                                             controller->getStatus(OBJS_StandbyPowerUndervoltage))? "True" : "False";
+                                             controller->getStatus(OBJS_StandbyPowerUndervoltage)) ? true : false;
     controllerBatteryPowerFault["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject controllerWarning;
-    controllerWarning["value"] = CGlobal::instance()->m_isEmergency? "True" : "False";
+    controllerWarning["value"] = CGlobal::instance()->m_isEmergency ? true : false;
     controllerWarning["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject paramsObj;
@@ -913,7 +922,7 @@ QByteArray CprocessMqtt::creatDistributionStatusJsonData(CDistribution* distribu
 {
     // 创建上行报文
     QJsonObject distributionID;
-    distributionID["value"] = QString::number(distribution->keyId());
+    distributionID["value"] = distribution->keyId();
     distributionID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject distributionAddress;
@@ -931,19 +940,19 @@ QByteArray CprocessMqtt::creatDistributionStatusJsonData(CDistribution* distribu
 
 
     QJsonObject distributionCommunicationFault;
-    distributionCommunicationFault["value"] = distribution->getStatus(OBJS_DistributionCommunicationFault)? "True" : "False";
+    distributionCommunicationFault["value"] = distribution->getStatus(OBJS_DistributionCommunicationFault)? true : false;
     distributionCommunicationFault["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject distributionMainPowerFault;
-    distributionMainPowerFault["value"] = distribution->getmainPowerFault()? "True" : "False";
+    distributionMainPowerFault["value"] = distribution->getmainPowerFault()? true : false;
     distributionMainPowerFault["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject distributionBatteryPowerFault;
-    distributionBatteryPowerFault["value"] = distribution->getbackupPowerFault()? "True" : "False";
+    distributionBatteryPowerFault["value"] = distribution->getbackupPowerFault()? true : false;
     distributionBatteryPowerFault["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject distributionWarning;
-    distributionWarning["value"] = distribution->getemergencyStatus()? "True" : "False";
+    distributionWarning["value"] = distribution->getemergencyStatus()? true : false;
     distributionWarning["ts"] = QDateTime::currentMSecsSinceEpoch();
     QJsonObject paramsObj;
 
@@ -970,7 +979,7 @@ QByteArray CprocessMqtt::creatLoopStatusJsonData(CLoop* loop)
 {
     // 创建上行报文
     QJsonObject loopID;
-    loopID["value"] = QString::number(loop->keyId());
+    loopID["value"] = loop->keyId();
     loopID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject loopType;
@@ -989,7 +998,7 @@ QByteArray CprocessMqtt::creatLoopStatusJsonData(CLoop* loop)
     loopAddress["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject loopCommunicationFault;
-    loopCommunicationFault["value"] = loop->getLoopCommunicationFault()? "True" : "False";
+    loopCommunicationFault["value"] = loop->getLoopCommunicationFault()? true : false;
     loopCommunicationFault["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject paramsObj;
@@ -1013,7 +1022,7 @@ QByteArray CprocessMqtt::creatDeviceStatusJsonData(CDevice* lamp)
 {
     // 创建上行报文
     QJsonObject lampID;
-    lampID["value"] = QString::number(lamp->keyId());
+    lampID["value"] = lamp->keyId();
     lampID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject lampType;
@@ -1032,16 +1041,16 @@ QByteArray CprocessMqtt::creatDeviceStatusJsonData(CDevice* lamp)
     lampAddress["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject lampCommunicationFault;
-    lampCommunicationFault["value"] = !lamp->isDeviceOnline()? "True" : "False";
+    lampCommunicationFault["value"] = !lamp->isDeviceOnline()? true : false;
     lampCommunicationFault["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject lampLightFault;
-    lampLightFault["value"] = (lamp->deviceValue(DEVICE_VALUE_LIGHT) == "光源故障")? "True" : "False";
+    lampLightFault["value"] = (lamp->deviceValue(DEVICE_VALUE_LIGHT) == "光源故障")? true : false;
     lampLightFault["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject lampWarning;
     lampWarning["value"] = (lamp->deviceValue(DEVICE_VALUE_EMERGENCY) == "应急"
-                                 || CGlobal::instance()->m_isEmergency)? "True" : "False";
+                                 || CGlobal::instance()->m_isEmergency)? true : false;
     lampWarning["ts"] = QDateTime::currentMSecsSinceEpoch();
     QJsonObject paramsObj;
     paramsObj["LampID"] = lampID;

@@ -10,6 +10,8 @@ dlgadminParamPage::dlgadminParamPage(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::dlgadminParamPage)
 {
+    qDebug() << "dlgadminParamPage::dlgadminParamPage"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     ui->setupUi(this);
     CGlobal::instance()->m_HaveDialog = true;
 

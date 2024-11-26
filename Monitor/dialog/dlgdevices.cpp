@@ -7,6 +7,8 @@ dlgDevices::dlgDevices(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::dlgDevices)
 {
+    qDebug() << "dlgDevices::dlgDevices"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     ui->setupUi(this);
     CGlobal::instance()->setDlgDevices(this);
     m_model = new CDeviceListModel();

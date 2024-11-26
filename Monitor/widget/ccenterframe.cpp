@@ -3,6 +3,8 @@
 CCenterFrame::CCenterFrame(QFrame *parent) :
     QSplitter(parent)
 {
+    qDebug() << "CCenterFrame::CCenterFrame"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
 //    createLeftBox();
 

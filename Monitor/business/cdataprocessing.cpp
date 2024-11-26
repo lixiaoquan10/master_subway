@@ -3,6 +3,8 @@
 CDataProcessing::CDataProcessing(QObject *parent) :
     QObject(parent)
 {
+    qDebug() << "CDataProcessing::CDataProcessing"
+             << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss:zzz");
     initMember();
     selfCheckSet();
     m_checkTimer = new QTimer(this);
