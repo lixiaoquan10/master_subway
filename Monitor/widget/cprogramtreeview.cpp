@@ -374,6 +374,18 @@ void CProgramTreeView::slot_emergencyStart()
     msgobjectstatus.nValue = true;
     msgobjectstatus.nCanportAdd = CGlobal::instance()->m_nCanportAddress;
     CGlobal::instance()->ClientBusiness()->exeCommand(NCT_Emergency, &msgobjectstatus);
+    CController* controller = CGlobal::instance()->controller();
+    if(!controller)
+        return;
+    CCanport* canport = controller->canportByAddress(CGlobal::instance()->m_nCanportAddress);
+    if(!canport)
+        return;
+    CDistribution* distribution = canport->distributionByAddress(CGlobal::instance()->m_nDistriAddress);
+    if(!distribution)
+        return;
+    distribution->setStatus(OBJS_SystemEmergency, 1);
+    distribution->setemergencyStatus(1);
+    CGlobal::instance()->ClientBusiness()->emitStatusSendToMQTT(distribution, true);
 }
 
 void CProgramTreeView::slot_emergencyStop()
@@ -385,6 +397,19 @@ void CProgramTreeView::slot_emergencyStop()
     msgobjectstatus.nValue = false;
     msgobjectstatus.nCanportAdd = CGlobal::instance()->m_nCanportAddress;
     CGlobal::instance()->ClientBusiness()->exeCommand(NCT_Emergency, &msgobjectstatus);
+
+    CController* controller = CGlobal::instance()->controller();
+    if(!controller)
+        return;
+    CCanport* canport = controller->canportByAddress(CGlobal::instance()->m_nCanportAddress);
+    if(!canport)
+        return;
+    CDistribution* distribution = canport->distributionByAddress(CGlobal::instance()->m_nDistriAddress);
+    if(!distribution)
+        return;
+    distribution->setStatus(OBJS_SystemEmergency, 0);
+    distribution->setemergencyStatus(0);
+    CGlobal::instance()->ClientBusiness()->emitStatusSendToMQTT(distribution, true);
 }
 
 //读软件版本

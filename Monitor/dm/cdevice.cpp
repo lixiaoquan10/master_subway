@@ -144,8 +144,8 @@ QVariant CDevice::deviceValue(const QString name) const
 
 bool CDevice::getDeviceCommunicationFault()
 {
-    qDebug() << "CDevice::getDeviceCommunicationFault"
-             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
+//    qDebug() << "CDevice::getDeviceCommunicationFault"
+//             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
     CCanport* canport = CGlobal::instance()->controller()->canportByAddress(deviceValue(DEVICE_VALUE_CANPORTADDR).toInt());
     if(!canport)
         return false;

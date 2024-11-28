@@ -133,6 +133,9 @@ public:
 
     int deviceType(int typeId);
 
+    void emitStatusSendToMQTT(CObject* object, bool isDistributionEmergencyOrFault = false)
+                             { emit statusSendToMQTT(object, isDistributionEmergencyOrFault); }
+
 public slots:
     void slotCheckLoginInfo();
     void mainPowerStop();

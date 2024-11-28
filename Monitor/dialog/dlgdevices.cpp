@@ -392,6 +392,8 @@ void dlgDevices::slot_StartEmergency()
     devicecontrol.saveDeviceControlFile();//保存灯具控制表
     getDeviceInfo();
 
+    CGlobal::instance()->ClientBusiness()->emitStatusSendToMQTT(device);
+
     CMsgObjectStatus msgObjectStatus;
     msgObjectStatus.nCanportAdd = canAddress;
     msgObjectStatus.nDisID = distributionAddress;
@@ -444,6 +446,8 @@ void dlgDevices::slot_StopEmergency()
         devicecontrol.saveDeviceControlFile();//保存灯具控制表
     }
     getDeviceInfo();
+
+    CGlobal::instance()->ClientBusiness()->emitStatusSendToMQTT(device);
 
     CMsgObjectStatus msgObjectStatus;
     msgObjectStatus.nCanportAdd = canAddress;
@@ -519,6 +523,8 @@ void dlgDevices::slot_deviceUse()
     CDevice* device = loop->deviceByAdd(m_model->index(m_index->row(),2).data().toInt());
     if(!device)
         return;
+    device->setStatus(OBJS_LightCommunicationFault, 0);
+    CGlobal::instance()->ClientBusiness()->emitStatusSendToMQTT(device);
     device->setDeviceForbid(false);
     getDeviceInfo();
     deviceForbidFault deviceforbid;
@@ -545,6 +551,8 @@ void dlgDevices::slot_deviceForbid()
     CDevice* device = loop->deviceByAdd(m_model->index(m_index->row(),2).data().toInt());
     if(!device)
         return;
+    device->setStatus(OBJS_LightCommunicationFault, 1);
+    CGlobal::instance()->ClientBusiness()->emitStatusSendToMQTT(device);
     device->setDeviceForbid(true);
     device->setDeviceOnline(true);
     device->setDeviceValue(DEVICE_VALUE_LIGHT,"正常");

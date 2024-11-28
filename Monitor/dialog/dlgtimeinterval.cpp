@@ -100,15 +100,11 @@ dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
 
     ui->m_com1Status->setText("未连接");
     ui->m_com2Status->setText("未连接");
+
     m_mqttClient1 = new QMqttClient;
     m_mqttClient1->setUsername("SEMODEL");
     m_mqttClient1->setPassword("se_model");
     m_processMqtt1 = new CprocessMqtt(m_mqttClient1);
-    // 创建MQTT线程
-    m_mqttThread1 = new QThread;
-    m_mqttClient1->moveToThread(m_mqttThread1);
-    // 启动MQTT线程
-    m_mqttThread1->start();
     connect(CGlobal::instance()->ClientBusiness(), SIGNAL(statusSendToMQTT(CObject*, bool)),
             m_processMqtt1, SLOT(slot_sendDeviceStatusMsg(CObject*, bool)));
     connect(m_processMqtt1, SIGNAL(hostControlMsg(int)),
@@ -117,14 +113,14 @@ dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
             this, SLOT(slot_setCom1Status(bool)));
     connect(this, SIGNAL(uploadStatusToMQTT()),
             m_processMqtt1, SLOT(slot_uploadAllDeviceStatus()));
+    // 创建MQTT线程
+    m_mqttThread1 = new QThread;
+    m_mqttClient1->moveToThread(m_mqttThread1);
+    // 启动MQTT线程
+    m_mqttThread1->start();
 
     m_mqttClient2 = new QMqttClient;
     m_processMqtt2 = new CprocessMqtt(m_mqttClient2);
-    // 创建MQTT线程
-    m_mqttThread2 = new QThread;
-    m_mqttClient2->moveToThread(m_mqttThread2);
-    // 启动MQTT线程
-    m_mqttThread2->start();
     connect(CGlobal::instance()->ClientBusiness(), SIGNAL(statusSendToMQTT(CObject*, bool)),
             m_processMqtt2, SLOT(slot_sendDeviceStatusMsg(CObject*, bool)));
     connect(m_processMqtt2, SIGNAL(hostControlMsg(int)),
@@ -133,14 +129,21 @@ dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
             this, SLOT(slot_setCom2Status(bool)));
     connect(this, SIGNAL(uploadStatusToMQTT()),
             m_processMqtt2, SLOT(slot_uploadAllDeviceStatus()));
+    // 创建MQTT线程
+    m_mqttThread2 = new QThread;
+    m_mqttClient2->moveToThread(m_mqttThread2);
+    // 启动MQTT线程
+    m_mqttThread2->start();
+
 
     m_ntpClient = new QUdpSocket;
-//    // 创建ntp线程
-//    m_ntpThread = new QThread;
-//    m_ntpClient->moveToThread(m_ntpThread);
-//    // 启动ntp线程
-//    m_ntpThread->start();
-//    m_processNtp = new CprocessNtp("cn.pool.ntp.org", m_ntpClient);
+    m_processNtp = new CprocessNtp("cn.pool.ntp.org", m_ntpClient);
+    // 创建ntp线程
+    m_ntpThread = new QThread;
+    m_processNtp->moveToThread(m_ntpThread);
+
+    // 启动ntp线程
+    m_ntpThread->start();
 }
 
 

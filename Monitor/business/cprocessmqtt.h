@@ -29,14 +29,17 @@ public:
     void subscribeComTopic();                                  //订阅服务器相关主题
 
     void subscribeToTopic(const QString &topic);               //订阅某个主题
-    void manualConnectToBroker(const QString &host, quint16 port);   //连接到服务器
-    void manualDisconnectToBroker();                                 //断开连接
 
     void replyHostControl(QString msgid, bool isTrue);   //回复服务器控制指令
+
+    void manualConnectToBroker(const QString &host, quint16 port);   //连接到服务器
+    void manualDisconnectToBroker();                                 //断开连接
 
     void saveDataToFile(QString fileName, QString data);   //保存到文件
 
     void clearSendData();        // 清理发送相关数据
+
+    void controlTxtFileSize(const QString& filePath, qint64 maxSize);
 
 public slots:
     bool publishMessage(const QString &topic, const QByteArray &message);                     //发送数据
@@ -50,6 +53,8 @@ public slots:
     void slot_ResendTimerTimeout();                                                           //发送数据超时处理
     void slot_sendDeviceStatusMsg(CObject* object, bool isDistributionEmergencyOrFault = false);        //设备状态信息上传
     void slot_uploadAllDeviceStatus();                     //所有设备状态信息上传
+
+    void slot_testMessage();
 signals:
     void connectStatus(bool status);
     void hostControlMsg(int type);
@@ -64,6 +69,7 @@ private:
     uint32_t m_msgid;                //数据计时
     QTimer* m_pingTimer;             //心跳定时器
     QTimer* m_reconnectTimer;        //重连定时器
+    QTimer* m_testTimer;             //测试定时器
     QMap<quint16, QTimer*> m_resendTimers;     // 维护一个重发定时器列表
     QMap<quint16, QPair<QByteArray, QString>> m_sendMessages;  // 维护每个 packetId 对应的消息内容和主题
     const int m_resendTimeout = 3000;       // 3秒超时
@@ -73,5 +79,8 @@ private:
     int m_reconnectInterval;                     // 当前重连时间间隔（毫秒）
     const int m_initialReconnectInterval = 3000; // 初始重连时间间隔
     const int m_maxReconnectInterval = 24000;    // 最大重连时间间隔（例如24s）
+
+    bool m_testMessage;
+    bool m_isBuildAllDeviceMsg;
 };
 #endif // CPROCESSMQTT_H

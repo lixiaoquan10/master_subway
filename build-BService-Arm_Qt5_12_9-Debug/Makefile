@@ -3405,6 +3405,7 @@ bservice.o: ../BService/bservice.cpp ../BService/bservice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDir \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdir.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfileinfo.h \
@@ -3525,6 +3526,7 @@ cglobal.o: ../BService/cglobal.cpp ../BService/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		../BService/cplatform_arm.h \
 		../BService/cadapterobject.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
@@ -3675,6 +3677,7 @@ clog.o: ../BService/log/clog.cpp ../BService/log/clog.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		../BService/struct.h \
 		../BService/struct/cmsglog.h \
 		../BService/dialog/dlginformationwindow.h \
@@ -3871,6 +3874,7 @@ dlginformationwindow.o: ../BService/dialog/dlginformationwindow.cpp ../BService/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSizePolicy \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlginformationwindow.o ../BService/dialog/dlginformationwindow.cpp
@@ -4033,6 +4037,7 @@ cserialport.o: ../BService/process/cserialport.cpp ../BService/process/cserialpo
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
@@ -4226,6 +4231,7 @@ ccommunicationmanager.o: ../BService/process/ccommunicationmanager.cpp ../BServi
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		../BService/struct.h \
 		../BService/struct/cmsgnull.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug \
@@ -4319,6 +4325,7 @@ cprocessbase.o: ../BService/process/cprocessbase.cpp ../BService/process/cproces
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cprocessbase.o ../BService/process/cprocessbase.cpp
 
@@ -4417,6 +4424,7 @@ ccandatabytearray.o: ../BService/process/ccandatabytearray.cpp ../BService/proce
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ccandatabytearray.o ../BService/process/ccandatabytearray.cpp
 
@@ -4801,6 +4809,7 @@ ccommunicationroute.o: ../BService/process/ccommunicationroute.cpp /opt/Qt5.12.9
 		../BService/struct/cmsgrouteconfig.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFile \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		../BService/process/cserialport.h \
 		../BService/serial/qextserialport.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QIODevice \
@@ -4914,6 +4923,7 @@ cprocessdistribution.o: ../BService/process/cprocessdistribution.cpp ../BService
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug \
 		../BService/process/ccommunicationmanager.h \
 		../BService/process/ccommunicationline.h \
@@ -5092,6 +5102,7 @@ cprocesscontroller.o: ../BService/process/cprocesscontroller.cpp ../BService/pro
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSettings \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsettings.h \
@@ -5403,6 +5414,7 @@ cadapterobject.o: ../BService/cadapterobject.cpp ../BService/cadapterobject.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		../BService/struct.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDir \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdir.h \
@@ -5754,6 +5766,7 @@ cprocessclient.o: ../BService/process/cprocessclient.cpp ../BService/process/cpr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextStream \
 		../BService/ctrace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfileinfo.h \

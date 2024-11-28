@@ -174,8 +174,8 @@ CDistribution *CCanport::distributionById(const int id) const
 
 CDistribution *CCanport::distributionByAddress(const int add) const
 {
-    qDebug() << "CCanport::distributionByAddress"
-             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
+//    qDebug() << "CCanport::distributionByAddress"
+//             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
     for(int i = 0; i < m_distributions.size(); ++i)
     {
         if(m_distributions.at(i)->distributionAddress() == add)

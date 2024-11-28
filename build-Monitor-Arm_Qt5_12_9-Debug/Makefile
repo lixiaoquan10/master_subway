@@ -2962,6 +2962,8 @@ moc_cdevice.cpp: ../Monitor/dm/cdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -5090,6 +5092,8 @@ moc_cglobal.cpp: ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessntp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
@@ -10040,6 +10044,8 @@ moc_dlghandfireview.cpp: ../Monitor/dialog/dlghandfireview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -10953,6 +10959,8 @@ moc_dlgtimeinterval.cpp: ../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -12868,6 +12876,8 @@ moc_dlgdeviceForbidFault.cpp: ../Monitor/dialog/dlgdeviceForbidFault.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -14654,6 +14664,8 @@ cprocessModbusTcp.o: ../Monitor/business/cprocessModbusTcp.cpp ../Monitor/busine
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -15079,6 +15091,8 @@ cprocessmqtt.o: ../Monitor/business/cprocessmqtt.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -15503,6 +15517,8 @@ cprocessntp.o: ../Monitor/business/cprocessntp.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -15607,8 +15623,6 @@ cprocessntp.o: ../Monitor/business/cprocessntp.cpp ../Monitor/cglobal.h \
 		../Monitor/view/ctableview.h \
 		../Monitor/view/ccontrollertreeview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTimeZone \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtimezone.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cprocessntp.o ../Monitor/business/cprocessntp.cpp
@@ -15748,7 +15762,7 @@ mqttTest.o: ../Monitor/dialog/mqttTest.cpp ../Monitor/dialog/mqttTest.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
 		ui_mqttTest.h \
-		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
@@ -15756,6 +15770,48 @@ mqttTest.o: ../Monitor/dialog/mqttTest.cpp ../Monitor/dialog/mqttTest.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QFormLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qformlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPlainTextEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qplaintextedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtextedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextdocument.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qabstracttextdocumentlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qglyphrun.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrawfont.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontdatabase.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSpacerItem \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSpinBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qspinbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
@@ -15763,17 +15819,12 @@ mqttTest.o: ../Monitor/dialog/mqttTest.cpp ../Monitor/dialog/mqttTest.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvalidator.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregularexpression.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
@@ -15793,20 +15844,10 @@ mqttTest.o: ../Monitor/dialog/mqttTest.cpp ../Monitor/dialog/mqttTest.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFile \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QMenu \
@@ -15827,9 +15868,6 @@ mqttTest.o: ../Monitor/dialog/mqttTest.cpp ../Monitor/dialog/mqttTest.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -15879,8 +15917,6 @@ mqttTest.o: ../Monitor/dialog/mqttTest.cpp ../Monitor/dialog/mqttTest.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
@@ -15888,8 +15924,6 @@ mqttTest.o: ../Monitor/dialog/mqttTest.cpp ../Monitor/dialog/mqttTest.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCommonStyle \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../Monitor/groupbox.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
 		../Monitor/cfilterobject.h \
 		../Monitor/business/cclientbusiness.h \
 		../Monitor/struct/shardEnum.h \
@@ -15949,8 +15983,8 @@ mqttTest.o: ../Monitor/dialog/mqttTest.cpp ../Monitor/dialog/mqttTest.h \
 		../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		../Monitor/business/cprocessntp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
@@ -16354,6 +16388,8 @@ deviceDefaultControl.o: ../Monitor/graphics/deviceDefaultControl.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -16776,6 +16812,8 @@ widget.o: ../Monitor/widget.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -17197,6 +17235,8 @@ cdataprocessing.o: ../Monitor/business/cdataprocessing.cpp ../Monitor/cglobal.h 
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -17618,6 +17658,8 @@ ccontroller.o: ../Monitor/dm/ccontroller.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -18039,6 +18081,8 @@ cobject.o: ../Monitor/dm/cobject.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -18460,6 +18504,8 @@ cloop.o: ../Monitor/dm/cloop.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -18881,6 +18927,8 @@ clayer.o: ../Monitor/dm/clayer.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -19302,6 +19350,8 @@ cdm.o: ../Monitor/dm/cdm.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -19723,6 +19773,8 @@ cdistribution.o: ../Monitor/dm/cdistribution.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -20144,6 +20196,8 @@ cdevice.o: ../Monitor/dm/cdevice.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -20565,6 +20619,8 @@ cfirepoint.o: ../Monitor/dm/cfirepoint.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -20986,6 +21042,8 @@ cdbsqlite.o: ../Monitor/dm/cdbsqlite.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -21407,6 +21465,8 @@ ccanport.o: ../Monitor/dm/ccanport.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -21828,6 +21888,8 @@ cmath.o: ../Monitor/graphics/cmath.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -22435,6 +22497,8 @@ ccontrollertreemodel.o: ../Monitor/model/ccontrollertreemodel.cpp ../Monitor/cgl
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -22856,6 +22920,8 @@ ccontrollermodel.o: ../Monitor/model/ccontrollermodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -23277,6 +23343,8 @@ cmodel.o: ../Monitor/model/cmodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -23698,6 +23766,8 @@ cloopmodel.o: ../Monitor/model/cloopmodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -24119,6 +24189,8 @@ cdistributionmodel.o: ../Monitor/model/cdistributionmodel.cpp ../Monitor/cglobal
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -24540,6 +24612,8 @@ cdevicesfindtablemodel.o: ../Monitor/model/cdevicesfindtablemodel.cpp ../Monitor
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -24961,6 +25035,8 @@ cdevicemodel.o: ../Monitor/model/cdevicemodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -25382,6 +25458,8 @@ cdesigntreemodel.o: ../Monitor/model/cdesigntreemodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -25803,6 +25881,8 @@ ccanportmodel.o: ../Monitor/model/ccanportmodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -26483,6 +26563,8 @@ cglobal.o: ../Monitor/cglobal.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -26925,6 +27007,8 @@ cdevicetype.o: ../Monitor/cdevicetype.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -27346,6 +27430,8 @@ cinformationmodel.o: ../Monitor/model/cinformationmodel.cpp ../Monitor/cglobal.h
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -27781,6 +27867,8 @@ cclientbusiness.o: ../Monitor/business/cclientbusiness.cpp ../Monitor/business/c
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -28189,6 +28277,8 @@ ccommunication.o: ../Monitor/communication/ccommunication.cpp ../Monitor/cglobal
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -28610,6 +28700,8 @@ ctoptoolbar.o: ../Monitor/widget/ctoptoolbar.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -29031,6 +29123,8 @@ ccenterframe.o: ../Monitor/widget/ccenterframe.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -29452,6 +29546,8 @@ cbottomtoolbar.o: ../Monitor/widget/cbottomtoolbar.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -29873,6 +29969,8 @@ cprogramview.o: ../Monitor/widget/cprogramview.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -30303,6 +30401,8 @@ cprogramtreeview.o: ../Monitor/widget/cprogramtreeview.cpp ../Monitor/widget/cpr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -30401,11 +30501,9 @@ cprogramtreeview.o: ../Monitor/widget/cprogramtreeview.cpp ../Monitor/widget/cpr
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cprogramtreeview.o ../Monitor/widget/cprogramtreeview.cpp
 
 cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogramprojectview.h \
-		../Monitor/cglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
@@ -30417,51 +30515,66 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
@@ -30474,35 +30587,22 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
@@ -30511,11 +30611,20 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
@@ -30528,8 +30637,30 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
+		../Monitor/view/ctableview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
+		../Monitor/style/cstyledbar.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -30552,22 +30683,9 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QMenu \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qmenu.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qaction.h \
@@ -30590,9 +30708,6 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -30627,8 +30742,6 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qxmlstream.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg/qtsvgglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTabWidget \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTemporaryFile \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtemporaryfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
@@ -30642,18 +30755,13 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
 		../Monitor/cmyiconstyle.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCommonStyle \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../Monitor/groupbox.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
 		../Monitor/cfilterobject.h \
 		../Monitor/business/cclientbusiness.h \
 		../Monitor/struct/shardEnum.h \
@@ -30714,8 +30822,8 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -30811,13 +30919,11 @@ cprogramcontrollerview.o: ../Monitor/widget/cprogramcontrollerview.cpp ui_cprogr
 		../Monitor/widget/cprogramview.h \
 		../Monitor/widget/cstatustabs.h \
 		../Monitor/widget/ctoptoolbar.h \
-		../Monitor/style/cstyledbar.h \
 		../Monitor/style/cstylehelper.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QStyle \
 		../Monitor/delegate/cdevicetypedelegate.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QStyledItemDelegate \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
-		../Monitor/view/ctableview.h \
 		../Monitor/view/ccontrollertreeview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeView
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cprogramcontrollerview.o ../Monitor/widget/cprogramcontrollerview.cpp
@@ -30934,7 +31040,7 @@ cprogramcandeviceview.o: ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QModelIndex \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
 		ui_cprogramcandeviceview.h \
-		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
@@ -30942,11 +31048,14 @@ cprogramcandeviceview.o: ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
@@ -30959,7 +31068,16 @@ cprogramcandeviceview.o: ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -30984,13 +31102,6 @@ cprogramcandeviceview.o: ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -31052,8 +31163,6 @@ cprogramcandeviceview.o: ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qxmlstream.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg/qtsvgglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTabWidget \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTemporaryFile \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtemporaryfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
@@ -31067,7 +31176,6 @@ cprogramcandeviceview.o: ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
@@ -31075,8 +31183,6 @@ cprogramcandeviceview.o: ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCommonStyle \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../Monitor/groupbox.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
 		../Monitor/cfilterobject.h \
 		../Monitor/business/cclientbusiness.h \
 		../Monitor/struct/shardEnum.h \
@@ -31139,6 +31245,8 @@ cprogramcandeviceview.o: ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -31245,11 +31353,9 @@ cprogramcandeviceview.o: ../Monitor/widget/cprogramcandeviceview.cpp ../Monitor/
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cprogramcandeviceview.o ../Monitor/widget/cprogramcandeviceview.cpp
 
 cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cprogramdistributionview.h \
-		../Monitor/widget/cprogramdistributionview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
@@ -31261,110 +31367,106 @@ cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmargins.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpaintdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrect.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpalette.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcolor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		../Monitor/cglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCheckBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcheckbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -31372,7 +31474,6 @@ cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvalidator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregularexpression.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyle.h \
@@ -31381,6 +31482,32 @@ cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSlider \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTextEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtextedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextdocument.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
+		../Monitor/widget/cprogramdistributionview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -31408,10 +31535,7 @@ cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -31437,9 +31561,6 @@ cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -31489,7 +31610,6 @@ cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
@@ -31497,8 +31617,6 @@ cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCommonStyle \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../Monitor/groupbox.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
 		../Monitor/cfilterobject.h \
 		../Monitor/business/cclientbusiness.h \
 		../Monitor/struct/shardEnum.h \
@@ -31559,8 +31677,8 @@ cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cp
 		../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -31667,11 +31785,9 @@ cprogramdistributionview.o: ../Monitor/widget/cprogramdistributionview.cpp ui_cp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cprogramdistributionview.o ../Monitor/widget/cprogramdistributionview.cpp
 
 cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdeviceview.h \
-		../Monitor/cglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
@@ -31683,51 +31799,66 @@ cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdevice
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
@@ -31740,35 +31871,22 @@ cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdevice
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
@@ -31777,11 +31895,13 @@ cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdevice
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
@@ -31794,8 +31914,23 @@ cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdevice
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
+		../Monitor/view/ctableview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
+		../Monitor/style/cstyledbar.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -31818,22 +31953,12 @@ cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdevice
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QMenu \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qmenu.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qaction.h \
@@ -31893,8 +32018,6 @@ cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdevice
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qxmlstream.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg/qtsvgglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTabWidget \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTemporaryFile \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtemporaryfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
@@ -31908,10 +32031,7 @@ cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdevice
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
 		../Monitor/cmyiconstyle.h \
@@ -31982,6 +32102,8 @@ cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdevice
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -32077,13 +32199,11 @@ cprogramdeviceview.o: ../Monitor/widget/cprogramdeviceview.cpp ui_cprogramdevice
 		../Monitor/widget/cprogramview.h \
 		../Monitor/widget/cstatustabs.h \
 		../Monitor/widget/ctoptoolbar.h \
-		../Monitor/style/cstyledbar.h \
 		../Monitor/style/cstylehelper.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QStyle \
 		../Monitor/delegate/cdevicetypedelegate.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QStyledItemDelegate \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
-		../Monitor/view/ctableview.h \
 		../Monitor/view/ccontrollertreeview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeView
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cprogramdeviceview.o ../Monitor/widget/cprogramdeviceview.cpp
@@ -32193,7 +32313,7 @@ cprogramcanportview.o: ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widg
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
 		ui_cprogramcanportview.h \
-		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
@@ -32201,11 +32321,20 @@ cprogramcanportview.o: ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widg
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
@@ -32218,8 +32347,27 @@ cprogramcanportview.o: ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widg
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		../Monitor/style/cstyledbar.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -32242,19 +32390,7 @@ cprogramcanportview.o: ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widg
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -32280,9 +32416,6 @@ cprogramcanportview.o: ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widg
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -32317,8 +32450,6 @@ cprogramcanportview.o: ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widg
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qxmlstream.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg/qtsvgglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTabWidget \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTemporaryFile \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtemporaryfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
@@ -32332,17 +32463,13 @@ cprogramcanportview.o: ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widg
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
 		../Monitor/cmyiconstyle.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCommonStyle \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../Monitor/groupbox.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
 		../Monitor/cfilterobject.h \
 		../Monitor/business/cclientbusiness.h \
 		../Monitor/struct/shardEnum.h \
@@ -32403,8 +32530,8 @@ cprogramcanportview.o: ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widg
 		../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -32499,7 +32626,6 @@ cprogramcanportview.o: ../Monitor/widget/cprogramcanportview.cpp ../Monitor/widg
 		../Monitor/widget/cprogramview.h \
 		../Monitor/widget/cstatustabs.h \
 		../Monitor/widget/ctoptoolbar.h \
-		../Monitor/style/cstyledbar.h \
 		../Monitor/style/cstylehelper.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QStyle \
 		../Monitor/delegate/cdevicetypedelegate.h \
@@ -32825,6 +32951,8 @@ cprogramcontainer.o: ../Monitor/widget/cprogramcontainer.cpp ../Monitor/cglobal.
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -33363,6 +33491,8 @@ cdesignview.o: ../Monitor/widget/cdesignview.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -33784,6 +33914,8 @@ cdesigntreeview.o: ../Monitor/widget/cdesigntreeview.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -34212,6 +34344,8 @@ cdesignsplashview.o: ../Monitor/widget/cdesignsplashview.cpp ../Monitor/widget/c
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -34718,6 +34852,8 @@ cdesigncontainer.o: ../Monitor/widget/cdesigncontainer.cpp ../Monitor/cglobal.h 
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -35139,6 +35275,8 @@ dlgsystemrecordmodel.o: ../Monitor/dialog/dlgsystemrecordmodel.cpp ../Monitor/di
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -35246,11 +35384,9 @@ dlgsystemrecordmodel.o: ../Monitor/dialog/dlgsystemrecordmodel.cpp ../Monitor/di
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgsystemrecordmodel.o ../Monitor/dialog/dlgsystemrecordmodel.cpp
 
 dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
-		../Monitor/dialog/dlgsystemrecord.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
@@ -35262,106 +35398,102 @@ dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmargins.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpaintdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrect.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpalette.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcolor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
-		../Monitor/cglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -35378,12 +35510,48 @@ dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDateEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdatetimeedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSpacerItem \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		../Monitor/dialog/dlgsystemrecord.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcryptographichash.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDateTime \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDesktopWidget \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDir \
@@ -35398,19 +35566,7 @@ dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -35436,9 +35592,6 @@ dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -35473,8 +35626,6 @@ dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qxmlstream.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg/qtsvgglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTabWidget \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTemporaryFile \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtemporaryfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
@@ -35488,9 +35639,7 @@ dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
@@ -35498,8 +35647,6 @@ dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCommonStyle \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../Monitor/groupbox.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
 		../Monitor/cfilterobject.h \
 		../Monitor/business/cclientbusiness.h \
 		../Monitor/struct/shardEnum.h \
@@ -35559,8 +35706,8 @@ dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
 		../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -35668,11 +35815,9 @@ dlgsystemrecord.o: ../Monitor/dialog/dlgsystemrecord.cpp ui_dlgsystemrecord.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgsystemrecord.o ../Monitor/dialog/dlgsystemrecord.cpp
 
 dlgadministrator.o: ../Monitor/dialog/dlgadministrator.cpp ui_dlgadministrator.h \
-		../Monitor/dialog/dlgadministrator.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
@@ -35684,106 +35829,102 @@ dlgadministrator.o: ../Monitor/dialog/dlgadministrator.cpp ui_dlgadministrator.h
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmargins.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpaintdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrect.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpalette.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcolor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
-		../Monitor/cglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -35800,6 +35941,24 @@ dlgadministrator.o: ../Monitor/dialog/dlgadministrator.cpp ui_dlgadministrator.h
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../Monitor/dialog/dlgadministrator.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -35831,8 +35990,6 @@ dlgadministrator.o: ../Monitor/dialog/dlgadministrator.cpp ui_dlgadministrator.h
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -35858,9 +36015,6 @@ dlgadministrator.o: ../Monitor/dialog/dlgadministrator.cpp ui_dlgadministrator.h
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -35910,7 +36064,6 @@ dlgadministrator.o: ../Monitor/dialog/dlgadministrator.cpp ui_dlgadministrator.h
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
@@ -35981,8 +36134,8 @@ dlgadministrator.o: ../Monitor/dialog/dlgadministrator.cpp ui_dlgadministrator.h
 		../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -36961,6 +37114,8 @@ cdevicetypedelegate.o: ../Monitor/delegate/cdevicetypedelegate.cpp ../Monitor/de
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -38492,6 +38647,8 @@ dlginformationwindow.o: ../Monitor/dialog/dlginformationwindow.cpp ../Monitor/cg
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -38706,7 +38863,7 @@ dlgsearchdevice.o: ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgse
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QModelIndex \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
 		ui_dlgsearchdevice.h \
-		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
@@ -38714,9 +38871,6 @@ dlgsearchdevice.o: ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgse
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -38732,6 +38886,28 @@ dlgsearchdevice.o: ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgse
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -38751,20 +38927,7 @@ dlgsearchdevice.o: ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgse
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFile \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -38826,8 +38989,6 @@ dlgsearchdevice.o: ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgse
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qxmlstream.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg/qtsvgglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTabWidget \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTemporaryFile \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtemporaryfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
@@ -38841,9 +39002,7 @@ dlgsearchdevice.o: ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgse
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
@@ -38851,8 +39010,6 @@ dlgsearchdevice.o: ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgse
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCommonStyle \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../Monitor/groupbox.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
 		../Monitor/cfilterobject.h \
 		../Monitor/business/cclientbusiness.h \
 		../Monitor/struct/shardEnum.h \
@@ -38915,6 +39072,8 @@ dlgsearchdevice.o: ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgse
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -39022,11 +39181,9 @@ dlgsearchdevice.o: ../Monitor/dialog/dlgsearchdevice.cpp ../Monitor/dialog/dlgse
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgsearchdevice.o ../Monitor/dialog/dlgsearchdevice.cpp
 
 dlgchangeadd.o: ../Monitor/dialog/dlgchangeadd.cpp ui_dlgchangeadd.h \
-		../Monitor/dialog/dlgchangeadd.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
@@ -39038,106 +39195,102 @@ dlgchangeadd.o: ../Monitor/dialog/dlgchangeadd.cpp ui_dlgchangeadd.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmargins.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpaintdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrect.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpalette.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcolor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
-		../Monitor/cglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -39154,6 +39307,23 @@ dlgchangeadd.o: ../Monitor/dialog/dlgchangeadd.cpp ui_dlgchangeadd.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../Monitor/dialog/dlgchangeadd.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -39174,19 +39344,12 @@ dlgchangeadd.o: ../Monitor/dialog/dlgchangeadd.cpp ui_dlgchangeadd.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -39212,9 +39375,6 @@ dlgchangeadd.o: ../Monitor/dialog/dlgchangeadd.cpp ui_dlgchangeadd.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -39264,7 +39424,6 @@ dlgchangeadd.o: ../Monitor/dialog/dlgchangeadd.cpp ui_dlgchangeadd.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
@@ -39337,6 +39496,8 @@ dlgchangeadd.o: ../Monitor/dialog/dlgchangeadd.cpp ui_dlgchangeadd.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -39444,11 +39605,9 @@ dlgchangeadd.o: ../Monitor/dialog/dlgchangeadd.cpp ui_dlgchangeadd.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgchangeadd.o ../Monitor/dialog/dlgchangeadd.cpp
 
 dlgchangetype.o: ../Monitor/dialog/dlgchangetype.cpp ui_dlgchangetype.h \
-		../Monitor/dialog/dlgchangetype.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
@@ -39460,106 +39619,102 @@ dlgchangetype.o: ../Monitor/dialog/dlgchangetype.cpp ui_dlgchangetype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmargins.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpaintdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrect.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpalette.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcolor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
-		../Monitor/cglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -39576,6 +39731,23 @@ dlgchangetype.o: ../Monitor/dialog/dlgchangetype.cpp ui_dlgchangetype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../Monitor/dialog/dlgchangetype.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -39596,19 +39768,12 @@ dlgchangetype.o: ../Monitor/dialog/dlgchangetype.cpp ui_dlgchangetype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -39634,9 +39799,6 @@ dlgchangetype.o: ../Monitor/dialog/dlgchangetype.cpp ui_dlgchangetype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -39686,7 +39848,6 @@ dlgchangetype.o: ../Monitor/dialog/dlgchangetype.cpp ui_dlgchangetype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
@@ -39759,6 +39920,8 @@ dlgchangetype.o: ../Monitor/dialog/dlgchangetype.cpp ui_dlgchangetype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -40185,6 +40348,8 @@ dlghandfireview.o: ../Monitor/dialog/dlghandfireview.cpp ../Monitor/dialog/dlgha
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -40284,7 +40449,9 @@ dlghandfireview.o: ../Monitor/dialog/dlghandfireview.cpp ../Monitor/dialog/dlgha
 		../Monitor/view/ctableview.h \
 		../Monitor/view/ccontrollertreeview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeView \
-		ui_dlghandfireview.h
+		ui_dlghandfireview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSpacerItem \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlghandfireview.o ../Monitor/dialog/dlghandfireview.cpp
 
 groupbox.o: ../Monitor/groupbox.cpp ../Monitor/groupbox.h \
@@ -40997,6 +41164,8 @@ dlglogininformation.o: ../Monitor/dialog/dlglogininformation.cpp ../Monitor/cglo
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -41104,12 +41273,9 @@ dlglogininformation.o: ../Monitor/dialog/dlglogininformation.cpp ../Monitor/cglo
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlglogininformation.o ../Monitor/dialog/dlglogininformation.cpp
 
 dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
-		../Monitor/dialog/dlgtimeinterval.h \
-		../Monitor/cglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
@@ -41121,51 +41287,66 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
@@ -41178,35 +41359,22 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
@@ -41215,9 +41383,10 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCheckBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcheckbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -41225,7 +41394,6 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvalidator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregularexpression.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyle.h \
@@ -41234,16 +41402,42 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDateTimeEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdatetimeedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSpacerItem \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		../Monitor/dialog/dlgtimeinterval.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcryptographichash.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDateTime \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDesktopWidget \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDir \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdir.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfileinfo.h \
@@ -41256,19 +41450,12 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -41294,9 +41481,6 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -41346,9 +41530,7 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
@@ -41356,8 +41538,6 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCommonStyle \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../Monitor/groupbox.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
 		../Monitor/cfilterobject.h \
 		../Monitor/business/cclientbusiness.h \
 		../Monitor/struct/shardEnum.h \
@@ -41518,15 +41698,13 @@ dlgtimeinterval.o: ../Monitor/dialog/dlgtimeinterval.cpp ui_dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessntp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QButtonGroup \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qbuttongroup.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgtimeinterval.o ../Monitor/dialog/dlgtimeinterval.cpp
 
 cmsglogin.o: ../Monitor/struct/cmsglogin.cpp ../Monitor/struct/cmsglogin.h \
@@ -41961,16 +42139,7 @@ ckeyboard.o: ../Monitor/keyboard/ckeyboard.cpp ../Monitor/keyboard/ckeyboard.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
 		ui_ckeyboard.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFile \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDateTime \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
-		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
@@ -41978,6 +42147,19 @@ ckeyboard.o: ../Monitor/keyboard/ckeyboard.cpp ../Monitor/keyboard/ckeyboard.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDebug \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFile \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QDateTime \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatetime.h \
+		../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
@@ -42044,8 +42226,6 @@ ckeyboard.o: ../Monitor/keyboard/ckeyboard.cpp ../Monitor/keyboard/ckeyboard.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -42093,10 +42273,8 @@ ckeyboard.o: ../Monitor/keyboard/ckeyboard.cpp ../Monitor/keyboard/ckeyboard.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasictimer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
 		../Monitor/cmyiconstyle.h \
@@ -42165,6 +42343,8 @@ ckeyboard.o: ../Monitor/keyboard/ckeyboard.cpp ../Monitor/keyboard/ckeyboard.h \
 		../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -42272,11 +42452,9 @@ ckeyboard.o: ../Monitor/keyboard/ckeyboard.cpp ../Monitor/keyboard/ckeyboard.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ckeyboard.o ../Monitor/keyboard/ckeyboard.cpp
 
 dlgdevices.o: ../Monitor/dialog/dlgdevices.cpp ui_dlgdevices.h \
-		../Monitor/dialog/dlgdevices.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
@@ -42288,108 +42466,116 @@ dlgdevices.o: ../Monitor/dialog/dlgdevices.cpp ui_dlgdevices.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmargins.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpaintdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrect.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpalette.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcolor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
-		../Monitor/cglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
@@ -42402,8 +42588,32 @@ dlgdevices.o: ../Monitor/dialog/dlgdevices.cpp ui_dlgdevices.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSpacerItem \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		../Monitor/view/ctableview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
+		../Monitor/dialog/dlgdevices.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -42424,22 +42634,9 @@ dlgdevices.o: ../Monitor/dialog/dlgdevices.cpp ui_dlgdevices.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QMenu \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qmenu.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qaction.h \
@@ -42462,12 +42659,7 @@ dlgdevices.o: ../Monitor/dialog/dlgdevices.cpp ui_dlgdevices.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSet \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSettings \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsettings.h \
@@ -42499,8 +42691,6 @@ dlgdevices.o: ../Monitor/dialog/dlgdevices.cpp ui_dlgdevices.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qxmlstream.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtSvg/qtsvgglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTabWidget \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTableView \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtableview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTemporaryFile \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtemporaryfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QTextCodec \
@@ -42514,9 +42704,7 @@ dlgdevices.o: ../Monitor/dialog/dlgdevices.cpp ui_dlgdevices.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
@@ -42585,8 +42773,8 @@ dlgdevices.o: ../Monitor/dialog/dlgdevices.cpp ui_dlgdevices.h \
 		../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -42688,7 +42876,6 @@ dlgdevices.o: ../Monitor/dialog/dlgdevices.cpp ui_dlgdevices.h \
 		../Monitor/delegate/cdevicetypedelegate.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QStyledItemDelegate \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
-		../Monitor/view/ctableview.h \
 		../Monitor/view/ccontrollertreeview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeView
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgdevices.o ../Monitor/dialog/dlgdevices.cpp
@@ -43008,6 +43195,8 @@ cstatustabs.o: ../Monitor/widget/cstatustabs.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -43429,6 +43618,8 @@ cdevicelistmodel.o: ../Monitor/model/cdevicelistmodel.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -43850,6 +44041,8 @@ configfilemanager.o: ../Monitor/graphics/configfilemanager.cpp ../Monitor/cgloba
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -44062,8 +44255,7 @@ dlgusetime.o: ../Monitor/dialog/dlgusetime.cpp ../Monitor/dialog/dlgusetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
 		ui_dlgusetime.h \
-		../Monitor/dialog/dlgtimeinterval.h \
-		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
@@ -44071,6 +44263,27 @@ dlgusetime.o: ../Monitor/dialog/dlgusetime.cpp ../Monitor/dialog/dlgusetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		../Monitor/dialog/dlgtimeinterval.h \
+		../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
@@ -44081,14 +44294,12 @@ dlgusetime.o: ../Monitor/dialog/dlgusetime.cpp ../Monitor/dialog/dlgusetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvalidator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregularexpression.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
@@ -44110,19 +44321,12 @@ dlgusetime.o: ../Monitor/dialog/dlgusetime.cpp ../Monitor/dialog/dlgusetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -44148,9 +44352,6 @@ dlgusetime.o: ../Monitor/dialog/dlgusetime.cpp ../Monitor/dialog/dlgusetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -44200,9 +44401,7 @@ dlgusetime.o: ../Monitor/dialog/dlgusetime.cpp ../Monitor/dialog/dlgusetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
@@ -44371,19 +44570,17 @@ dlgusetime.o: ../Monitor/dialog/dlgusetime.cpp ../Monitor/dialog/dlgusetime.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessntp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgusetime.o ../Monitor/dialog/dlgusetime.cpp
 
 dlguploadlamp.o: ../Monitor/dialog/dlguploadlamp.cpp ui_dlguploadlamp.h \
-		../Monitor/dialog/dlguploadlamp.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qconfig.h \
@@ -44395,106 +44592,102 @@ dlguploadlamp.o: ../Monitor/dialog/dlguploadlamp.cpp ui_dlguploadlamp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsysinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlogging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qflags.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasicatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_bootstrap.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qgenericatomic.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_cxx11.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qatomic_msvc.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qglobalstatic.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnumeric.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qversiontagging.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qnamespace.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qarraydata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qalgorithms.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiterator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringbuilder.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpair.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbytearraylist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringlist.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregexp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qstringmatcher.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qscopedpointer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtguiglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtgui-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmargins.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpaintdevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qrect.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsize.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qpoint.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpalette.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcolor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgb.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qrgba64.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qbrush.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvector.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qmatrix.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpolygon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qregion.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdatastream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qiodevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qline.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtransform.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainterpath.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qimage.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixelformat.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpixmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qshareddata.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qhash.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfont.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontmetrics.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qfontinfo.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qsizepolicy.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qcursor.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qkeysequence.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qevent.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qvariant.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qmap.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qdebug.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtextstream.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qset.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurl.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qurlquery.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfile.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
-		../Monitor/cglobal.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qeventloop.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcombobox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -44511,6 +44704,23 @@ dlguploadlamp.o: ../Monitor/dialog/dlguploadlamp.cpp ui_dlguploadlamp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QDialog \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdialog.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../Monitor/dialog/dlguploadlamp.h \
+		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -44531,19 +44741,12 @@ dlguploadlamp.o: ../Monitor/dialog/dlguploadlamp.cpp ui_dlguploadlamp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -44569,9 +44772,6 @@ dlguploadlamp.o: ../Monitor/dialog/dlguploadlamp.cpp ui_dlguploadlamp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -44621,7 +44821,6 @@ dlguploadlamp.o: ../Monitor/dialog/dlguploadlamp.cpp ui_dlguploadlamp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
@@ -44695,6 +44894,8 @@ dlguploadlamp.o: ../Monitor/dialog/dlguploadlamp.cpp ui_dlguploadlamp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -44906,7 +45107,7 @@ dlgadminparam.o: ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtouchdevice.h \
 		ui_dlgadminparam.h \
-		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qcoreapplication.h \
@@ -44914,6 +45115,27 @@ dlgadminparam.o: ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSpacerItem \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
@@ -44924,14 +45146,12 @@ dlgadminparam.o: ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvalidator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregularexpression.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCoreApplication \
@@ -44953,19 +45173,12 @@ dlgadminparam.o: ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QHash \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -44991,9 +45204,6 @@ dlgadminparam.o: ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -45043,9 +45253,7 @@ dlgadminparam.o: ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVector \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
@@ -45115,8 +45323,8 @@ dlgadminparam.o: ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminp
 		../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -45222,11 +45430,7 @@ dlgadminparam.o: ../Monitor/dialog/dlgadminparam.cpp ../Monitor/dialog/dlgadminp
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeView \
 		../Monitor/keyboard/ckeyboard.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QSignalMapper \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsignalmapper.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qsignalmapper.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgadminparam.o ../Monitor/dialog/dlgadminparam.cpp
 
 dlgadminParamPage.o: ../Monitor/dialog/dlgadminParamPage.cpp ../Monitor/dialog/dlgadminParamPage.h \
@@ -45371,12 +45575,37 @@ dlgadminParamPage.o: ../Monitor/dialog/dlgadminParamPage.cpp ../Monitor/dialog/d
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qtimer.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qbasictimer.h \
 		ui_dlgadminParamPage.h \
-		../Monitor/cglobal.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCheckBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcheckbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
+		../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QByteArray \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QCloseEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QColor \
@@ -45387,14 +45616,12 @@ dlgadminParamPage.o: ../Monitor/dialog/dlgadminParamPage.cpp ../Monitor/dialog/d
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractspinbox.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qvalidator.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qregularexpression.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractslider.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qabstractitemmodel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QContextMenuEvent \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QCryptographicHash \
@@ -45414,18 +45641,11 @@ dlgadminParamPage.o: ../Monitor/dialog/dlgadminParamPage.cpp ../Monitor/dialog/d
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QFileInfo \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QFont \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGridLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgridlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qboxlayout.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHBoxLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QLayout \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QLineF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QList \
@@ -45447,9 +45667,6 @@ dlgadminParamPage.o: ../Monitor/dialog/dlgadminParamPage.cpp ../Monitor/dialog/d
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QPointF \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QProcess \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QRegExp \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QScrollBar \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qscrollbar.h \
@@ -45496,17 +45713,12 @@ dlgadminParamPage.o: ../Monitor/dialog/dlgadminParamPage.cpp ../Monitor/dialog/d
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QUuid \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/quuid.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtCore/QVariant \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QVBoxLayout \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QWidget \
 		../Monitor/widget.h \
 		../Monitor/cdevicetype.h \
 		../Monitor/cmyiconstyle.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QCommonStyle \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../Monitor/groupbox.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QGroupBox \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/qgroupbox.h \
 		../Monitor/cfilterobject.h \
 		../Monitor/business/cclientbusiness.h \
 		../Monitor/struct/shardEnum.h \
@@ -45566,8 +45778,8 @@ dlgadminParamPage.o: ../Monitor/dialog/dlgadminParamPage.cpp ../Monitor/dialog/d
 		../Monitor/dialog/dlgtimeinterval.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/QPainter \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessntp.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QUdpSocket \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qudpsocket.h \
@@ -46087,6 +46299,8 @@ deviceForbidFault.o: ../Monitor/graphics/deviceForbidFault.cpp ../Monitor/cgloba
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -46508,6 +46722,8 @@ deviceControl.o: ../Monitor/graphics/deviceControl.cpp ../Monitor/cglobal.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -46934,6 +47150,8 @@ dlgdeviceForbidFault.o: ../Monitor/dialog/dlgdeviceForbidFault.cpp ../Monitor/di
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \
@@ -47034,6 +47252,7 @@ dlgdeviceForbidFault.o: ../Monitor/dialog/dlgdeviceForbidFault.cpp ../Monitor/di
 		../Monitor/view/ccontrollertreeview.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QTreeView \
 		ui_dlgdeviceForbidFault.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtWidgets/QSpacerItem \
 		../Monitor/model/cdeviceforbidfaultlistmodel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dlgdeviceForbidFault.o ../Monitor/dialog/dlgdeviceForbidFault.cpp
 
@@ -47352,6 +47571,8 @@ cdeviceforbidfaultlistmodel.o: ../Monitor/model/cdeviceforbidfaultlistmodel.cpp 
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/QHostInfo \
+		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtNetwork/qhostinfo.h \
 		../Monitor/business/cprocessmqtt.h \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/QMqttClient \
 		/opt/Qt5.12.9/5.12.9/gcc_64/include/QtMqtt/qmqttclient.h \

@@ -1443,8 +1443,8 @@ void CTopToolBar::slotReStart()
     if(ret == QMessageBox::Yes)
     {   
         slotMuteSystem();
-        qApp->quit();
-//        QProcess::execute(QString("reboot"));
+//        qApp->quit();
+        QProcess::execute(QString("reboot"));
 
 //        QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
     }

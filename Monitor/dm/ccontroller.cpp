@@ -358,8 +358,8 @@ CCanport *CController::canportById(const int id) const
 
 CCanport *CController::canportByAddress(const int add) const
 {
-    qDebug() << "CController::canportByAddress"
-             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
+//    qDebug() << "CController::canportByAddress"
+//             << QDateTime::currentDateTime().toString("HH:mm:ss:zzz");
     for(int i = 0; i < m_canports.size(); ++i)
     {
         if(m_canports.at(i)->canportAdd() == add)

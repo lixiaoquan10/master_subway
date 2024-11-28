@@ -8,6 +8,8 @@
 CprocessMqtt::CprocessMqtt(QMqttClient *mqttClient) : m_mqttClient(mqttClient)
 {
     m_msgid = 1;
+    m_testMessage = false;
+    m_isBuildAllDeviceMsg = false;
     m_isPingRespond = true;
     m_pingNoRespondCount = 0;
     m_productKey = "安科瑞应急照明与疏散指示系统";
@@ -33,6 +35,9 @@ CprocessMqtt::CprocessMqtt(QMqttClient *mqttClient) : m_mqttClient(mqttClient)
     //定时ping
     m_pingTimer = new QTimer();
     connect(m_pingTimer, &QTimer::timeout, this, &CprocessMqtt::slot_requestPing);
+    //测试 定时发送状态
+    m_testTimer = new QTimer();
+    connect(m_testTimer, &QTimer::timeout, this, &CprocessMqtt::slot_testMessage);
     //定时重连
     m_reconnectTimer = new QTimer();
     connect(m_reconnectTimer, &QTimer::timeout, this, &CprocessMqtt::slot_reconnectToBroker);
@@ -45,6 +50,15 @@ CprocessMqtt::~CprocessMqtt()
     delete m_pingTimer;
     delete m_reconnectTimer;
     clearSendData();
+}
+
+void CprocessMqtt::slot_testMessage()
+{
+    if(m_testMessage)
+        slot_uploadAllDeviceStatus();
+    else
+        uploadAllDeviceInfo();
+    m_testMessage = !m_testMessage;
 }
 
 void CprocessMqtt::clearSendData()
@@ -65,6 +79,7 @@ void CprocessMqtt::slot_brokerDisconnected()
 {
     m_reconnectTimer->start(m_reconnectInterval);
     m_pingTimer->stop();
+    m_testTimer->stop();
     // 清理所有定时器
     for (QTimer *timer : m_resendTimers) {
         timer->stop();  // 停止定时器
@@ -100,6 +115,7 @@ void CprocessMqtt::slot_updateLogStateChange()
     if(m_mqttClient->state() == QMqttClient::Disconnected)
     {
         m_pingTimer->stop();
+        m_testTimer->stop();
         emit connectStatus(false);
         content = content
                 + QLatin1String("MQTT state changed. Now: disconnected")
@@ -123,7 +139,8 @@ void CprocessMqtt::slot_updateLogStateChange()
         emit connectStatus(true);
         subscribeComTopic();
         uploadAllDeviceInfo();
-        QTimer::singleShot(5000, this, &CprocessMqtt::slot_uploadAllDeviceStatus);
+//        QTimer::singleShot(5000, this, &CprocessMqtt::slot_uploadAllDeviceStatus);
+        m_testTimer->start(5000);
         m_pingTimer->start(2000);
         // 重置重连间隔
         m_reconnectInterval = m_initialReconnectInterval;
@@ -187,7 +204,7 @@ void CprocessMqtt::slot_reconnectToBroker()
 //订阅通讯所需主题
 void CprocessMqtt::subscribeComTopic()
 {
-    subscribeToTopic(QString("v1/%1/%2/sys/service/invoke").arg(m_productKey).arg(m_deviceSN));
+    subscribeToTopic(QString("v1/%1/%2/sys/property/down").arg(m_productKey).arg(m_deviceSN));
 }
 
 //订阅主题
@@ -237,14 +254,14 @@ void CprocessMqtt::subscribeToTopic(const QString &topic)
         saveDataToFile(filePath, data);
         manualDisconnectToBroker();
         manualConnectToBroker(m_host, m_port);
-    }  
+    }
 }
 //发送数据
 bool CprocessMqtt::publishMessage(const QString &topic, const QByteArray &message)
 {
     QString filePath = "/home/xfss/root/logfile/MQTTData_" + m_host+ ".txt";
     if (m_mqttClient->state() == QMqttClient::Connected) {
-        quint32 packetId = m_mqttClient->publish(topic, message, 1);
+        quint32 packetId = m_mqttClient->publish(topic, message, 0);
         // 记录消息内容、主题和定时器
         m_sendMessages[packetId] = qMakePair(message, topic);
         // 为每个已发布的消息启动一个定时器，3秒超时后重发
@@ -284,7 +301,7 @@ bool CprocessMqtt::publishMessage(const QString &topic, const QByteArray &messag
         manualDisconnectToBroker();
         manualConnectToBroker(m_host, m_port);
         return false;
-    } 
+    }
 }
 
 // 处理消息状态变化的槽函数
@@ -380,7 +397,7 @@ void CprocessMqtt::slot_handleMessageReceived(const QByteArray &message, const Q
             + QLatin1Char('\n');
     QString filePath = "/home/xfss/root/logfile/MQTTData_" + m_host+ ".txt";
     saveDataToFile(filePath, content);
-    if(topic.name() == QString("v1/%1/%2/sys/service/invoke").arg(m_productKey).arg(m_deviceSN))
+    if(topic.name() == QString("v1/%1/%2/sys/property/down").arg(m_productKey).arg(m_deviceSN))
     {
         QJsonDocument jsonDoc = QJsonDocument::fromJson(message);
         if (jsonDoc.isObject()) {
@@ -398,14 +415,14 @@ void CprocessMqtt::slot_handleMessageReceived(const QByteArray &message, const Q
             bool start;
             // 判断 "Reset" 是否存在
             if (params.contains("Reset")) {
-                reset = params.value("Reset").toObject().value("value").toBool();
+                reset = params.value("Reset").toBool();
             } else {
                 replyHostControl(msgid, false);
                 return;
             }
             // 判断 "Start" 是否存在
             if (params.contains("Start")) {
-                start = params.value("Start").toObject().value("value").toBool();
+                start = params.value("Start").toBool();
             } else {
                 replyHostControl(msgid, false);
                 return;
@@ -466,7 +483,7 @@ void CprocessMqtt::slot_pingResponse()
 //回复服务器控制指令
 void CprocessMqtt::replyHostControl(QString msgid, bool isTrue)
 {
-    QString topic = QString("v1/%1/%2/sys/service/invoke_reply").arg(m_productKey).arg(m_deviceSN);
+    QString topic = QString("v1/%1/%2/sys/property/down_reply").arg(m_productKey).arg(m_deviceSN);
     QJsonObject msgObj;
     msgObj["msgid"] = msgid;
     if(isTrue)
@@ -487,11 +504,15 @@ void CprocessMqtt::replyHostControl(QString msgid, bool isTrue)
 //上传所有设备信息到服务器
 void CprocessMqtt::uploadAllDeviceInfo()
 {
-    QString topic = QString("v1/%1/%2/sys/property/up").arg(m_productKey).arg(m_deviceSN);
+    QString allDeviceMsg;
+    QString topic;
     // 创建上行报文
     CController* controller = CGlobal::instance()->controller();
     if(!controller)
         return;
+    allDeviceMsg = QString("Type:应急照明控制器 ID: %1").arg(1)
+            + QLatin1Char('\n');
+    topic = QString("v1/%1/%2_%3/sys/property/up").arg(m_productKey).arg(m_deviceSN).arg(1);
     QByteArray controllerJsonData = creatControllerJsonData(controller);
     bool isPublishSuccess = publishMessage(topic, controllerJsonData);
     if(!isPublishSuccess)
@@ -509,6 +530,9 @@ void CprocessMqtt::uploadAllDeviceInfo()
             CDistribution* distribution = canport->distributionByAddress(j+1);
             if(!distribution)
                 continue;
+            allDeviceMsg = allDeviceMsg + QString("Type:集中电源 ID: %1").arg(distribution->keyId())
+                    + QLatin1Char('\n');
+            topic = QString("v1/%1/%2_%3/sys/property/up").arg(m_productKey).arg(m_deviceSN).arg(distribution->keyId());
             QByteArray distributionJsonData = creatDistributionJsonData(distribution);
             bool isPublishSuccess = publishMessage(topic, distributionJsonData);
             if(!isPublishSuccess)
@@ -521,6 +545,9 @@ void CprocessMqtt::uploadAllDeviceInfo()
                 CLoop* loop = distribution->loopByAdd(l+1);
                 if(!loop)
                     continue;
+                allDeviceMsg = allDeviceMsg + QString("Type:回路 ID: %1").arg(loop->keyId())
+                        + QLatin1Char('\n');
+                topic = QString("v1/%1/%2_%3/sys/property/up").arg(m_productKey).arg(m_deviceSN).arg(loop->keyId());
                 QByteArray loopJsonData = creatLoopJsonData(loop);
                 bool isPublishSuccess = publishMessage(topic, loopJsonData);
                 if(!isPublishSuccess)
@@ -533,6 +560,9 @@ void CprocessMqtt::uploadAllDeviceInfo()
                     CDevice* device = loop->deviceByAdd(m+1);
                     if(!device)
                         continue;
+                    allDeviceMsg = allDeviceMsg + QString("Type:灯具 ID: %1").arg(device->keyId())
+                                            + QLatin1Char('\n');
+                    topic = QString("v1/%1/%2_%3/sys/property/up").arg(m_productKey).arg(m_deviceSN).arg(device->keyId());
                     QByteArray deviceJsonData = creatDeviceJsonData(device);
                     bool isPublishSuccess = publishMessage(topic, deviceJsonData);
                     if(!isPublishSuccess)
@@ -544,18 +574,25 @@ void CprocessMqtt::uploadAllDeviceInfo()
             }
         }
     }
+    if(!m_isBuildAllDeviceMsg)
+    {
+        QString filePath = "/home/xfss/root/logfile/MQTTData_allDeviceMsg_" + m_host+ ".txt";
+        saveDataToFile(filePath, allDeviceMsg);
+        m_isBuildAllDeviceMsg = true;
+    }
 }
 
 //设备状态变化上报
 void CprocessMqtt::slot_sendDeviceStatusMsg(CObject* object, bool isDistributionEmergencyOrFault)
 {
     QString type = object->type();
-    QString topic = QString("v1/%1/%2/sys/event/up").arg(m_productKey).arg(m_deviceSN);
+    QString topic;
     if(type == CController::type_s)
     {
         CController* controller = static_cast<CController*>(object);
         if(!controller)
             return;
+        topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(1);
         QByteArray controllerJsonData = creatControllerStatusJsonData(controller);
         bool isPublishSuccess = publishMessage(topic, controllerJsonData);
         if(!isPublishSuccess)
@@ -569,6 +606,7 @@ void CprocessMqtt::slot_sendDeviceStatusMsg(CObject* object, bool isDistribution
         CDistribution* distribution = static_cast<CDistribution*>(object);
         if(!distribution)
             return;
+        topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(distribution->keyId());
         QByteArray distributionJsonStatusData = creatDistributionStatusJsonData(distribution);
         bool isPublishSuccess = publishMessage(topic, distributionJsonStatusData);
         if(!isPublishSuccess)
@@ -583,15 +621,13 @@ void CprocessMqtt::slot_sendDeviceStatusMsg(CObject* object, bool isDistribution
             CLoop* loop = distribution->loopByAdd(l+1);
             if(!loop)
                 continue;
-            if(distribution->getStatus(OBJS_DistributionCommunicationFault))
+            topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(loop->keyId());
+            QByteArray loopStatusJsonData = creatLoopStatusJsonData(loop);
+            bool isPublishSuccess = publishMessage(topic, loopStatusJsonData);
+            if(!isPublishSuccess)
             {
-                QByteArray loopStatusJsonData = creatLoopStatusJsonData(loop);
-                bool isPublishSuccess = publishMessage(topic, loopStatusJsonData);
-                if(!isPublishSuccess)
-                {
-                    clearSendData();
-                    return;
-                }
+                clearSendData();
+                return;
             }
             QList<CDevice*> devices = loop->devices();
             for(int m=0; m<devices.count(); m++)
@@ -599,6 +635,7 @@ void CprocessMqtt::slot_sendDeviceStatusMsg(CObject* object, bool isDistribution
                 CDevice* device = devices.at(m);
                 if(!device)
                     continue;
+                topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(device->keyId());
                 QByteArray deviceStatusJsonData = creatDeviceStatusJsonData(device);
                 bool isPublishSuccess = publishMessage(topic, deviceStatusJsonData);
                 if(!isPublishSuccess)
@@ -615,6 +652,7 @@ void CprocessMqtt::slot_sendDeviceStatusMsg(CObject* object, bool isDistribution
         CLoop* loop = static_cast<CLoop*>(object);
         if(!loop)
             return;
+        topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(loop->keyId());
         QByteArray loopJsonData = creatLoopStatusJsonData(loop);
         publishMessage(topic, loopJsonData);
         QList<CDevice*> devices = loop->devices();
@@ -623,6 +661,7 @@ void CprocessMqtt::slot_sendDeviceStatusMsg(CObject* object, bool isDistribution
             CDevice* device = devices.at(m);
             if(!device)
                 continue;
+            topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(device->keyId());
             QByteArray deviceStatusJsonData = creatDeviceStatusJsonData(device);
             bool isPublishSuccess = publishMessage(topic, deviceStatusJsonData);
             if(!isPublishSuccess)
@@ -638,6 +677,7 @@ void CprocessMqtt::slot_sendDeviceStatusMsg(CObject* object, bool isDistribution
         CDevice* device = static_cast<CDevice*>(object);
         if(!device)
             return;
+        topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(device->keyId());
         QByteArray deviceJsonData = creatDeviceStatusJsonData(device);
         bool isPublishSuccess = publishMessage(topic, deviceJsonData);
         if(!isPublishSuccess)
@@ -651,11 +691,12 @@ void CprocessMqtt::slot_sendDeviceStatusMsg(CObject* object, bool isDistribution
 //上传所有设备状态到服务器
 void CprocessMqtt::slot_uploadAllDeviceStatus()
 {
-    QString topic = QString("v1/%1/%2/sys/event/up").arg(m_productKey).arg(m_deviceSN);
+    QString topic;
     // 创建上行报文
     CController* controller = CGlobal::instance()->controller();
     if(!controller)
         return;
+    topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(1);
     QByteArray controllerJsonStatusData = creatControllerStatusJsonData(controller);
     bool isPublishSuccess = publishMessage(topic, controllerJsonStatusData);
     if(!isPublishSuccess)
@@ -674,6 +715,7 @@ void CprocessMqtt::slot_uploadAllDeviceStatus()
             CDistribution* distribution = distributions.at(j);
             if(!distribution)
                 continue;
+            topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(distribution->keyId());
             QByteArray distributionJsonStatusData = creatDistributionStatusJsonData(distribution);
             bool isPublishSuccess = publishMessage(topic, distributionJsonStatusData);
             if(!isPublishSuccess)
@@ -686,6 +728,7 @@ void CprocessMqtt::slot_uploadAllDeviceStatus()
                 CLoop* loop = distribution->loopByAdd(l+1);
                 if(!loop)
                     continue;
+                topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(loop->keyId());
                 QByteArray loopStatusJsonData = creatLoopStatusJsonData(loop);
                 bool isPublishSuccess = publishMessage(topic, loopStatusJsonData);
                 if(!isPublishSuccess)
@@ -699,6 +742,7 @@ void CprocessMqtt::slot_uploadAllDeviceStatus()
                     CDevice* device = devices.at(m);
                     if(!device)
                         continue;
+                    topic = QString("v1/%1/%2_%3/sys/event/up").arg(m_productKey).arg(m_deviceSN).arg(device->keyId());
                     QByteArray deviceStatusJsonData = creatDeviceStatusJsonData(device);
                     bool isPublishSuccess = publishMessage(topic, deviceStatusJsonData);
                     if(!isPublishSuccess)
@@ -724,12 +768,17 @@ QByteArray CprocessMqtt::creatControllerJsonData(CController* controller)
     controllerType["value"] = "应急照明控制器";
     controllerType["ts"] = QDateTime::currentMSecsSinceEpoch();
 
+    QJsonObject controllerName;
+    controllerName["value"] = "应急照明控制器";
+    controllerName["ts"] = QDateTime::currentMSecsSinceEpoch();
+
     QJsonObject controllerID;
     controllerID["value"] = 1;
     controllerID["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject paramsObj;
     paramsObj["Type"] = controllerType;
+    paramsObj["Name"] = controllerName;
     paramsObj["ControllerID"] = controllerID;
 
     QJsonObject msgObj;
@@ -878,38 +927,46 @@ QByteArray CprocessMqtt::creatDeviceJsonData(CDevice* lamp)
 //创建控制器状态数据
 QByteArray CprocessMqtt::creatControllerStatusJsonData(CController* controller)
 {
+    QString eventid = "normal";
+    bool mainPowerFault = false;
+    bool batteryPowerFault = false;
+    bool warning = false;
+
+    if(CGlobal::instance()->m_isShieldMainPowerFaultEmergency)
+    {
+        mainPowerFault = true;
+        eventid = "fault";
+    }
+
+    if(controller->getStatus(OBJS_StandbyPowerOff) || controller->getStatus(OBJS_StandbyPowerShort) ||
+            controller->getStatus(OBJS_StandbyPowerUndervoltage))
+    {
+        batteryPowerFault = true;
+        eventid = "fault";
+    }
+
+    if(CGlobal::instance()->m_isEmergency)
+    {
+        warning = true;
+        eventid = "warning";
+    }
+
     // 创建上行报文
-    QJsonObject controllerType;
-    controllerType["value"] = "应急照明控制器";
-    controllerType["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject controllerID;
-    controllerID["value"] = 1;
-    controllerID["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject controllerMainPowerFault;
-    controllerMainPowerFault["value"] = CGlobal::instance()->m_isShieldMainPowerFaultEmergency ? true : false;
-    controllerMainPowerFault["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject controllerBatteryPowerFault;
-    controllerBatteryPowerFault["value"] =  (controller->getStatus(OBJS_StandbyPowerOff) ||
-                                             controller->getStatus(OBJS_StandbyPowerShort) ||
-                                             controller->getStatus(OBJS_StandbyPowerUndervoltage)) ? true : false;
-    controllerBatteryPowerFault["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject controllerWarning;
-    controllerWarning["value"] = CGlobal::instance()->m_isEmergency ? true : false;
-    controllerWarning["ts"] = QDateTime::currentMSecsSinceEpoch();
+    QJsonObject paramValue;
+    paramValue["Type"] = "应急照明控制器";
+    paramValue["Name"] = "应急照明控制器";
+    paramValue["ControllerID"] = 1;
+    paramValue["MainPowerFault"] = mainPowerFault;
+    paramValue["BatteryPowerFault"] = batteryPowerFault;
+    paramValue["Warning"] = warning;
 
     QJsonObject paramsObj;
-    paramsObj["Type"] = controllerType;
-    paramsObj["ControllerID"] = controllerID;
-    paramsObj["MainPowerFault"] = controllerMainPowerFault;
-    paramsObj["BatteryPowerFault"] = controllerBatteryPowerFault;
-    paramsObj["Warning"] = controllerWarning;
+    paramsObj["value"] = paramValue;
+    paramsObj["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject msgObj;
     msgObj["msgid"] = QString::number(m_msgid++);
+    msgObj["eventid"] = eventid;
     msgObj["params"] = paramsObj;
     // 转换为JSON文档
     QJsonDocument doc(msgObj);
@@ -920,53 +977,55 @@ QByteArray CprocessMqtt::creatControllerStatusJsonData(CController* controller)
 //创建集中电源状态数据
 QByteArray CprocessMqtt::creatDistributionStatusJsonData(CDistribution* distribution)
 {
+    QString eventid = "normal";
+    bool communicationFault = false;
+    bool mainPowerFault = false;
+    bool batteryPowerFault = false;
+    bool warning = false;
+
+    if(distribution->getStatus(OBJS_DistributionCommunicationFault))
+    {
+        communicationFault = true;
+        eventid = "fault";
+    }
+
+    if(distribution->getmainPowerFault())
+    {
+        mainPowerFault = true;
+        eventid = "fault";
+    }
+
+    if(distribution->getbackupPowerFault())
+    {
+        batteryPowerFault = true;
+        eventid = "fault";
+    }
+
+    if(distribution->getemergencyStatus())
+    {
+        warning = true;
+        eventid = "warning";
+    }
+
     // 创建上行报文
-    QJsonObject distributionID;
-    distributionID["value"] = distribution->keyId();
-    distributionID["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject distributionAddress;
-    distributionAddress["value"] = QString::number(distribution->canportAddress()-2) + "-" +
+    QJsonObject paramValue;
+    paramValue["Type"] = "集中电源";
+    paramValue["Name"] = distribution->distributionValue(DISTRIBUTION_VALUE_NAME).toString();
+    paramValue["CanDeviceID"] = distribution->keyId();
+    paramValue["CanDeviceAddress"] = QString::number(distribution->canportAddress()-2) + "-" +
             QString::number(distribution->distributionAddress());
-    distributionAddress["ts"] = QDateTime::currentMSecsSinceEpoch();
+    paramValue["CanCommunicationFault"] = communicationFault;
+    paramValue["CanMainPowerFault"] = mainPowerFault;
+    paramValue["CanBatteryPowerFault"] = batteryPowerFault;
+    paramValue["CanWarning"] = warning;
 
-    QJsonObject distributionType;
-    distributionType["value"] = "集中电源";
-    distributionType["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject distributionName;
-    distributionName["value"] = distribution->distributionValue(DISTRIBUTION_VALUE_NAME).toString();
-    distributionName["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-
-    QJsonObject distributionCommunicationFault;
-    distributionCommunicationFault["value"] = distribution->getStatus(OBJS_DistributionCommunicationFault)? true : false;
-    distributionCommunicationFault["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject distributionMainPowerFault;
-    distributionMainPowerFault["value"] = distribution->getmainPowerFault()? true : false;
-    distributionMainPowerFault["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject distributionBatteryPowerFault;
-    distributionBatteryPowerFault["value"] = distribution->getbackupPowerFault()? true : false;
-    distributionBatteryPowerFault["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject distributionWarning;
-    distributionWarning["value"] = distribution->getemergencyStatus()? true : false;
-    distributionWarning["ts"] = QDateTime::currentMSecsSinceEpoch();
     QJsonObject paramsObj;
-
-    paramsObj["CanDeviceID"] = distributionID;
-    paramsObj["Type"] = distributionType;
-    paramsObj["Name"] = distributionName;
-    paramsObj["CanDeviceAddress"] = distributionAddress;
-    paramsObj["CanCommunicationFault"] = distributionCommunicationFault;
-    paramsObj["CanMainPowerFault"] = distributionMainPowerFault;
-    paramsObj["CanBatteryPowerFault"] = distributionBatteryPowerFault;
-    paramsObj["CanWarning"] = distributionWarning;
+    paramsObj["value"] = paramValue;
+    paramsObj["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject msgObj;
     msgObj["msgid"] = QString::number(m_msgid++);
+    msgObj["eventid"] = eventid;
     msgObj["params"] = paramsObj;
     // 转换为JSON文档
     QJsonDocument doc(msgObj);
@@ -977,39 +1036,32 @@ QByteArray CprocessMqtt::creatDistributionStatusJsonData(CDistribution* distribu
 //创建回路状态数据
 QByteArray CprocessMqtt::creatLoopStatusJsonData(CLoop* loop)
 {
+    QString eventid = "normal";
+    bool communicationFault = false;
+
+    if(loop->getLoopCommunicationFault())
+    {
+        communicationFault = true;
+        eventid = "fault";
+    }
+
     // 创建上行报文
-    QJsonObject loopID;
-    loopID["value"] = loop->keyId();
-    loopID["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject loopType;
-    loopType["value"] = "回路";
-    loopType["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject loopName;
-    QString name = "回路" + QString::number(loop->loopAdd());
-    loopName["value"] = name;
-    loopName["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject loopAddress;
-    loopAddress["value"] = QString::number(loop->canportAdd()-2) + "-" +
+    QJsonObject paramValue;
+    paramValue["Type"] = "回路";
+    paramValue["Name"] = "回路" + QString::number(loop->loopAdd());
+    paramValue["LoopID"] = loop->keyId();
+    paramValue["LoopAddress"] = QString::number(loop->canportAdd()-2) + "-" +
             QString::number(loop->distributionAdd()) + "-" +
             QString::number(loop->loopAdd());
-    loopAddress["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject loopCommunicationFault;
-    loopCommunicationFault["value"] = loop->getLoopCommunicationFault()? true : false;
-    loopCommunicationFault["ts"] = QDateTime::currentMSecsSinceEpoch();
+    paramValue["LoopCommunicationFault"] = communicationFault;
 
     QJsonObject paramsObj;
-    paramsObj["LoopID"] = loopID;
-    paramsObj["Type"] = loopType;
-    paramsObj["Name"] = loopName;
-    paramsObj["LoopAddress"] = loopAddress;
-    paramsObj["LoopCommunicationFault"] = loopCommunicationFault;
+    paramsObj["value"] = paramValue;
+    paramsObj["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject msgObj;
     msgObj["msgid"] = QString::number(m_msgid++);
+    msgObj["eventid"] = eventid;
     msgObj["params"] = paramsObj;
     // 转换为JSON文档
     QJsonDocument doc(msgObj);
@@ -1020,49 +1072,60 @@ QByteArray CprocessMqtt::creatLoopStatusJsonData(CLoop* loop)
 //创建灯具状态数据
 QByteArray CprocessMqtt::creatDeviceStatusJsonData(CDevice* lamp)
 {
+    QString eventid = "normal";
+    bool communicationFault = false;
+    bool lightFault = false;
+    bool warning = false;
+    CController* controller = CGlobal::instance()->controller();
+    if(!controller)
+        return NULL;
+    CCanport* canport = controller->canportByAddress(lamp->canportAdd());
+    if(!canport)
+        return NULL;
+    CDistribution* distribution = canport->distributionByAddress(lamp->distributionAdd());
+    if(!distribution)
+        return NULL;
+
+    if(lamp->getDeviceCommunicationFault())
+    {
+        communicationFault = true;
+        eventid = "fault";
+    }
+
+    if(lamp->deviceValue(DEVICE_VALUE_LIGHT) == "光源故障")
+    {
+        lightFault = true;
+        eventid = "fault";
+    }
+
+    if(lamp->deviceValue(DEVICE_VALUE_EMERGENCY) == "应急"
+            || distribution->getemergencyStatus()
+            || CGlobal::instance()->m_isEmergency)
+    {
+        warning = true;
+        eventid = "warning";
+    }
+
     // 创建上行报文
-    QJsonObject lampID;
-    lampID["value"] = lamp->keyId();
-    lampID["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject lampType;
-    lampType["value"] = "灯具";
-    lampType["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject lampName;
-    lampName["value"] = lamp->deviceValue(DEVICE_VALUE_TYPE).toString();
-    lampName["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject lampAddress;
-    lampAddress["value"] = QString::number(lamp->canportAdd()-2) + "-" +
+    QJsonObject paramValue;
+    paramValue["Type"] = "灯具";
+    paramValue["Name"] = lamp->deviceValue(DEVICE_VALUE_TYPE).toString();
+    paramValue["LampID"] = lamp->keyId();
+    paramValue["LampAddress"] = QString::number(lamp->canportAdd()-2) + "-" +
             QString::number(lamp->distributionAdd()) + "-" +
             QString::number(lamp->loopAdd()) + "-" +
             QString::number(lamp->deviceAdd());
-    lampAddress["ts"] = QDateTime::currentMSecsSinceEpoch();
+    paramValue["LampCommunicationFault"] = communicationFault;
+    paramValue["LightFault"] = lightFault;
+    paramValue["LampWarning"] = warning;
 
-    QJsonObject lampCommunicationFault;
-    lampCommunicationFault["value"] = !lamp->isDeviceOnline()? true : false;
-    lampCommunicationFault["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject lampLightFault;
-    lampLightFault["value"] = (lamp->deviceValue(DEVICE_VALUE_LIGHT) == "光源故障")? true : false;
-    lampLightFault["ts"] = QDateTime::currentMSecsSinceEpoch();
-
-    QJsonObject lampWarning;
-    lampWarning["value"] = (lamp->deviceValue(DEVICE_VALUE_EMERGENCY) == "应急"
-                                 || CGlobal::instance()->m_isEmergency)? true : false;
-    lampWarning["ts"] = QDateTime::currentMSecsSinceEpoch();
     QJsonObject paramsObj;
-    paramsObj["LampID"] = lampID;
-    paramsObj["Type"] = lampType;
-    paramsObj["Name"] = lampName;
-    paramsObj["LampAddress"] = lampAddress;
-    paramsObj["LampCommunicationFault"] = lampCommunicationFault;
-    paramsObj["LightFault"] = lampLightFault;
-    paramsObj["LampWarning"] = lampWarning;
+    paramsObj["value"] = paramValue;
+    paramsObj["ts"] = QDateTime::currentMSecsSinceEpoch();
 
     QJsonObject msgObj;
     msgObj["msgid"] = QString::number(m_msgid++);
+    msgObj["eventid"] = eventid;
     msgObj["params"] = paramsObj;
     // 转换为JSON文档
     QJsonDocument doc(msgObj);
@@ -1079,6 +1142,49 @@ void CprocessMqtt::saveDataToFile(QString fileName, QString data)
         stream << data << '\n';
         file.close();
     }
-    CGlobal::instance()->controlTxtFileSize(fileName, 1024 * 1024);
+    controlTxtFileSize(fileName, 1024 * 1024);
 }
 
+
+void CprocessMqtt::controlTxtFileSize(const QString& filePath, qint64 maxSize)
+{
+    QFile file(filePath);
+
+    // Check if the file exists and its size
+    if (!file.exists() || file.size() <= maxSize) {
+        return;  // Nothing to do
+    }
+
+    // Create a temporary file
+    QFile tempFile(filePath + ".tmp");
+    if (!tempFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        return;
+    }
+
+    QTextStream tempStream(&tempFile);
+
+    // Open the original file for reading
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream stream(&file);
+
+        // Skip the first line and write the rest to the temporary file
+        for(int i=0; i<200; i++)
+        {
+            stream.readLine();  // Skip the first line
+        }
+        while (!stream.atEnd()) {
+            tempStream << stream.readLine() << '\n';
+        }
+        file.close();  // Close the original file
+
+        tempFile.close();  // Close the temporary file
+
+        // Replace the original file with the temporary file
+        if (!file.remove()) {
+            return;
+        }
+        if (!tempFile.rename(filePath)) {
+        }
+    } else {
+    }
+}
