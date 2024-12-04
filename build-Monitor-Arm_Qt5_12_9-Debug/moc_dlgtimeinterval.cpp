@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_dlgTimeInterval_t {
-    QByteArrayData data[59];
-    char stringdata0[1465];
+    QByteArrayData data[62];
+    char stringdata0[1507];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -89,7 +89,10 @@ QT_MOC_LITERAL(54, 1372, 18), // "slot_setCom2Status"
 QT_MOC_LITERAL(55, 1391, 22), // "slot_setHostControlMsg"
 QT_MOC_LITERAL(56, 1414, 4), // "type"
 QT_MOC_LITERAL(57, 1419, 22), // "onMqttSocketConnected1"
-QT_MOC_LITERAL(58, 1442, 22) // "onMqttSocketConnected2"
+QT_MOC_LITERAL(58, 1442, 22), // "onMqttSocketConnected2"
+QT_MOC_LITERAL(59, 1465, 18), // "slot_setNTPprocess"
+QT_MOC_LITERAL(60, 1484, 12), // "QHostAddress"
+QT_MOC_LITERAL(61, 1497, 9) // "convertIP"
 
     },
     "dlgTimeInterval\0m_Checked_signal\0\0"
@@ -134,7 +137,9 @@ QT_MOC_LITERAL(58, 1442, 22) // "onMqttSocketConnected2"
     "on_pushButton_ModbusTCP_clicked\0"
     "slot_setCom1Status\0enable\0slot_setCom2Status\0"
     "slot_setHostControlMsg\0type\0"
-    "onMqttSocketConnected1\0onMqttSocketConnected2"
+    "onMqttSocketConnected1\0onMqttSocketConnected2\0"
+    "slot_setNTPprocess\0QHostAddress\0"
+    "convertIP"
 };
 #undef QT_MOC_LITERAL
 
@@ -144,7 +149,7 @@ static const uint qt_meta_data_dlgTimeInterval[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      48,   14, // methods
+      49,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -152,56 +157,57 @@ static const uint qt_meta_data_dlgTimeInterval[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,  254,    2, 0x06 /* Public */,
-       4,    0,  257,    2, 0x06 /* Public */,
+       1,    1,  259,    2, 0x06 /* Public */,
+       4,    0,  262,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    0,  258,    2, 0x08 /* Private */,
-       6,    0,  259,    2, 0x08 /* Private */,
-       7,    0,  260,    2, 0x08 /* Private */,
-       8,    0,  261,    2, 0x08 /* Private */,
-       9,    1,  262,    2, 0x08 /* Private */,
-      11,    5,  265,    2, 0x08 /* Private */,
-      17,    0,  276,    2, 0x08 /* Private */,
-      18,    0,  277,    2, 0x08 /* Private */,
-      19,    0,  278,    2, 0x08 /* Private */,
-      20,    0,  279,    2, 0x08 /* Private */,
-      21,    0,  280,    2, 0x08 /* Private */,
-      22,    0,  281,    2, 0x08 /* Private */,
-      23,    0,  282,    2, 0x08 /* Private */,
-      24,    0,  283,    2, 0x08 /* Private */,
-      25,    0,  284,    2, 0x08 /* Private */,
-      26,    0,  285,    2, 0x08 /* Private */,
-      27,    0,  286,    2, 0x08 /* Private */,
-      28,    0,  287,    2, 0x08 /* Private */,
-      29,    0,  288,    2, 0x08 /* Private */,
-      30,    0,  289,    2, 0x08 /* Private */,
-      31,    0,  290,    2, 0x08 /* Private */,
-      32,    0,  291,    2, 0x08 /* Private */,
-      33,    0,  292,    2, 0x08 /* Private */,
-      34,    0,  293,    2, 0x08 /* Private */,
-      35,    0,  294,    2, 0x08 /* Private */,
-      36,    0,  295,    2, 0x08 /* Private */,
-      37,    0,  296,    2, 0x08 /* Private */,
-      38,    0,  297,    2, 0x08 /* Private */,
-      39,    0,  298,    2, 0x08 /* Private */,
-      40,    0,  299,    2, 0x08 /* Private */,
-      41,    0,  300,    2, 0x08 /* Private */,
-      42,    0,  301,    2, 0x08 /* Private */,
-      43,    0,  302,    2, 0x08 /* Private */,
-      44,    0,  303,    2, 0x08 /* Private */,
-      45,    0,  304,    2, 0x08 /* Private */,
-      46,    0,  305,    2, 0x08 /* Private */,
-      47,    0,  306,    2, 0x08 /* Private */,
-      48,    0,  307,    2, 0x08 /* Private */,
-      49,    0,  308,    2, 0x08 /* Private */,
-      50,    0,  309,    2, 0x08 /* Private */,
-      51,    0,  310,    2, 0x08 /* Private */,
-      52,    1,  311,    2, 0x08 /* Private */,
-      54,    1,  314,    2, 0x08 /* Private */,
-      55,    1,  317,    2, 0x08 /* Private */,
-      57,    0,  320,    2, 0x08 /* Private */,
-      58,    0,  321,    2, 0x08 /* Private */,
+       5,    0,  263,    2, 0x08 /* Private */,
+       6,    0,  264,    2, 0x08 /* Private */,
+       7,    0,  265,    2, 0x08 /* Private */,
+       8,    0,  266,    2, 0x08 /* Private */,
+       9,    1,  267,    2, 0x08 /* Private */,
+      11,    5,  270,    2, 0x08 /* Private */,
+      17,    0,  281,    2, 0x08 /* Private */,
+      18,    0,  282,    2, 0x08 /* Private */,
+      19,    0,  283,    2, 0x08 /* Private */,
+      20,    0,  284,    2, 0x08 /* Private */,
+      21,    0,  285,    2, 0x08 /* Private */,
+      22,    0,  286,    2, 0x08 /* Private */,
+      23,    0,  287,    2, 0x08 /* Private */,
+      24,    0,  288,    2, 0x08 /* Private */,
+      25,    0,  289,    2, 0x08 /* Private */,
+      26,    0,  290,    2, 0x08 /* Private */,
+      27,    0,  291,    2, 0x08 /* Private */,
+      28,    0,  292,    2, 0x08 /* Private */,
+      29,    0,  293,    2, 0x08 /* Private */,
+      30,    0,  294,    2, 0x08 /* Private */,
+      31,    0,  295,    2, 0x08 /* Private */,
+      32,    0,  296,    2, 0x08 /* Private */,
+      33,    0,  297,    2, 0x08 /* Private */,
+      34,    0,  298,    2, 0x08 /* Private */,
+      35,    0,  299,    2, 0x08 /* Private */,
+      36,    0,  300,    2, 0x08 /* Private */,
+      37,    0,  301,    2, 0x08 /* Private */,
+      38,    0,  302,    2, 0x08 /* Private */,
+      39,    0,  303,    2, 0x08 /* Private */,
+      40,    0,  304,    2, 0x08 /* Private */,
+      41,    0,  305,    2, 0x08 /* Private */,
+      42,    0,  306,    2, 0x08 /* Private */,
+      43,    0,  307,    2, 0x08 /* Private */,
+      44,    0,  308,    2, 0x08 /* Private */,
+      45,    0,  309,    2, 0x08 /* Private */,
+      46,    0,  310,    2, 0x08 /* Private */,
+      47,    0,  311,    2, 0x08 /* Private */,
+      48,    0,  312,    2, 0x08 /* Private */,
+      49,    0,  313,    2, 0x08 /* Private */,
+      50,    0,  314,    2, 0x08 /* Private */,
+      51,    0,  315,    2, 0x08 /* Private */,
+      52,    1,  316,    2, 0x08 /* Private */,
+      54,    1,  319,    2, 0x08 /* Private */,
+      55,    1,  322,    2, 0x08 /* Private */,
+      57,    0,  325,    2, 0x08 /* Private */,
+      58,    0,  326,    2, 0x08 /* Private */,
+      59,    1,  327,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    3,
@@ -254,6 +260,7 @@ static const uint qt_meta_data_dlgTimeInterval[] = {
     QMetaType::Void, QMetaType::Int,   56,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 60,   61,
 
        0        // eod
 };
@@ -312,6 +319,7 @@ void dlgTimeInterval::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 45: _t->slot_setHostControlMsg((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 46: _t->onMqttSocketConnected1(); break;
         case 47: _t->onMqttSocketConnected2(); break;
+        case 48: _t->slot_setNTPprocess((*reinterpret_cast< QHostAddress(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -362,13 +370,13 @@ int dlgTimeInterval::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 48)
+        if (_id < 49)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 48;
+        _id -= 49;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 48)
+        if (_id < 49)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 48;
+        _id -= 49;
     }
     return _id;
 }
@@ -714,8 +722,8 @@ void pingThread::pingFinished(double _t1)
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 struct qt_meta_stringdata_wlanThread_t {
-    QByteArrayData data[8];
-    char stringdata0[77];
+    QByteArrayData data[10];
+    char stringdata0[103];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -731,12 +739,15 @@ QT_MOC_LITERAL(3, 25, 7), // "wlanIP1"
 QT_MOC_LITERAL(4, 33, 12), // "wlanGateway1"
 QT_MOC_LITERAL(5, 46, 9), // "wlanName2"
 QT_MOC_LITERAL(6, 56, 7), // "wlanIP2"
-QT_MOC_LITERAL(7, 64, 12) // "wlanGateway2"
+QT_MOC_LITERAL(7, 64, 12), // "wlanGateway2"
+QT_MOC_LITERAL(8, 77, 22), // "convertAddressFinished"
+QT_MOC_LITERAL(9, 100, 2) // "ip"
 
     },
     "wlanThread\0wlanFinished\0\0wlanIP1\0"
     "wlanGateway1\0wlanName2\0wlanIP2\0"
-    "wlanGateway2"
+    "wlanGateway2\0convertAddressFinished\0"
+    "ip"
 };
 #undef QT_MOC_LITERAL
 
@@ -746,18 +757,20 @@ static const uint qt_meta_data_wlanThread[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    5,   19,    2, 0x06 /* Public */,
+       1,    5,   24,    2, 0x06 /* Public */,
+       8,    1,   35,    2, 0x06 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    5,    6,    7,
+    QMetaType::Void, QMetaType::QString,    9,
 
        0        // eod
 };
@@ -769,6 +782,7 @@ void wlanThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->wlanFinished((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])),(*reinterpret_cast< QString(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< QString(*)>(_a[5]))); break;
+        case 1: _t->convertAddressFinished((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -777,6 +791,13 @@ void wlanThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
             using _t = void (wlanThread::*)(QString , QString , QString , QString , QString );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&wlanThread::wlanFinished)) {
                 *result = 0;
+                return;
+            }
+        }
+        {
+            using _t = void (wlanThread::*)(QString );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&wlanThread::convertAddressFinished)) {
+                *result = 1;
                 return;
             }
         }
@@ -812,6 +833,125 @@ int wlanThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 2)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 2;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 2)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 2;
+    }
+    return _id;
+}
+
+// SIGNAL 0
+void wlanThread::wlanFinished(QString _t1, QString _t2, QString _t3, QString _t4, QString _t5)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)), const_cast<void*>(reinterpret_cast<const void*>(&_t5)) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void wlanThread::convertAddressFinished(QString _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+struct qt_meta_stringdata_convertIPThread_t {
+    QByteArrayData data[5];
+    char stringdata0[56];
+};
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_convertIPThread_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
+static const qt_meta_stringdata_convertIPThread_t qt_meta_stringdata_convertIPThread = {
+    {
+QT_MOC_LITERAL(0, 0, 15), // "convertIPThread"
+QT_MOC_LITERAL(1, 16, 22), // "convertAddressFinished"
+QT_MOC_LITERAL(2, 39, 0), // ""
+QT_MOC_LITERAL(3, 40, 12), // "QHostAddress"
+QT_MOC_LITERAL(4, 53, 2) // "ip"
+
+    },
+    "convertIPThread\0convertAddressFinished\0"
+    "\0QHostAddress\0ip"
+};
+#undef QT_MOC_LITERAL
+
+static const uint qt_meta_data_convertIPThread[] = {
+
+ // content:
+       8,       // revision
+       0,       // classname
+       0,    0, // classinfo
+       1,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       1,       // signalCount
+
+ // signals: name, argc, parameters, tag, flags
+       1,    1,   19,    2, 0x06 /* Public */,
+
+ // signals: parameters
+    QMetaType::Void, 0x80000000 | 3,    4,
+
+       0        // eod
+};
+
+void convertIPThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        auto *_t = static_cast<convertIPThread *>(_o);
+        Q_UNUSED(_t)
+        switch (_id) {
+        case 0: _t->convertAddressFinished((*reinterpret_cast< QHostAddress(*)>(_a[1]))); break;
+        default: ;
+        }
+    } else if (_c == QMetaObject::IndexOfMethod) {
+        int *result = reinterpret_cast<int *>(_a[0]);
+        {
+            using _t = void (convertIPThread::*)(QHostAddress );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&convertIPThread::convertAddressFinished)) {
+                *result = 0;
+                return;
+            }
+        }
+    }
+}
+
+QT_INIT_METAOBJECT const QMetaObject convertIPThread::staticMetaObject = { {
+    &QThread::staticMetaObject,
+    qt_meta_stringdata_convertIPThread.data,
+    qt_meta_data_convertIPThread,
+    qt_static_metacall,
+    nullptr,
+    nullptr
+} };
+
+
+const QMetaObject *convertIPThread::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
+}
+
+void *convertIPThread::qt_metacast(const char *_clname)
+{
+    if (!_clname) return nullptr;
+    if (!strcmp(_clname, qt_meta_stringdata_convertIPThread.stringdata0))
+        return static_cast<void*>(this);
+    return QThread::qt_metacast(_clname);
+}
+
+int convertIPThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QThread::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
         if (_id < 1)
             qt_static_metacall(this, _c, _id, _a);
         _id -= 1;
@@ -824,9 +964,9 @@ int wlanThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void wlanThread::wlanFinished(QString _t1, QString _t2, QString _t3, QString _t4, QString _t5)
+void convertIPThread::convertAddressFinished(QHostAddress _t1)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)), const_cast<void*>(reinterpret_cast<const void*>(&_t5)) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

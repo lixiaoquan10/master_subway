@@ -10,16 +10,15 @@ class CprocessNtp  : public QObject
 {
     Q_OBJECT
 public:
-    explicit CprocessNtp(const QString& ntpServer, QUdpSocket* udpSocket);
+    explicit CprocessNtp(const QHostAddress& ntpServer, QUdpSocket* udpSocket);
     ~CprocessNtp();
     void startNtpTimer();
 private slots:
     void slot_requestTime();
     void onResponseReceived();
 private:
-    QString m_serverAddress;
-    QUdpSocket *m_udpSocket; 
     QHostAddress m_hostAddress;
+    QUdpSocket *m_udpSocket;
     QTimer* m_ntpTimer;             //对时定时器
 };
 #endif // CPROCESSNTP_H

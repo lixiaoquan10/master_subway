@@ -79,7 +79,7 @@ void CprocessMqtt::slot_brokerDisconnected()
 {
     m_reconnectTimer->start(m_reconnectInterval);
     m_pingTimer->stop();
-    m_testTimer->stop();
+//    m_testTimer->stop();
     // 清理所有定时器
     for (QTimer *timer : m_resendTimers) {
         timer->stop();  // 停止定时器
@@ -115,7 +115,7 @@ void CprocessMqtt::slot_updateLogStateChange()
     if(m_mqttClient->state() == QMqttClient::Disconnected)
     {
         m_pingTimer->stop();
-        m_testTimer->stop();
+//        m_testTimer->stop();
         emit connectStatus(false);
         content = content
                 + QLatin1String("MQTT state changed. Now: disconnected")
@@ -139,8 +139,8 @@ void CprocessMqtt::slot_updateLogStateChange()
         emit connectStatus(true);
         subscribeComTopic();
         uploadAllDeviceInfo();
-//        QTimer::singleShot(5000, this, &CprocessMqtt::slot_uploadAllDeviceStatus);
-        m_testTimer->start(5000);
+        QTimer::singleShot(5000, this, &CprocessMqtt::slot_uploadAllDeviceStatus);
+//        m_testTimer->start(5000);
         m_pingTimer->start(2000);
         // 重置重连间隔
         m_reconnectInterval = m_initialReconnectInterval;
@@ -411,27 +411,28 @@ void CprocessMqtt::slot_handleMessageReceived(const QByteArray &message, const Q
                 return;
             }
             // 提取各个字段
-            bool reset;
-            bool start;
-            // 判断 "Reset" 是否存在
-            if (params.contains("Reset")) {
-                reset = params.value("Reset").toBool();
+            int hostControl;
+            // 判断 "HostControl" 是否存在
+            if (params.contains("HostControl")) {
+                hostControl = params.value("HostControl").toInt();
             } else {
                 replyHostControl(msgid, false);
                 return;
             }
-            // 判断 "Start" 是否存在
-            if (params.contains("Start")) {
-                start = params.value("Start").toBool();
-            } else {
-                replyHostControl(msgid, false);
-                return;
-            }
-            if(reset)
+            if(hostControl == 1)
+            {
                 emit hostControlMsg(0x01);
-            if(start)
+                replyHostControl(msgid, true);
+            }
+            else if(hostControl == 2)
+            {
                 emit hostControlMsg(0x02);
-            replyHostControl(msgid, true);
+                replyHostControl(msgid, true);
+            }
+            else
+            {
+                replyHostControl(msgid, false);
+            }
         }
     }
 }

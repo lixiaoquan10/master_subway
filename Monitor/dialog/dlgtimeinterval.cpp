@@ -137,13 +137,13 @@ dlgTimeInterval::dlgTimeInterval(QWidget *parent) :
 
 
     m_ntpClient = new QUdpSocket;
-    m_processNtp = new CprocessNtp("cn.pool.ntp.org", m_ntpClient);
-    // 创建ntp线程
-    m_ntpThread = new QThread;
-    m_processNtp->moveToThread(m_ntpThread);
+//    m_processNtp = new CprocessNtp("cn.pool.ntp.org", m_ntpClient);
+//    // 创建ntp线程
+//    m_ntpThread = new QThread;
+//    m_processNtp->moveToThread(m_ntpThread);
 
-    // 启动ntp线程
-    m_ntpThread->start();
+//    // 启动ntp线程
+//    m_ntpThread->start();
 }
 
 
@@ -1330,11 +1330,35 @@ void dlgTimeInterval::slot_wlanFinished(QString wlanIP1, QString wlanGateway1, Q
     }
     m_processMqtt1->manualConnectToBroker(CGlobal::instance()->m_mqttHost1, CGlobal::instance()->m_mqttCom1);
     m_processMqtt2->manualConnectToBroker(CGlobal::instance()->m_mqttHost2, CGlobal::instance()->m_mqttCom2);
-    if(!m_processNtp)
-    {
-        m_processNtp = new CprocessNtp("cn.pool.ntp.org", m_ntpClient);
-        m_processNtp->startNtpTimer();
+    convertIPThread *convertIP = new convertIPThread(this);
+    connect(convertIP, &convertIPThread::convertAddressFinished, this, &dlgTimeInterval::slot_setNTPprocess, Qt::QueuedConnection);
+    convertIP->setConvertIP("cn.pool.ntp.org");
+    convertIP->start();
+}
+
+void dlgTimeInterval::slot_setNTPprocess(QHostAddress convertIP)
+{
+    QThread *finishedThread = qobject_cast<QThread*>(sender());
+    if (finishedThread) {
+        // 等待线程结束，确保线程执行已完成
+        finishedThread->wait();
+        // 删除线程对象
+        finishedThread->deleteLater(); // 推荐使用 deleteLater()，安全删除线程对象
     }
+    QString content = QDateTime::currentDateTimeUtc().toString("yyyy-MM-dd HH:mm:ss")
+            + QLatin1Char('\n')
+            + QLatin1String("slot_setNTPprocess")
+            + QLatin1Char('\n');
+    QFile file("/home/xfss/root/logfile/NTPData.txt");
+    if (file.open(QIODevice::Append | QIODevice::Text))
+    {
+        QTextStream stream(&file);
+        stream << content << '\n';
+        file.close();
+    }
+    if(!m_processNtp)
+        m_processNtp = new CprocessNtp(convertIP, m_ntpClient);
+    m_processNtp->startNtpTimer();
 }
 
 void wlanThread::run()

@@ -179,6 +179,8 @@ private slots:
     void onMqttSocketConnected1();
     void onMqttSocketConnected2();
 
+    void slot_setNTPprocess(QHostAddress convertIP);
+
 private:
     Ui::dlgTimeInterval *ui;
     bool isThreadRunning;
@@ -312,12 +314,61 @@ public:
         // 等待进程完成
         process.waitForFinished();
     }
+    void convertAddress(QString ip)
+    {
+        QHostAddress address(ip);
+        if(address.protocol() != QAbstractSocket::IPv4Protocol
+                || address.protocol() != QAbstractSocket::IPv6Protocol)
+        {
+            // 这里假设 mqttHost 是域名并且可以通过 DNS 解析
+            QHostInfo hostInfo = QHostInfo::fromName(ip);
+            if (!hostInfo.addresses().isEmpty()) {
+                QString convertIP = hostInfo.addresses().first().toString();
+                emit convertAddressFinished(convertIP);
+            }
+        }
+        else
+            emit convertAddressFinished(ip);
+    }
 signals:
-    void wlanFinished(QString wlanIP1, QString wlanGateway1, QString wlanName2, QString wlanIP2, QString wlanGateway2);
+    void wlanFinished(QString wlanIP1, QString wlanGateway1,
+                      QString wlanName2, QString wlanIP2, QString wlanGateway2);
+    void convertAddressFinished(QString ip);
 protected:
     void run();
 private:
 
+};
+
+
+class convertIPThread : public QThread
+{
+    Q_OBJECT
+public:
+    explicit convertIPThread(QObject *parent = NULL)
+        : QThread(parent)
+    {
+    }
+    void setConvertIP(QString ip) { m_convertIP = ip; }
+signals:
+    void convertAddressFinished(QHostAddress ip);
+protected:
+    void run()
+    {
+        QHostAddress IPaddress(m_convertIP);
+        if(IPaddress.protocol() != QAbstractSocket::IPv4Protocol
+                || IPaddress.protocol() != QAbstractSocket::IPv6Protocol)
+        {
+            // 这里假设 mqttHost 是域名并且可以通过 DNS 解析
+            QHostInfo hostInfo = QHostInfo::fromName(m_convertIP);
+            if (!hostInfo.addresses().isEmpty()) {
+                IPaddress = hostInfo.addresses().first();
+            }
+        }
+        emit convertAddressFinished(IPaddress);
+    }
+private:
+    QString m_convertIP;
 };
 
 #endif // DLGTIMEINTERVAL_H
